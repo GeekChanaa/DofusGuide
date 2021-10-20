@@ -1,0 +1,545 @@
+[
+    {
+        "_id": 17458,
+        "ankamaId": 17458,
+        "name": "Harnachement de Dragodinde Brâkmarien",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182002.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17458-harnachement-dragodinde-brakmarien",
+        "description": "Ce harnachement permettra à votre dragodinde de se camoufler dans les recoins les plus sombres.",
+        "recipe": []
+    },
+    {
+        "_id": 17459,
+        "ankamaId": 17459,
+        "name": "Harnachement de Dragodinde Bontarien",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182001.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17459-harnachement-dragodinde-bontarien",
+        "description": "Cet attirail sophistiqué vous permettra de mettre votre dinde aux couleurs de la ville lumière.",
+        "recipe": []
+    },
+    {
+        "_id": 17838,
+        "ankamaId": 17838,
+        "name": "Harnachement de Dragodinde Pilote",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182003.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17838-harnachement-dragodinde-pilote",
+        "description": "Si vous n’avez pas froid aux yeux, vous pourrez transformer votre dragodinde en bête de course avec ce harnachement. Enfin, en apparence seulement.",
+        "recipe": []
+    },
+    {
+        "_id": 17839,
+        "ankamaId": 17839,
+        "name": "Harnachement de Dragodinde Abraknyde",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182004.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17839-harnachement-dragodinde-abraknyde",
+        "description": "Si vous pouviez équiper votre belle-mère de ce harnachement, vous auriez une raison supplémentaire de l’appeler « vieille branche ».",
+        "recipe": []
+    },
+    {
+        "_id": 17840,
+        "ankamaId": 17840,
+        "name": "Harnachement de Dragodinde Royal",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182005.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17840-harnachement-dragodinde-royal",
+        "description": "On dit que « l’habit ne fait pas le moine », mais équiper votre dragodinde de cet attirail est un minimum nécessaire pour faire partie de la garde Royale d’Amakna.",
+        "recipe": []
+    },
+    {
+        "_id": 18148,
+        "ankamaId": 18148,
+        "name": "Harnachement de Muldo Brâkmarien",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182010.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18148-harnachement-muldo-brakmarien",
+        "description": "Si « vilenie » est votre deuxième prénom, n’hésitez plus ; équipez votre Muldo de ce harnachement et montrez votre dévouement à la cause néfaste de Brâkmar.",
+        "recipe": []
+    },
+    {
+        "_id": 18149,
+        "ankamaId": 18149,
+        "name": "Harnachement de Muldo Bontarien",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182009.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18149-harnachement-muldo-bontarien",
+        "description": "Revendiquez votre allégeance à Bonta en équipant ce harnachement sur votre Muldo.",
+        "recipe": []
+    },
+    {
+        "_id": 18150,
+        "ankamaId": 18150,
+        "name": "Harnachement de Muldo Steamer",
+        "level": 180,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182008.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18150-harnachement-muldo-steamer",
+        "description": "Blindage résistant et propulseurs à vapeur ; ce harnachement a tout pour faire de votre Muldo un véhicule à la pointe de la technologie.",
+        "recipe": [
+            {
+                    "name" : "Poil de Meno",
+                    "ankamaId": 17976,
+                    "url": "https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources/17976-poil-meno",
+                    "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/52/54707.w48h48.png",
+                    "type": "Poil",
+                    "level": 200,
+                    "quantity": 10
+                
+            },
+            {
+                    "name" : "Dentier de Dantinéa",
+                    "ankamaId": 17982,
+                    "url": "https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources/17982-dentier-dantinea",
+                    "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/52/47854.w48h48.png",
+                    "type": "Os",
+                    "level": 200,
+                    "quantity": 10
+                
+            },
+            {
+                    "name" : "Aile de Larve de Koutoulou",
+                    "ankamaId": 17989,
+                    "url": "https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources/17989-aile-larve-koutoulou",
+                    "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/52/104749.w48h48.png",
+                    "type": "Aile",
+                    "level": 200,
+                    "quantity": 10
+                
+            },
+            {
+                    "name" : "Bois d'Aquajou",
+                    "ankamaId": 17991,
+                    "url": "https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources/17991-bois-aquajou",
+                    "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/52/38684.w48h48.png",
+                    "type": "Bois",
+                    "level": 200,
+                    "quantity": 100
+                
+            },
+            {
+                    "name" : "Salikrone",
+                    "ankamaId": 17992,
+                    "url": "https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources/17992-salikrone",
+                    "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/52/36653.w48h48.png",
+                    "type": "Plante",
+                    "level": 200,
+                    "quantity": 100
+                
+            },
+            {
+                    "name" : "Quisnoa",
+                    "ankamaId": 17993,
+                    "url": "https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources/17993-quisnoa",
+                    "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/52/34560.w48h48.png",
+                    "type": "Céréale",
+                    "level": 200,
+                    "quantity": 100
+                
+            },
+            {
+                    "name" : "Patelle",
+                    "ankamaId": 17994,
+                    "url": "https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources/17994-patelle",
+                    "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/52/41419.w48h48.png",
+                    "type": "Poisson",
+                    "level": 200,
+                    "quantity": 100
+                
+            },
+            {
+                    "name" : "Écume de mer",
+                    "ankamaId": 17995,
+                    "url": "https://www.dofus-touch.com/fr/mmorpg/encyclopedie/ressources/17995-ecume-mer",
+                    "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/52/39399.w48h48.png",
+                    "type": "Minerai",
+                    "level": 200,
+                    "quantity": 100
+                
+            }
+        ]
+    },
+    {
+        "_id": 18151,
+        "ankamaId": 18151,
+        "name": "Harnachement de Muldo Sufokien",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182007.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18151-harnachement-muldo-sufokien",
+        "description": "Aux couleurs de Sufokia, votre Muldo en imposera.",
+        "recipe": []
+    },
+    {
+        "_id": 18152,
+        "ankamaId": 18152,
+        "name": "Harnachement de Muldo coquillage",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182006.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18152-harnachement-muldo-coquillage",
+        "description": "Grâce à ce harnachement constitué de coquillages et de coraux, votre Muldo se sentira comme un poisson dans l’eau lors de vos excursions sous-marines.",
+        "recipe": []
+    },
+    {
+        "_id": 18157,
+        "ankamaId": 18157,
+        "name": "Harnachement de Dragodinde Barbare",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182011.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18157-harnachement-dragodinde-barbare",
+        "description": "Les dragodindes possèdent déjà une partie des caractéristiques du barbare : la témérité et un certain ridicule. Pour ce qui est de la force, n'espérez pas qu'un simple Harnachement puisse y faire quelque chose.",
+        "recipe": []
+    },
+    {
+        "_id": 18196,
+        "ankamaId": 18196,
+        "name": "Harnachement de Dragodinde Likrone",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182012.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18196-harnachement-dragodinde-likrone",
+        "description": "Mythe ou réalité ? Il n'y a jamais eu autant de signalements de Likrone depuis la mise en service de ce Harnachement.",
+        "recipe": []
+    },
+    {
+        "_id": 18453,
+        "ankamaId": 18453,
+        "name": "Harnachement de Dragodinde Steamer",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182013.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18453-harnachement-dragodinde-steamer",
+        "description": "En équipant ce harnachement sur votre dragodinde, vous la transformerez en un moyen de locomotion mécanisé 100% écologique et bon marché.",
+        "recipe": []
+    },
+    {
+        "_id": 18524,
+        "ankamaId": 18524,
+        "name": "Harnachement de Dragodinde des Glaces",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182014.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18524-harnachement-dragodinde-glaces",
+        "description": "Ce harnachement est insensible à la fonte des glaces. Vous pouvez donc continuer à vivre sans vous soucier des conséquences de vos actes sur le réchauffement climatique.",
+        "recipe": []
+    },
+    {
+        "_id": 18558,
+        "ankamaId": 18558,
+        "name": "Harnachement de Dragodinde Squelette",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182020.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18558-harnachement-dragodinde-squelette",
+        "description": "Vous avez envoyé votre dragodinde dans le royaume des morts pour que la légende prenne vie. Grâce à ce paradoxe et surtout ce harnachement, votre dragodinde n'aura jamais été aussi effrayante.",
+        "recipe": []
+    },
+    {
+        "_id": 18631,
+        "ankamaId": 18631,
+        "name": "Harnachement de Dragodinde Désertique",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182015.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18631-harnachement-dragodinde-desertique",
+        "description": "Ce harnachement est conçu pour récupérer et recycler les fluides corporels de la dragodinde afin de limiter sa déshydratation en milieu aride.",
+        "recipe": []
+    },
+    {
+        "_id": 18800,
+        "ankamaId": 18800,
+        "name": "Harnachement de Muldo Likrone",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182016.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18800-harnachement-muldo-likrone",
+        "description": "Mythe ou réalité ? Il n'y a jamais eu autant de signalements de Likrone depuis la mise en service de ce Harnachement.",
+        "recipe": []
+    },
+    {
+        "_id": 18881,
+        "ankamaId": 18881,
+        "name": "Harnachement de Dragodinde Magmatique",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182017.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18881-harnachement-dragodinde-magmatique",
+        "description": "Ce harnachement est idéal pour protéger votre dragodinde lorsqu’elle doit traverser les landes de Sidimote à toute vitesse parce que vous avez le feu aux fesses.",
+        "recipe": []
+    },
+    {
+        "_id": 19136,
+        "ankamaId": 19136,
+        "name": "Harnachement de Muldo Zombique",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182018.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19136-harnachement-muldo-zombique",
+        "description": "Si vous trouvez de bon goût d’affubler votre fidèle destrier de la dépouille nécrosée d’un de ses congénères, vous devriez sérieusement songer à arrêter de manger des Corbacs au petit-déjeuner ou d’écouter du Krâmstaïn toute la journée.",
+        "recipe": []
+    },
+    {
+        "_id": 19344,
+        "ankamaId": 19344,
+        "name": "Harnachement de Muldo Squelette",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182021.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19344-harnachement-muldo-squelette",
+        "description": "Vous avez envoyé votre Muldo dans le royaume des morts pour que la légende prenne vie. Grâce à ce paradoxe et surtout ce harnachement, votre Muldo n'aura jamais été aussi effrayant.",
+        "recipe": []
+    },
+    {
+        "_id": 19616,
+        "ankamaId": 19616,
+        "name": "Harnachement de Muldo Scarab",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182022.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19616-harnachement-muldo-scarab",
+        "description": "Avec ce harnachement équipé sur votre muldo, celui-ci risque de se prendre pour un Scarab et de faire rouler devant lui une boule d'excréments. Le point positif, c'est que les gens s'écarteront pour vous laisser passer, ce qui vous permettra de sortir rapidement des embouteillages à la sortie d'Astrub aux heures de grand trafic.",
+        "recipe": []
+    },
+    {
+        "_id": 19735,
+        "ankamaId": 19735,
+        "name": "Harnachement de Muldo Cryptique",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182023.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19735-harnachement-muldo-cryptique",
+        "description": "D'après son nom, on pourrait croire que cet harnachement est difficile à déchiffrer. Ce qui n'est pas vraiment un problème, un harnachement n'est pas le genre d'objet qu'on a besoin de décrypter. Sauf si il est dans une crypte et que vous avez besoin de l'en sortir, mais le \"décrypter\" n'est pas le bon terme non plus.",
+        "recipe": []
+    },
+    {
+        "_id": 19991,
+        "ankamaId": 19991,
+        "name": "Harnachement Volkorne Dragosaure",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182024.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19991-harnachement-volkorne-dragosaure",
+        "description": "Votre Volkorne a enfin l'air méchant.",
+        "recipe": []
+    },
+    {
+        "_id": 20026,
+        "ankamaId": 20026,
+        "name": "Harnachement Dragodinde Scintillant",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182025.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20026-harnachement-dragodinde-scintillant",
+        "description": "Mieux vaut briller de mille feux que brûler de mille scintillements.",
+        "recipe": []
+    },
+    {
+        "_id": 20027,
+        "ankamaId": 20027,
+        "name": "Harnachement Muldo Scintillant",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182026.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20027-harnachement-muldo-scintillant",
+        "description": "Mieux vaut briller de mille feux que brûler de mille scintillements.",
+        "recipe": []
+    },
+    {
+        "_id": 20068,
+        "ankamaId": 20068,
+        "name": "Harnachement de Muldo Forban",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182028.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20068-harnachement-muldo-forban",
+        "description": "Le gouvernail fixé à l'arrière de cet harnachement permet de diriger votre muldo comme un navire pirate. Cela nécessite juste de vous tenir sur votre muldo en sens inverse de la marche et donc de conduire sans voir où vous allez, ou bien de vous mettre dans le sens de la marche pour voir où vous allez mais de faire avancer votre muldo en sens inverse de votre orientation, c'est à dire en marche arrière dans le sens de la marche. Vous allez voir, on s'y fait très vite.",
+        "recipe": []
+    },
+    {
+        "_id": 20372,
+        "ankamaId": 20372,
+        "name": "Harnachement Dragombre",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182029.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20372-harnachement-dragombre",
+        "description": "Est-ce un nez, une corne, un porte-manteau ? Quoi qu'il en soit, ce gros appendice permettra à votre volkorne d'enfoncer la cage thoracique de vos ennemis lorsque vous leur foncerez dessus.",
+        "recipe": []
+    },
+    {
+        "_id": 20769,
+        "ankamaId": 20769,
+        "name": "Harnachement de Dragodinde Mordant",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182031.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20769-harnachement-dragodinde-mordant",
+        "description": "Une fois cet harnachement équipé sur votre Dragodinde, plus personne n'osera poser la main sur vous.",
+        "recipe": []
+    },
+    {
+        "_id": 20770,
+        "ankamaId": 20770,
+        "name": "Harnachement de Muldo Mordant",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182032.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20770-harnachement-muldo-mordant",
+        "description": "En équipant cet harnachement, votre Muldo n'aura plus aucun mal à mâcher la nourriture que vous voudrez bien lui donner.",
+        "recipe": []
+    },
+    {
+        "_id": 20771,
+        "ankamaId": 20771,
+        "name": "Harnachement de Volkorne Mordant",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182033.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20771-harnachement-volkorne-mordant",
+        "description": "Équiper cet harnachement sur votre Volkorne diminuera le risque qu'il se cogne la corne en passant les portes. Par contre, il aura tendance à mordre les jambes des aventuriers passant un peu trop près de lui.",
+        "recipe": []
+    },
+    {
+        "_id": 21011,
+        "ankamaId": 21011,
+        "name": "Harnachement Dragokronique",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182034.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21011-harnachement-dragokronique",
+        "description": "Beaucoup on surestimés les capacités de leur Dragodinde après avoir équipé cet harnachement. Il est fortement déconseillé de tenter la traversée d'un lac de lave à la nage ou encore de sauter des falaises d'Incarnam.",
+        "recipe": []
+    },
+    {
+        "_id": 21035,
+        "ankamaId": 21035,
+        "name": "Harnachement de Dragodinde Noxine",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182035.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21035-harnachement-dragodinde-noxine",
+        "description": "Idéal pour être pris pour cible lors d’une attaque nocturne, ce harnachement mettra votre monture en lumière.",
+        "recipe": []
+    },
+    {
+        "_id": 21037,
+        "ankamaId": 21037,
+        "name": "Harnachement de Muldo Noxine",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182036.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21037-harnachement-muldo-noxine",
+        "description": "On ne sait jamais ce qu’on risque de croiser dans les profondeurs abyssales, notamment parce qu’on ne voit pas plus loin qu’à quelques kamètres. Ce harnachement règlera vos soucis de vision et fera de votre monture une proie de choix pour les prédateurs marins.",
+        "recipe": []
+    },
+    {
+        "_id": 21038,
+        "ankamaId": 21038,
+        "name": "Harnachement de Volkorne Noxine",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182037.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21038-harnachement-volkorne-noxine",
+        "description": "Ce harnachement fera ressembler votre monture à une luciole géante et étendra ainsi la pollution lumineuse aux régions les plus sauvages.",
+        "recipe": []
+    },
+    {
+        "_id": 21147,
+        "ankamaId": 21147,
+        "name": "Harnachement Lagon-dinde",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182039.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21147-harnachement-lagon-dinde",
+        "description": "Avec ce harnachement, votre Dragodinde aura des yeux trop mignons, des écailles d'un bleu profond et la peur constante d'arriver en second.",
+        "recipe": []
+    },
+    {
+        "_id": 21148,
+        "ankamaId": 21148,
+        "name": "Harnachement Muldo d'eau",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182040.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21148-harnachement-muldo-eau",
+        "description": "Les histoires historiques parlent toujours de Dragons draconiques et de héros héroïques. Ecrivez à l'écrit votre propre aventure aventurière avec votre Muldo d'eau.",
+        "recipe": []
+    },
+    {
+        "_id": 21168,
+        "ankamaId": 21168,
+        "name": "Harnachement Corbadinde",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182038.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21168-harnachement-corbadinde",
+        "description": "Cette dragodinde spectrale vous donnerait presque envie d'enfiler un costume et de terroriser vos compétiteurs. Quelle idée saugrenue. Vous ferez ça quand les Pious auront des dents. Ou quand le monde aura été submergé. Hein, quoi ?",
+        "recipe": []
+    },
+    {
+        "_id": 21294,
+        "ankamaId": 21294,
+        "name": "Harnachement de Volkorne Squelette",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182041.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21294-harnachement-volkorne-squelette",
+        "description": "Comment un insecte peut-il se retrouver avec des ossements à la place de son exosquelette ? Au lieu de vous triturer le cerveau à chercher une explication, contentez-vous d'exhiber fièrement votre terrifiante monture.",
+        "recipe": []
+    },
+    {
+        "_id": 21319,
+        "ankamaId": 21319,
+        "name": "Harnachement de Dragodinde Iop",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182042.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21319-harnachement-dragodinde-iop",
+        "description": "Les dragodindes ne sont pas réputées pour leur intelligence, mais cet harnachement ne va pas améliorer les choses. Si votre dragodinde décide de foncer dans la mêlée sans aucune raison apparente ne soyez pas étonnés.",
+        "recipe": []
+    },
+    {
+        "_id": 21322,
+        "ankamaId": 21322,
+        "name": "Harnachement de Dragodinde Espécuaire",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182043.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21322-harnachement-dragodinde-especuaire",
+        "description": "Beaucoup d'aventuriers ayant essayé cet harnachement se sont plaints du manque de visibilité, dû à la collerette fixée sur la tête de la dragodinde. Le nombre d'accidents a en effet explosé depuis l'arrivée de cet harnachement, au plus grand bonheur des alchimistes.",
+        "recipe": []
+    },
+    {
+        "_id": 21330,
+        "ankamaId": 21330,
+        "name": "Harnachement de Volkorne Iop",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182044.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21330-harnachement-volkorne-iop",
+        "description": "Grâce à cet harnachement la corne de votre Volkorn se transforme en un formidable éperon. De quoi faire pâlir le plus aguerri des trools ou satisfaire le plus complexé des Iop.",
+        "recipe": []
+    },
+    {
+        "_id": 21333,
+        "ankamaId": 21333,
+        "name": "Harnachement de Muldo Iop",
+        "level": 60,
+        "type": "Harnachement",
+        "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182045.png",
+        "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21333-harnachement-muldo-iop",
+        "description": "Habituée au milieu aquatique, la peau du muldo n'est pas reconnue pour sa résistance aux objets tranchants. Cette armure est parfaite pour ne pas finir en fricassée de muldo à la première escarmouche.",
+        "recipe": []
+    }
+]
