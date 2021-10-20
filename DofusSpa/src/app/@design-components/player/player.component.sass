@@ -1,0 +1,703 @@
+.player
+	+m
+		position: relative
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 40px
+		+x
+			display: block
+		+m
+			position: relative
+			margin-bottom: 32px
+	&__box
+		display: flex
+		margin-right: auto
+	&__ava
+		position: relative
+		flex-shrink: 0
+		width: 80px
+		height: 80px
+		border-radius: 50%
+		border: 3px solid $wh
+		box-shadow: 0 0 0 2px $purple 
+		&.online
+			&:before
+				content: ""
+				position: absolute
+				top: -3px
+				right: -3px
+				width: 24px
+				height: 24px
+				border-radius: 50%
+				background: $green  
+	&__box > &__ava
+		margin-right: 30px
+		+m
+			margin-right: 20px
+	&__ava &__pic
+		width: 100%
+		min-height: 100%
+		border-radius: 50%   
+	& > &__title
+		margin-bottom: 32px
+	&__stat
+		display: flex
+		align-items: center
+	&__stage
+		margin-right: 100px
+		+m
+			margin-right: auto
+			font-size: 13px
+			font-weight: 500
+			color: $gray-dark  
+	&__playlist
+		position: relative
+		z-index: 3
+		+m
+			position: static
+			margin: 0 20px
+	&__burger
+		position: relative
+		z-index: 2
+		display: inline-block
+		width: 32px
+		height: 24px
+		font-size: 0 
+		&:before,
+		&:after
+			display: block
+			width: 32px
+			height: 2px
+			border-radius: 1px 
+			background: $text
+			transition: transform .3s
+		&:before,
+		&:after
+			content: '' 
+		&:before
+			margin-bottom: 6px
+		&:after
+			margin-top: 6px
+	&__playlist.show &__burger
+		&:before
+			transform: translateY(4px) rotate(45deg)
+		&:after
+			transform: translateY(-4px) rotate(-45deg)
+	&__wrap
+		position: absolute
+		top: -32px
+		right: -24px
+		width: 420px
+		padding-bottom: 16px
+		border-radius: 20px
+		background: $wh
+		box-shadow: 0 25px 40px rgba($bl, .3)
+		visibility: hidden
+		opacity: 0
+		transition: all .25s
+		+m
+			top: -20px
+			right: -2px
+			left: -2px
+			width: auto
+	&__playlist.show &__wrap
+		visibility: visible
+		opacity: 1
+	&__top
+		display: flex
+		align-items: center
+		height: 92px
+		padding: 0 80px 0 52px
+		+m
+			height: 64px
+			padding: 0 24px
+			font-size: 18px 
+		span
+			margin-right: 35px
+			+m
+				margin-right: 12px 
+	&__group
+		max-height: 336px
+		padding: 0 16px
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+		+m
+			max-height: 192px
+			padding: 0 8px 
+		&::-webkit-scrollbar
+			width: 8px
+		&::-webkit-scrollbar-track-piece
+			background-color: transparent
+			border-radius: 4px
+		&::-webkit-scrollbar-thumb:vertical
+			width: 8px 
+		&::-webkit-scrollbar-thumb:vertical,
+		&::-webkit-scrollbar-thumb:window-inactive
+			background-color: $border
+			border-radius: 4px
+	&__game
+		display: flex
+		align-items: center
+		height: 112px
+		padding: 0 18px 
+		border-radius: 16px 
+		font-size: 18px
+		font-weight: 500 
+		line-height: (24/18)
+		color: $text 
+		transition: all .25s
+		+m
+			height: 64px
+			font-size: 16px
+		&:hover
+			background: rgba($border, .25) 
+		&.active
+			background: $purple
+			color: $wh   
+	&__game &__ava
+		width: 60px
+		height: 60px
+		margin-right: 20px
+		border: 2px solid $wh
+		box-shadow: 0 0 0 2px $purple
+		transition: all .25s 
+		+m
+			width: 40px
+			height: 40px
+			margin-right: 16px 
+		&.online
+			&:before
+				content: ""
+				position: absolute
+				top: -3px
+				right: -3px
+				width: 20px
+				height: 20px
+				+m
+					width: 12px
+					height: 12px
+	&__game.active &__ava
+		border-color: $purple
+		box-shadow: 0 0 0 2px $purple-light
+	&__box &__title
+		margin-bottom: 8px
+		+m
+			+fi
+			font-size: 18px
+	&__note
+		line-height: (24/14)
+		color: $gray-light 
+		+m
+			font-size: 13px
+			line-height: 1.3
+	&__options
+		display: flex
+		align-items: center
+		margin-left: 30px
+		flex-shrink: 0
+		+x
+			margin: 24px 0 0 
+		+m
+			margin: 32px -4px 0 
+	&__option
+		display: flex
+		align-items: center
+		height: 56px
+		padding: 0 20px
+		border-radius: 16px
+		background: rgba($border, .25)  
+		font-weight: 600
+		color: $gray-dark
+		transition: all .25s 
+		+m
+			flex: 0 0 calc(50% - 8px)
+			width: calc(50% - 8px)
+			justify-content: center
+			margin: 0 4px 
+		.icon
+			margin-right: 12px
+			font-size: 16px
+			fill: $gray-dark 
+		&:hover
+			background: $orange
+			color: $wh
+			.icon
+				fill: $wh 
+		+nl
+			margin-right: 8px
+			+m
+				margin-right: 4px
+	&__wrapper
+		position: relative
+		padding-right: 272px
+		border-radius: 32px
+		background: $border-light
+		+d
+			padding: 0 0 172px
+		+m
+			padding: 0
+			background: none 
+			border-radius: 24px 
+			background: none
+	&__arrows
+		display: none
+		+m
+			display: flex
+	& > &__arrows
+		position: absolute
+		top: 0
+		right: 0
+	&__wrapper &__arrows
+		justify-content: center
+		margin-top: 24px
+	&__arrow
+		flex-shrink: 0 
+		width: 32px
+		height: 32px
+		border-radius: 50% 
+		box-shadow: 0 3px 10px rgba($bl, .07) 
+		font-size: 0
+		transition: background .25s 
+		.icon
+			font-size: 10px
+			fill: $text
+			transition: fill .25s
+		&:hover
+			background: $purple
+			.icon
+				fill: $wh 
+		+nl
+			margin-right: 10px
+	&__wrapper &__arrow
+		width: 40px
+		height: 40px
+	&__container
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 90px
+			left: 24px
+			right: 24px
+			bottom: -32px
+			z-index: -1
+			+shadow 
+			+d
+				top: 76px
+			+m
+				top: 15px
+				left: 7px
+				right: 7px
+				bottom: -15px
+	&__view
+		position: relative
+		height: 492px
+		border-radius: 32px
+		overflow: hidden 
+		+cover
+		+d
+			height: 400px
+		+m
+			height: 320px
+			border-radius: 24px 24px 0 0
+		+s
+			height: 220px 
+		&:before
+			content: ""
+			+coverdiv
+			background-image: linear-gradient(180deg, rgba(29,31,34,0.00) 80%, rgba(27,29,33,0.90) 99%)
+	&__counter
+		position: absolute
+		top: 32px
+		left: 32px
+		display: inline-block
+		padding: 0 20px
+		border-radius: 8px  
+		background: rgba($bl, .71)
+		font-size: 13px
+		font-weight: 700 
+		line-height: 32px 
+		color: $wh 
+		+d
+			top: 24px
+			left: 24px
+		+m
+			display: none
+	&__control
+		position: absolute
+		left: 32px
+		bottom: 32px
+		right: 32px
+		z-index: 2
+		display: flex
+		align-items: center
+		+m
+			left: 8px
+			right: 8px
+			bottom: 8px
+	&__actions
+		display: flex
+		align-items: center
+		+nl
+			margin-right: auto
+	&__action
+		width: 24px
+		height: 24px
+		border-radius: 4px 
+		background: rgba($bl, .7) 
+		font-size: 0
+		transition: background .25s 
+		.icon
+			font-size: 16px
+			fill: $wh
+			&-pause,
+			&-sound-off
+				display: none
+			&-pause
+				font-size: 14px
+			&-play-window
+				font-size: 13px
+		&:hover
+			background: $bl
+		&.active
+			.icon
+				&-pause,
+				&-sound-off
+					display: inline-block
+				&-play,
+				&-sound-on
+					display: none
+			
+		+nl
+			margin-right: 10px
+	&__chat
+		display: none
+		position: absolute
+		top: 24px
+		right: 16px
+		width: 48px
+		height: 48px
+		border-radius: 50%
+		background: rgba($bl, .9) 
+		font-size: 0 
+		+d
+			display: inline-block
+		+m
+			top: 16px
+		.icon
+			font-size: 20px
+			fill: $wh
+	&__toggle
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 2
+		transform: translate(-50%,-50%)
+		width: 96px
+		height: 96px
+		border-radius: 16px 
+		background: rgba($bl, .85) 
+		font-size: 0
+		transition: background .25s 
+		+m
+			width: 56px
+			height: 56px
+		.icon
+			font-size: 30px
+			fill: $orange
+			+m
+				font-size: 15px
+			&-pause
+				display: none
+		&:hover
+			background: rgba($bl, .75) 
+		&.active
+			.icon
+				&-pause
+					display: inline-block
+				&-play
+					display: none
+			
+		+nl
+			margin-right: 10px
+	&__volume
+		display: flex
+		align-items: center
+	&__line
+		position: relative
+		flex-shrink: 0
+		width: 64px
+		height: 2px
+		margin-left: 8px
+		border-radius: 1px
+		background: rgba($wh, .2)
+		cursor: pointer 
+	&__progress
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		background: $wh
+		border-radius: 1px
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			right: -4px
+			transform: translateY(-50%)
+			width: 8px
+			height: 8px
+			background: $wh
+			border-radius: 50% 
+	&__body
+		margin-top: -32px
+		padding: 72px 32px 32px
+		background: $wh
+		border-radius: 0 0 32px 32px 
+		+m
+			margin: 0
+			padding: 32px 24px 
+			border-radius: 0 0 24px 24px 
+		.live
+			margin-bottom: 8px
+	&__info
+		margin-bottom: 8px
+		max-width: 500px
+		+d
+			max-width: 100%
+		+m
+			font-size: 18px 
+	&__parameters
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+	&__parameter
+		display: flex
+		align-items: center
+		color: $gray-light
+		+nf
+			margin-left: 12px
+			&:before
+				content: "•"
+				margin-right: 12px 
+	&__icon
+		margin-right: 8px
+		font-size: 0
+	&__icon &__pic
+		max-width: 24px
+	&__list
+		position: absolute
+		top: 32px
+		right: 0
+		bottom: 32px
+		width: 272px
+		padding: 0 26px 0 30px
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+		+d
+			top: auto
+			left: 0
+			right: 0
+			bottom: 0
+			display: flex
+			width: auto
+			padding: 0 0 32px  
+			&:before,
+			&:after
+				content: ""
+				flex-shrink: 0 
+				width: 32px
+				height: 1px 
+		+m
+			display: none
+		&::-webkit-scrollbar
+			width: 4px
+			+d
+				display: none
+		&::-webkit-scrollbar-track-piece
+			background-color: transparent
+			border-radius: 2px
+		&::-webkit-scrollbar-thumb:vertical
+			width: 4px 
+		&::-webkit-scrollbar-thumb:vertical,
+		&::-webkit-scrollbar-thumb:window-inactive
+			background-color: $blue
+			border-radius: 2px
+	&__preview
+		position: relative
+		display: block
+		font-size: 0
+		cursor: pointer
+		+d
+			flex-shrink: 0
+			width: 160px 
+		+nl
+			margin-bottom: 30px
+			+d
+				margin: 0 16px 0 0  
+		&.online
+			&:before
+				content: ""
+				position: absolute
+				top: 16px
+				right: 16px
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				background: $green
+				border: 2px solid $wh
+		.live
+			position: absolute
+			top: 8px
+			left: 8px
+	&__preview &__pic
+		width: 100%
+		border-radius: 16px  
+	&__row
+		display: flex
+		align-items: center
+	&__inner
+		flex-grow: 1
+		padding-right: 50px
+		+m
+			padding: 0
+	&__cards
+		position: relative
+		flex-shrink: 0
+		width: 147px
+		font-size: 0
+		+m
+			display: none
+	&__caption
+		position: absolute
+		left: 16px
+		bottom: 16px
+		right: 16px
+		z-index: 2
+		text-align: center
+		font-size: 14px
+		font-weight: 700
+		color: $wh 
+	&__btns
+		display: flex
+		margin: 28px -32px -10px 
+		padding: 20px 32px 0
+		border-top: 1px solid $border-light
+		+m
+			margin-bottom: -16px
+			padding: 16px 24px 0 
+	&__btns &__btn
+		+m
+			height: 48px
+		&.btn_gray
+			color: $gray-dark
+		.icon
+			&-like
+				font-size: 17px
+			&-share-1
+				font-size: 14px
+			&-dots-border
+				font-size: 6px
+		&:not(.btn_square)
+			min-width: auto
+			padding: 0 20px
+			+m
+				padding: 0 25px 
+		&:nth-child(3)
+			+m
+				min-width: 48px
+				padding: 0
+				font-size: 0
+				.icon
+					margin: 0
+		&:last-child
+			+m
+				display: none
+		+nf
+			margin-left: 8px
+			+m
+				margin-left: auto
+	+nl
+		margin-bottom: 72px
+		+d
+			margin-bottom: 48px
+	&_sm &__toggle
+		width: 56px
+		height: 56px
+	&_sm &__view
+		height: 280px
+		+m
+			height: 220px
+	&_sm &__body
+		margin-top: -32px
+		padding: 56px 24px 24px
+		+m
+			margin: 0
+			padding: 24px 16px  
+	&_solo
+		+m
+			margin: 0 -8px 
+		+nl
+			margin-bottom: 56px
+			+m
+				margin-bottom: 48px
+	&_solo &__wrapper
+		padding-right: 407px
+		background: none
+		+d
+			padding: 0
+
++dark
+	.player
+		&__wrapper
+			background: rgba($border-light, .1)
+			+m
+				background: none 
+		&__container
+			&:before
+				+shadow-dark
+		&__body
+			background: $dark1
+		&__preview.online:before
+			border-color: $dark1
+		&__ava
+			border: 3px solid $dark1
+			box-shadow: 0 0 0 2px $purple
+		&__burger
+			&:before,
+			&:after
+				background: $wh 
+		&__option
+			background: $dark1
+			color: $wh
+			&:hover
+				background: $orange
+		&__wrap
+			background: $dark1
+		&__group
+			&::-webkit-scrollbar-thumb:vertical,
+			&::-webkit-scrollbar-thumb:window-inactive
+				background-color: rgba($border-light, .1)
+		&__game
+			color: $wh
+			&:hover
+				background: none
+				color: $blue 
+		&__arrow
+			background: $dark1 
+			.icon
+				fill: $wh
+			&:hover
+				background: $purple
+		&__btns
+			border-color: $border-dark 
+		&__btns .player__btn
+			color: $wh 
+			.icon
+				fill: $wh
+		&_solo .player__wrapper
+			background: none 
+	  
+		
+			

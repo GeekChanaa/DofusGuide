@@ -1,0 +1,130 @@
+.comments
+	&__row
+		display: flex
+		align-items: flex-start
+		+t
+			display: block
+	&__container
+		position: relative
+		flex-grow: 1
+		padding: 32px 32px 54px
+		background: $wh
+		border-radius: 24px
+		+m
+			padding: 16px 16px 24px  
+		&:before
+			content: ""
+			position: absolute
+			top: 26px
+			left: 32px
+			right: 32px
+			bottom: -26px
+			z-index: -1
+			+shadow  
+	&__sidebar
+		flex-shrink: 0
+		width: 375px
+		margin-left: 32px
+		+d
+			width: 230px
+		+t
+			display: none
+			width: 100% 
+			margin: 32px 0 0
+		+m
+			display: block
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 16px
+		+m
+			display: block
+	&__title
+		margin-right: auto
+		+m
+			margin: 0 0 24px
+			padding: 0 8px 
+	&__field
+		min-width: 235px
+		margin-left: 30px
+		+m
+			min-width: 100%
+			margin: 0 
+	&__list
+		margin: 0 -16px
+	&__item
+		display: flex
+		align-items: flex-start
+		padding: 32px 28px 28px
+		border-radius: 12px 
+		cursor: pointer
+		transition: background .25s
+		&:hover
+			background: rgba($border, .5)  
+	&__ava
+		flex-shrink: 0
+		width: 48px
+		height: 48px
+		margin-right: 24px
+		font-size: 0
+	&__ava &__pic
+		width: 100%
+		min-height: 100%
+		border-radius: 50%
+	&__top
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 16px
+		font-size: 13px
+		font-weight: 500
+	&__author
+		margin-right: 12px
+		color: $blue
+	&__time
+		color: $gray-dark 
+	&__text
+		margin-bottom: 16px
+		line-height: (24/14)
+		color: $gray-dark
+	&__actions
+		display: flex
+		align-items: center
+	&__action
+		flex-shrink: 0
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		border: 1px solid $border-light
+		font-size: 0
+		transition: all .25s 
+		.icon
+			font-size: 12px
+			fill: $gray-dark
+			&-menu-fill
+				font-size: 3px
+		&:hover
+			background: rgba($gray-dark, .15)
+			border-color: transparent
+		+nl
+			margin-right: 16px
+	&__btns
+		margin-top: 32px
+		text-align: center
+
++dark
+	.comments
+		&__container
+			background: $dark1
+			&:before
+				+shadow-dark
+		&__item:hover
+			background: $border-dark 
+		&__action
+			border-color: rgba($border-light, .1) 
+			&:hover
+				border-color: transparent 
+				background: rgba($border-light, .1)
+				.icon
+					fill: $wh 
+
+

@@ -1,0 +1,248 @@
+.upload
+	&__row
+		display: flex
+	&__col
+		&:first-child
+			flex-grow: 1
+		&:nth-child(2)
+			width: 240px
+			margin-left: 32px
+			+m
+				width: 100%
+				margin: 0
+	&__nav
+		display: none
+		margin-bottom: 32px
+		+d
+			display: flex
+		+m
+			display: none
+	&__nav &__link
+		min-width: 200px
+		border-radius: 16px
+		background: rgba($purple, .1)
+		text-align: center
+		line-height: 56px
+		font-size: 13px
+		font-weight: 700 
+		color: $blue
+		transition: opacity .25s
+		+nl
+			margin-right: 8px
+	&__container
+		+m
+			margin: 0 -8px 
+	&__item
+		+rmin(1260)
+			display: block !important
+		+m
+			display: block !important
+		&:nth-child(2)
+			+d
+				display: none
+			+m
+				display: block
+		+nl
+			margin-bottom: 24px
+			+d
+				margin: 0
+			+m
+				margin-bottom: 16px
+	&__wrap
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		padding: 52px 
+		overflow: hidden
+		background-color: rgba($border, .5)
+		border: 2px dashed rgba($border, .5)
+		border-radius: 16px
+		text-align: center
+		+m
+			padding: 32px 
+		&_image
+			border: none
+			+cover
+			color: $wh 
+			&:before
+				content: ""
+				+coverdiv 
+				background-image: linear-gradient(180deg, rgba(0,0,0,0.36) 31%, rgba(24,26,28,0.90) 82%)
+	&__btns
+		margin-bottom: 54px
+		+m
+			display: flex
+			margin: 0 -8px 60px 
+	&__file
+		display: none
+		position: relative
+		flex: calc(50% - 16px)
+		min-width: calc(50% - 16px)
+		margin: 0 8px 
+		overflow: hidden
+		+m
+			display: block
+	&__file &__btn
+		min-width: 100%
+	&__btns > &__btn
+		+m
+			flex: calc(50% - 16px)
+			min-width: calc(50% - 16px)
+			margin: 0 8px  
+	&__wrap &__input,
+	&__file &__input
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 250px
+		opacity: 0
+	&__box
+		position: relative
+		z-index: 2
+		text-align: center
+	&__info
+		margin-bottom: 24px
+	&__wrap:not(.upload__wrap_image):hover &__btn
+		background: darken($blue, 7)
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 12px
+	&__wrap &__btn
+		min-width: auto 
+	&__head &__link
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 32px
+		height: 32px
+		margin-left: 20px
+		border-radius: 50%
+		box-shadow: 0 2px 7px rgba(#000, .1) 
+		font-size: 0 
+		transition: all .25s 
+		.icon
+			font-size: 16px
+			fill: $text
+			transition: fill .25s 
+		&:hover
+			box-shadow: 0 5px 10px rgba(#000, .1)
+			.icon
+				fill: $purple 
+	&__col:nth-child(2) > &__btn
+		min-width: 122px
+	&__stat
+		+d
+			display: flex
+			align-items: flex-end
+		+m
+			display: block
+	&__cell
+		&:nth-child(2)
+			+d
+				flex-grow: 1
+				padding-bottom: 8px
+		+nl
+			margin-bottom: 54px
+			+d
+				margin: 0 40px 0 0
+			+m
+				margin: 0 0 54px 
+	&__line
+		position: relative
+		margin-bottom: 20px
+		height: 4px
+		border-radius: 2px
+		background: $border  
+	&__progress
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		background: $blue
+		border-radius: 2px
+	&__tooltip
+		position: absolute
+		right: -28px
+		bottom: calc(100% + 10px)
+		width: 56px
+		border-radius: 6px
+		background: $bl
+		text-align: center
+		font-size: 13px
+		font-weight: 700 
+		line-height: 28px
+		color: $wh 
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
+			+arr(8,4,$bl,b)  
+	.widget
+		+nf
+			margin-top: 40px  
+	+nl
+		margin-bottom: 64px
+		+m
+			margin-bottom: 32px
+	&_empty &__row
+		+m
+			display: block
+	&_empty &__col:first-child
+		+m
+			display: none
+	&_empty &__col:nth-child(2) > &__btn
+		+m
+			min-width: calc(50% - 16px)
+			margin: 0 8px  
+	&_empty &__head
+		+m
+			display: none
+	&_solo
+		+m
+			margin: -16px 0 0
+	&_solo &__row
+		+d
+			display: block
+	&_solo &__col
+		&:nth-child(2)
+			+d
+				width: 100%
+				margin: 40px 0 0  
+	&_solo &__wrap
+		height: 450px
+		+d
+			height: 420px
+		+m
+			height: 343px
+	&_solo &__info
+		margin-bottom: 8px
+	&_solo &__wrap &__text
+		margin-bottom: 22px
+		font-size: 16px
+		font-weight: 600
+	&_solo &__wrap:not(.upload__wrap_image) &__text
+		color: $gray-dark 
+
++dark
+	.upload
+		&__wrap
+			background-color: $border-dark
+			border-color: rgba($border-light, .1)
+		&__head .upload__link
+			background: $dark1 
+			.icon
+				fill: $wh
+			&:hover
+				.icon
+					fill: $purple
+		&__line
+			background: rgba($border-light, .1) 
+
+
+

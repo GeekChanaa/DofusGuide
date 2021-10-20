@@ -1,0 +1,155 @@
+.views
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 40px
+		+m
+			display: block
+			margin-bottom: 24px
+	&__title
+		margin-right: auto
+		+m
+			margin: 0 0 24px 
+	.field
+		flex-shrink: 0 
+		min-width: 200px
+		margin-left: 30px
+		+m
+			min-width: 100%
+			margin: 0  
+	&__caption
+		display: flex
+		margin-bottom: 32px
+		padding: 0 50px 32px 0
+		border-bottom: 1px solid $border-light 
+		font-size: 13px
+		font-weight: 500
+		color: $gray-dark 
+		+m
+			display: none 
+	&__cell
+		&:first-child
+			flex-grow: 1
+		&:nth-child(2)
+			flex-shrink: 0
+			width: 86px
+			text-align: center
+		&:nth-child(3)
+			flex-shrink: 0
+			width: 150px
+			margin-left: 30px
+	&__list
+		margin-bottom: 36px
+		+m
+			margin: 0 -12px 24px 
+	&__item
+		position: relative
+		display: flex
+		padding: 6px 9px 10px
+		background: $wh
+		border-radius: 16px
+		cursor: pointer
+		transition: color .25s
+		+m
+			align-items: center
+		&:before
+			content: ""
+			position: absolute
+			top: 14px
+			left: 0
+			right: 0
+			bottom: -14px
+			z-index: -1
+			+shadow-sm 
+		&:hover
+			color: $purple 
+			+m
+				color: $text 
+		+nl
+			margin-bottom: 16px
+	&__preview
+		flex-shrink: 0
+		width: 128px
+		height: 96px
+		border-radius: 10px
+		+cover
+		+m
+			height: 140px
+	&__details
+		position: relative
+		display: flex
+		align-items: flex-start
+		flex-grow: 1
+		padding: 14px 41px 0 24px
+		+m
+			display: block
+			flex: 0 0 calc(100% - 130px)
+			width: calc(100% - 130px)
+			padding: 0 16px 0 24px
+	&__box
+		flex-grow: 1
+		padding-right: 15px
+	&__info
+		margin-bottom: 10px
+		font-size: 16px
+		font-weight: 600 
+		line-height: 1.2
+	&__game
+		display: inline-flex
+		align-items: center
+		font-size: 12px
+		font-weight: 500
+		color: $gray-dark
+		+m
+			margin-bottom: 8px 
+	&__logo
+		flex-shrink: 0
+		width: 20px
+		margin-right: 8px
+		font-size: 0
+	&__logo &__pic
+		width: 100% 
+	.status
+		&:nth-child(2)
+			flex-shrink: 0
+			width: 86px
+			+m
+				width: 100% 
+		&:nth-child(3)
+			flex-shrink: 0
+			width: 150px
+			margin-left: 30px
+			+m
+				width: 100%
+				margin: 0
+		+nl
+			+m
+				margin-bottom: 5px
+	&__action
+		position: absolute
+		top: 14px
+		right: 20px
+		width: 16px
+		height: 16px
+		font-size: 0
+		+m
+			display: none
+		.icon
+			font-size: 4px
+			fill: $gray-dark
+			transition: fill .25s
+		&:hover .icon
+			fill: $purple
+	&__btns
+		text-align: center
+	&__btn
+		min-width: 176px 
+
++dark
+	.views
+		&__caption
+			border-color: rgba($border-light, .1)
+		&__item
+			background: $dark1
+			&:before
+				+shadow-sm-dark  

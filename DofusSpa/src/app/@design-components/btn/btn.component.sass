@@ -1,0 +1,108 @@
+.btn
+	min-width: 166px
+	height: 56px
+	padding: 0 20px
+	border-radius: 16px/16px
+	+fi
+	font-size: 14px
+	line-height: (20/14) 
+	font-weight: 700 
+	transition: all .25s 
+	.icon,
+	&__text
+		display: inline-block
+		vertical-align: middle
+	.icon
+		position: relative
+		top: -1px
+		font-size: 20px
+		+nl
+			margin-right: 10px
+	&_white
+		background: $wh
+		color: $bl 
+		&:hover
+			color: $purple 
+	&_purple
+		background: $purple
+		color: $wh
+		&:hover
+			background: darken($purple, 5)
+	&_purple-light
+		background: rgba($purple-light, .5)
+		color: $link
+		.icon
+			fill: $link
+		&:hover
+			background: rgba($purple-light, .7)
+	&_blue
+		background: $blue
+		color: $wh
+		&:hover
+			background: darken($blue, 7)
+	&_orange
+		background: $orange
+		color: $wh
+		&:hover
+			background: darken($orange, 7)
+	&_blue-dark
+		background: $blue-dark
+		color: $wh
+		&:hover
+			background: lighten($blue-dark, 7)
+	&_black
+		background: $bl
+		color: $wh
+		.icon
+			fill: $wh
+		&:hover
+			background: $purple 
+	&_gray
+		background: rgba($border, .5)
+		color: $text
+		.icon
+			fill: $text
+		&:hover
+			background: rgba($border, .75)
+	&_asphalt
+		background: $border-light
+		color: $text
+		&:hover
+			background: darken($border-light, 5)
+	&_wide
+		min-width: 100% 
+	&_square
+		min-width: 56px
+		padding: 0
+		font-size: 0
+	&[href]
+		display: inline-flex
+		justify-content: center
+		align-items: center
+
++dark
+	.btn
+		&_gray
+			background: $border-dark 
+			color: $wh
+			&:hover
+				background: rgba($border, .2)
+		&_purple-light
+			background: rgba($border, .2)
+			color: $blue
+			.icon
+				fill: $blue
+			&:hover
+				background: rgba($border, .1)
+		&_asphalt
+			background: rgba($border-light, .1)
+			color: $wh
+			.icon
+				fill: $wh
+			&:hover
+				background: rgba($border-light, .05)
+		&_white
+			background: $dark
+			color: $wh
+			&:hover
+				color: $purple  

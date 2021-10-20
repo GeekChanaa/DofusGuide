@@ -1,0 +1,176 @@
+.game
+	position: relative
+	border-radius: 24px
+	background: $wh
+	cursor: pointer
+	transition: box-shadow .25s  
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	&:before
+		content: ""
+		position: absolute
+		top: 15px
+		left: 7px
+		right: 7px
+		bottom: -15px
+		z-index: -1
+		+shadow-sm 
+	&.active
+		box-shadow: 0 0 0 4px $blue 
+	&__preview
+		position: relative
+		height: 170px
+		border-radius: 24px 24px 0 0 
+		+cover
+		.checkbox
+			position: absolute
+			top: 16px
+			left: 16px
+			z-index: 2
+			visibility: hidden
+			opacity: 0
+			transition: all .25s
+		.checkbox__tick
+			border-color: $wh 
+	&:hover .checkbox
+		visibility: visible
+		opacity: 1
+	&.active .checkbox
+		visibility: visible
+		opacity: 1
+	&__time
+		position: absolute
+		top: 16px
+		right: 16px
+		padding: 0 10px
+		border-radius: 6px
+		background: rgba($bl, .7)  
+		font-size: 13px
+		line-height: 24px
+		font-weight: 700
+		color: $wh
+	&__line
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 0
+		height: 4px
+		background: $bl
+	&__progress
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		background: $orange 
+	&__details
+		padding: 24px 24px 0
+	&__title
+		margin-bottom: 18px
+		font-size: 18px
+		line-height: (24/18)
+		font-weight: 500
+		transition: color .25s  
+	&:hover &__title
+		color: $blue
+	&__status
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 18px
+		.status
+			+nl
+				margin-right: 20px
+	&__name
+		display: flex
+		align-items: center
+		font-size: 13px
+		font-weight: 700 
+	&__logo
+		margin-right: 8px
+		font-size: 0
+	&__logo &__pic
+		max-width: 24px
+		max-height: 24px
+	&__actions
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 49px
+		margin: 24px -24px 0
+		padding: 0 24px 
+		border-top: 1px solid $border-light  
+	&__action
+		font-size: 0
+		.icon
+			font-size: 22px
+			fill: $gray-dark
+			transition: fill .25s 
+			&-eye
+				font-size: 16px
+			&-link
+				font-size: 12px
+		&:hover .icon
+			fill: $purple
+		+nl
+			margin-right: auto
+	&_line
+		display: flex
+		align-items: center
+		padding: 8px
+		&:before
+			top: 0
+			left: 0
+			right: 0
+			bottom: -8px
+		.game__preview
+			flex-shrink: 0
+			width: 240px
+			height: 170px
+			border-radius: 20px
+		.game__line
+			display: none
+		.game__details
+			padding: 12px 32px
+			+x
+				padding: 12px 24px 
+		.game__title
+			margin-bottom: 18px
+			padding-right: 130px
+		.game__name
+			position: absolute
+			top: 32px
+			right: 32px
+			flex-direction: row-reverse
+		.game__logo
+			margin: 0 0 0 8px 
+		.game__actions
+			justify-content: stretch
+			height: auto
+			margin: 0
+			padding: 0
+			border: none 
+		.game__action
+			+nl
+				margin-right: 36px
+		.status
+			+nl
+				margin-right: 20px
+
+body.touch-device .game .checkbox
+	visibility: visible
+	opacity: 1
+
++dark
+	.game
+		background: $dark1
+		&.active
+			box-shadow: 0 0 0 4px rgba($border-light, .1)
+		&:before
+			+shadow-sm-dark
+		&__preview
+			.checkbox__tick
+				border-color: $wh 
+		&__actions
+			border-color: rgba($border-light, .1) 
+
+
+
+

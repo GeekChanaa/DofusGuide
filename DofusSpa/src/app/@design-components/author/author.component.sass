@@ -1,0 +1,261 @@
+.author
+	&__container
+		display: flex
+		align-items: center
+		position: relative
+		padding: 48px
+		background: $wh
+		border-radius: 24px
+		+w
+			padding: 32px
+		+d
+			display: block
+		+m
+			padding: 24px 
+		&:before
+			content: ""
+			position: absolute
+			top: 16px
+			left: 16px
+			right: 16px
+			bottom: -16px
+			z-index: -1
+			+shadow
+	&__details
+		display: flex
+		align-items: center
+		margin-right: auto
+		+d
+			align-items: flex-start
+	&__man
+		+m
+			margin-bottom: 12px
+			font-size: 24px
+			font-weight: 500 
+		&.confirm
+			&:after
+				content: ""
+				position: relative
+				bottom: -1px
+				display: inline-block
+				margin-left: 15px
+				width: 32px
+				height: 32px
+				border-radius: 50%
+				background: $green url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='7' viewBox='0 0 8 7'%3E%3Cpolygon fill='%23FFF' points='6.8 9 5.2 7.4 4 8.6 6.8 11.4 12 6.2 10.8 5' transform='translate(-4 -5)'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 16px 13px   
+				+m
+					width: 20px
+					height: 20px
+					margin-left: 8px
+					background-size: 10px auto 
+	&__parameters
+		display: flex
+	&__parameter
+		+m
+			font-size: 13px
+		+nl
+			margin-right: 24px
+			+m
+				margin-right: 16px 
+	&__btns
+		display: flex
+		font-size: 0 
+		margin-left: 30px
+		+d
+			margin-left: 132px
+		+m
+			justify-content: flex-end
+			margin: 16px 0 0 0
+	&__btns &__btn
+		+nl
+			margin-right: 24px
+	&__row
+		display: flex
+		align-items: flex-start
+		+d
+			display: block
+	&__col
+		&:first-child
+			flex-grow: 1
+			padding-right: 32px
+			+d
+				padding: 0
+		&:nth-child(2)
+			flex-shrink: 0
+			width: 375px
+			padding: 32px 32px 16px
+			border-radius: 32px
+			border: 1px solid $border-light
+			+d
+				width: auto
+				margin: 32px 0 0 114px
+			+m
+				margin: 24px 0 0
+				padding: 24px   
+	&__line
+		display: flex
+		font-size: 13px
+		font-weight: 500 
+		+nl
+			margin-bottom: 24px
+	&__category
+		flex-shrink: 0
+		width: 100px
+		padding-right: 10px
+		color: $gray-dark  	
+	&__foot
+		margin: 40px -7px 0
+	&__foot &__btn
+		flex: 0 0 calc(50% - 14px)
+		min-width: calc(50% - 14px)
+		margin: 0 7px
+		padding: 0 10px 
+	&__wrap
+		flex-grow: 1
+	&__flex
+		display: flex 
+		+w
+			display: block
+		+d
+			display: flex
+		+t
+			display: block
+		+nl
+			margin-bottom: 40px
+			padding-bottom: 40px
+			border-bottom: 1px solid $border-light 
+			+m
+				padding: 0
+				border: none 
+	&__box
+		margin-right: auto
+	&__flex &__btns
+		+w
+			margin: 24px 0 0 
+		+d
+			margin: 0 0 0 30px
+		+t
+			margin: 24px 0 0 
+	&__note
+		max-width: 330px
+		line-height: (24/14)
+		color: $gray-dark
+		+m
+			max-width: 100%
+			margin-left: -82px 
+	.games
+		display: flex
+		margin: -24px -12px 0
+		+m
+			display: block
+			margin: 0 0 0 -82px 
+	.games__item
+		flex: 0 0 calc(50% - 24px)
+		width: calc(50% - 24px)
+		margin: 24px 12px 0 
+		+m
+			width: 100%
+			margin: 0
+			+nl
+				margin-bottom: 16px
+	&_big
+		margin-top: -126px
+		+w
+			margin-top: -90px
+		+m
+			margin: -96px -8px 0 
+		+nl
+			margin-bottom: 46px
+			+m
+				margin-bottom: 32px
+	&_big .ava
+		flex-shrink: 0 
+		width: 124px
+		height: 124px
+		margin-right: 32px
+		border-width: 7px
+		box-shadow: 0 0 0 4px $blue-dark
+		+w
+			width: 100px
+			height: 100px
+		+m
+			width: 66px
+			height: 66px
+			margin-right: 16px
+			border-width: 3px
+			box-shadow: 0 0 0 2px $blue-dark
+		&_online:before
+			top: -6px
+			right: -6px
+			width: 32px
+			height: 32px
+			+w
+				width: 24px
+				height: 24px
+	&_big &__man
+		+w
+			font-size: 40px
+		+m
+			font-size: 24px
+	&_full
+		+nl
+			margin-bottom: 64px  
+			+m
+				margin-bottom: 48px
+	&_full &__details
+		align-items: flex-start
+	&_full .ava
+		flex-shrink: 0 
+		width: 90px
+		height: 90px
+		margin-right: 24px
+		border-width: 4px
+		box-shadow: 0 0 0 2px $blue-dark
+		+m
+			width: 66px
+			height: 66px
+			margin-right: 16px
+			border-width: 3px
+		&_online:before
+			top: -4px
+			right: -4px
+			width: 24px
+			height: 24px
+			+m
+				top: -2px
+				right: -2px
+				width: 16px
+				height: 16px
+	&_full &__man
+		margin-bottom: 14px
+	&_full &__parameters
+		margin-bottom: 18px 
+	&_full &__btns
+		+m
+			justify-content: stretch 
+			margin-left: -82px
+	&_full &__btn.btn_purple
+		+m
+			min-width: calc(100% - 80px)
+
++dark
+	.author
+		&__container
+			background: $dark1
+			&:before
+				+shadow-dark
+		.ava_online:before
+			border-color: $dark1 
+		&__flex
+			+nl
+				border-color: rgba($border-light, .1)
+		&__col:nth-child(2)
+			border-color: rgba($border-light, .1)
+			background: $dark1 
+
+
+
+
+
+
+   

@@ -1,0 +1,274 @@
+.details
+	&__container
+		position: relative
+		padding: 32px 32px 38px 
+		background: $wh
+		border-radius: 24px
+		+m
+			padding-bottom: 32px  
+		&:before
+			content: ""
+			position: absolute
+			top: 28px
+			left: 18px
+			right: 18px
+			bottom: -28px
+			z-index: -1
+			+shadow
+	&__title
+		margin-bottom: 40px
+		+m
+			margin-bottom: 24px
+	&__row
+		display: flex
+		margin-bottom: 30px
+		+m
+			display: block
+			margin-bottom: 16px
+	&__col
+		&:first-child
+			flex-shrink: 0
+			width: 170px
+			padding-right: 24px
+			+m
+				display: flex
+				align-items: flex-end
+				width: auto
+				margin: 0 -5px 16px
+				padding: 0 
+		&:nth-child(2)
+			flex: 0 0 calc(100% - 170px)
+			width: calc(100% - 170px) 
+			max-width: calc(100% - 170px)
+			+m
+				width: 100%
+				max-width: 100%  
+	&__top
+		margin-bottom: 16px
+		padding-bottom: 16px
+		border-bottom: 1px solid $border 
+		+m
+			flex: 0 0 calc(50% - 10px)
+			margin: 0 5px
+			padding: 0
+			border: none
+	&__bottom
+		+m
+			flex: 0 0 calc(50% - 10px)
+			margin: 0 5px 
+	&__container &__number
+		+m
+			font-size: 56px
+			line-height: 1
+	&__flex
+		display: flex
+		align-items: center
+		+nl
+			margin-bottom: 16px
+	&__line
+		display: flex
+		align-items: center
+		color: $link 
+		transition: color .25s
+		&:hover
+			color: $purple 
+	&__preview
+		font-size: 0
+	&__line &__preview
+		width: 32px
+		flex-shrink: 0 
+		margin-right: 16px
+	&__statistics
+		display: flex
+		align-items: center
+		margin-bottom: 20px
+		+m
+			margin-bottom: 32px
+	&__status
+		display: flex
+		align-items: center
+	&__status &__icon
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 16px
+		height: 16px
+		margin-right: 4px
+		border-radius: 50%
+		font-size: 0 
+		.icon
+			font-size: 6px
+			fill: $wh
+	&__box
+		position: relative
+		padding: 5px 5px 13px 
+		border-radius: 16px
+		background: $blue
+	&__chart
+		&_activity
+			width: 60px
+			height: 25px
+		&_counter
+			height: 200px
+			.apexcharts-tooltip.apexcharts-theme-light
+				background: $bl
+				border: none  
+				color: $wh
+	&__list
+		display: flex
+		border-radius: 16px
+		border: 1px solid $border-light
+		+m
+			flex-wrap: wrap  
+	&__item
+		flex: 0 0 25%
+		width: 25%
+		padding: 24px 
+		+m
+			flex: 0 0 50%
+			width: 50%
+		+nl
+			border-right: 1px solid $border-light 
+			+m
+				border-right: none  
+		&:nth-child(2n+1)
+			+m
+				border-right: 1px solid $border-light 
+		&:nth-child(n+3)
+			+m
+				border-top: 1px solid $border-light
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 8px
+	&__head &__preview
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 16px
+		height: 16px 
+		margin-right: 8px
+		border-radius: 6px
+		font-size: 0
+	&__head &__pic
+		max-width: 8px
+	&__indicator
+		position: relative
+		height: 2px
+		border-radius: 1px
+		background: $border 
+	&__progress
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0 
+	&__remove
+		position: absolute
+		top: 8px
+		right: 8px
+		z-index: 2
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		background: $wh
+		font-size: 0
+		.icon
+			font-size: 10px
+			transition: transform .25s
+		&:hover .icon
+			transform: rotate(90deg)
+	&_sm &__chart_activity
+		width: 60px
+		margin-left: auto
+		padding: 0
+	&_sm &__chart_counter
+		height: 210px
+	&_sm &__line
+		margin-right: auto
+	&_sm &__status
+		flex-shrink: 0 
+		margin-left: 20px
+	&_sm &__box
+		margin-bottom: 16px
+		padding: 5px 10px 0 3px
+	&_sm &__container
+		padding: 16px
+		+m
+			padding: 16px 
+		&:before
+			top: 0
+			left: 11px
+			right: 11px
+			bottom: -30px
+	&_sm &__list
+		flex-wrap: wrap
+	&_sm &__item
+		flex: 0 0 50%
+		width: 50%
+		padding: 16px
+		+m
+			padding: 24px 
+		+nl
+			border-right: none  
+		&:nth-child(2n+1)
+			border-right: 1px solid $border-light 
+		&:nth-child(n+3)
+			border-top: 1px solid $border-light
+	&_big
+		+nl
+			margin-bottom: 90px
+			+d
+				margin-bottom: 56px
+	&_big &__container
+		+m
+			padding: 16px 
+		&:before
+			left: 40px
+			right: 40px
+			+m
+				left: 15px
+				right: 15px
+	&_big &__number
+		margin-bottom: 16px
+	&_big &__line
+		color: $blue 
+	&_big &__chart_activity
+		width: 80px
+		margin-right: auto
+
++dark
+	.details
+		&__container
+			background: $dark1
+			&:before
+				+shadow-dark
+		&__list
+			border-color: rgba($border-light, .1) 
+		&__item
+			border-color: red
+		&__indicator
+			background: rgba($border-light, .1) 
+		&__chart
+			&_counter
+				.apexcharts-tooltip.apexcharts-theme-light
+					color: $wh
+		&__top
+			border-color: rgba($border-light, .1)
+		&_sm .details__item
+			&:nth-child(2n+1)
+				border-color: rgba($border-light, .1)
+			&:nth-child(n+3)
+				border-color: rgba($border-light, .1)
+		&_big .details__item
+			+nl
+				border-color: rgba($border-light, .1)   
+			&:nth-child(2n+1)
+				+m
+					border-color: rgba($border-light, .1)  
+			&:nth-child(n+3)
+				+m
+					border-color: rgba($border-light, .1) 
+				
+		

@@ -1,0 +1,135 @@
+.popular
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 32px
+		+m
+			display: block
+	&__title
+		margin-right: auto
+		+m
+			margin: 0 0 24px 
+	&__field
+		min-width: 235px
+		margin-left: 30px
+		+m
+			min-width: 100%
+			margin: 0 
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: -40px -16px 0
+		+d
+			margin-top: -24px
+		+m
+			display: block
+			margin: 0
+	&__item
+		position: relative
+		flex: 0 0 calc(25% - 32px)
+		width: calc(25% - 32px)
+		margin: 40px 16px 0
+		padding: 8px 
+		border-radius: 24px
+		background: $wh
+		color: $text 
+		+d
+			flex: 0 0 calc(50% - 32px)
+			width: calc(50% - 32px)
+			margin-top: 24px
+		+m
+			display: block
+			width: 100%
+			margin: 0 
+		&:before
+			content: ""
+			position: absolute
+			top: 24px
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+			background: #F0F3F6
+			filter: blur(43.4925px)
+			border-radius: 24px
+			transition: all .25s
+		+nl
+			+m
+				margin-bottom: 32px
+		&:hover:before
+			background: #A5ACB4
+			+m
+				background: #F0F3F6
+	&__preview
+		position: relative
+		height: 310px
+		+cover
+		border-radius: 24px 
+	&__category
+		position: absolute
+		top: 16px
+		left: 16px
+		padding: 0 20px
+		background: rgba($bl, .5) 
+		border-radius: 8px 
+		font-size: 13px
+		font-weight: 700 
+		line-height: 24px
+		color: $wh 
+	&__body
+		padding: 24px 24px 8px
+		+x
+			padding: 24px 16px 8px 
+	&__game
+		margin-bottom: 8px
+	.status
+		margin-bottom: 16px
+	&__btn
+		position: relative
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		min-width: 130px
+		height: 56px
+		background: rgba($border, .5)
+		border-radius: 16px 
+		font-size: 14px
+		font-weight: 700
+		color: $text
+		transition: all .25s
+	&__item:hover &__btn
+		min-width: 100% 
+		background: $purple
+		color: $wh
+	&__text-show,
+	&__text-hide
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		white-space: nowrap
+		transition: opacity .25s
+	&__text-hide
+		opacity: 0
+	&__item:hover &__text-show
+		opacity: 0
+	&__item:hover &__text-hide
+		opacity: 1   
+	+nl
+		margin-bottom: 55px
+
++dark
+	.popular
+		&__item
+			background: $dark1
+			color: $wh 
+			&:before
+				+shadow-sm-dark
+		&__btn
+			background: $border-dark
+			color: $wh
+		&__item &__btn
+			background: $border-dark
+			color: $wh
+		 
+				

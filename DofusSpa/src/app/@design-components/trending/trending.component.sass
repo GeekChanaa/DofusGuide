@@ -1,0 +1,223 @@
+.trending
+	&__row
+		display: flex
+		+w
+			display: block
+	&__col
+		&:first-child
+			flex: 0 0 calc(100% - 240px)
+			width: calc(100% - 240px)
+			padding-right: 32px
+			+w
+				width: 100%
+				padding: 0 
+		&:nth-child(2)
+			flex: 0 0 240px
+			width: 240px
+			padding-top: 88px
+			+w
+				width: 100%
+				padding-top: 60px
+	&__sorting
+		display: flex
+		margin-bottom: 32px
+		+m
+			margin: 0 -8px 32px 
+	&__tags
+		display: flex
+		flex-wrap: wrap
+		margin: -8px auto 0 -8px
+		+m
+			display: none
+	&__tag
+		min-width: 96px
+		margin: 8px 0 0 8px
+		padding: 0 25px 
+		border-radius: 16px 
+		background: rgba($purple, .1) 
+		text-align: center 
+		line-height: 56px
+		font-size: 13px
+		font-weight: 700
+		color: $link 
+		transition: opacity .25s 
+		+d
+			padding: 0 20px 
+		&:hover
+			opacity: .8 
+		&_all
+			background: $purple
+			color: $wh  
+	&__field
+		flex-shrink: 0
+		width: 210px
+		margin-left: 20px
+		+m
+			flex: 0 0 calc(50% - 16px)
+			width: calc(50% - 16px)
+			margin: 0 8px
+			.field__select
+				padding: 0 40px 0 16px
+				background-position: calc(100% - 16px) 52%   
+	&__title
+		margin-bottom: 40px 
+		+m
+			margin-bottom: 32px
+	.card
+		&:before
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+		+nl
+			margin-bottom: 24px
+	&__btns
+		margin-top: 32px
+		text-align: center
+	&__item
+		+w
+			margin-left: -10px
+			margin-right: -10px
+		+m
+			margin-left: 0
+			margin-right: 0
+		+nl
+			margin-bottom: 48px
+		.slick-arrow
+			position: absolute
+			top: -66px
+			width: 32px
+			height: 32px
+			border-radius: 50%
+			background: $wh
+			box-shadow: 0 5px 15px rgba($bl, .08)
+			font-size: 0
+			transition: background .25s  
+			.icon
+				font-size: 10px
+				fill: $text
+				transition: fill .25s 
+			&:hover
+				background: $blue
+				.icon
+					fill: $wh
+		.slick-next
+			right: 10px
+		.slick-prev
+			right: 52px
+	&__item &__title
+		+w
+			padding: 0 10px
+		+m
+			padding: 0
+	&__slider
+		+w
+			visibility: hidden
+			&.slick-initialized
+				visibility: visible
+		+m
+			visibility: visible
+		+nl
+			margin-bottom: 24px
+			+w
+				margin: 0
+			+m
+				margin-bottom: 24px
+	&__slide
+		+w
+			padding: 0 10px 
+		+m
+			padding: 0 
+		+nl
+			margin-bottom: 24px
+			+w
+				margin: 0
+			+m
+				margin-bottom: 24px
+	&__group
+		+nl
+			margin-bottom: 24px
+	&__user
+		display: flex
+		align-items: center
+		font-weight: 500 
+		color: $text 
+		transition: color .25s
+		&:hover
+			color: $purple 
+	&__group &__user
+		+nl
+			margin-bottom: 24px
+	&__ava
+		flex-shrink: 0
+		width: 56px
+		height: 56px
+		margin-right: 16px
+		font-size: 0
+	&__pic
+		width: 100%
+		min-height: 100%
+	&__man
+		margin-bottom: 2px
+		font-size: 13px
+		&.confirm
+			&:after
+				content: ""
+				position: relative
+				bottom: -2px
+				display: inline-block
+				margin-left: 5px
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				background: $green url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='7' viewBox='0 0 8 7'%3E%3Cpolygon fill='%23FFF' points='6.8 9 5.2 7.4 4 8.6 6.8 11.4 12 6.2 10.8 5' transform='translate(-4 -5)'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 8px 7px  
+	&__user &__game
+		margin-bottom: 2px
+		font-size: 12px
+		color: $gray-dark
+	&__box
+		display: flex
+		align-items: center
+		font-weight: 500
+		color: $text 
+		transition: color .25s
+		&:hover
+			color: $purple 
+		+nl
+			margin-bottom: 24px 
+	&__preview
+		flex-shrink: 0
+		width: 56px
+		margin-right: 16px
+		font-size: 0
+	&__pic
+		border-radius: 12px
+	&__box &__game
+		margin-bottom: 8px
+		font-size: 13px
+	&__box &__text
+		font-size: 12px
+		color: $gray-dark
+	&__item > &__btn
+		+w
+			display: none
+		+m
+			display: inline-block
+			min-width: 185px
+
++dark
+	.trending
+		&__tag:not(.trending__tag_all)
+			background: $border-dark
+			color: rgba($wh, .5) 
+		&__user,
+		&__box
+			color: $wh
+			&:hover
+				color: $purple  
+		.slick-arrow
+			background: $dark1
+			.icon
+				fill: $wh
+			&:hover
+				background: $purple

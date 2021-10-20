@@ -1,0 +1,104 @@
+.editor
+	&__wrap
+		background: rgba($border, .25)
+		border-radius: 12px
+	&__head
+		display: flex
+		padding: 24px 16px 
+		border-bottom: 1px solid $border-light
+		+m
+			padding: 24px 16px  
+	&__control
+		display: flex
+		flex-wrap: wrap
+		margin: -16px auto 0 -16px
+	&__action
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0
+		width: 24px
+		height: 24px
+		margin: 16px 0 0 16px 
+		border-radius: 4px
+		background: $border-light
+		font-size: 0
+		transition: all .25s 
+		.icon
+			font-size: 12px
+			fill: $gray-dark
+			transition: fill .25s
+		&:hover
+			.icon
+				fill: $text
+		&.active
+			background: $bl
+			.icon
+				fill: $wh
+	&__add
+		position: relative
+		flex-shrink: 0
+		width: 24px
+		height: 24px
+		margin-left: 30px
+		border-radius: 50%
+		background: $bl
+		transition: all .25s 
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%) 
+			background: $wh
+		&:before
+			width: 8px
+			height: 2px
+		&:after
+			width: 2px
+			height: 8px
+		&:hover
+			background: rgba($bl, .8)
+	&__body
+		padding: 16px
+	&__textarea
+		width: 100%
+		height: 110px
+		border: none
+		background: none
+		resize: none
+		font-size: 14px
+	&__btn
+		min-width: 195px
+		margin-top: 16px
+		+m
+			min-width: 100% 
+
++dark
+	.editor
+		&__wrap
+			background: $border-dark
+		&__head
+			border-color: $border-dark
+		&__action
+			background: rgba($border-light, .1)
+			&:hover
+				.icon
+					fill: $wh
+			&.active
+				background: $wh
+				.icon
+					fill: $text
+		&__textarea
+			color: $wh
+		&__add
+			background: $wh
+			&:before,
+			&:after
+				background: $text
+			&:hover
+				background: $dark
+				&:before,
+				&:after
+					background: $wh

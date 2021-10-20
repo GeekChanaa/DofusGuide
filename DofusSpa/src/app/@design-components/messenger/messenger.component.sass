@@ -1,0 +1,251 @@
+.messenger
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	width: 375px
+	border-radius: 32px
+	background: $wh
+	border: 1px solid $border-light
+	+d
+		left: 0
+		z-index: 5
+		transform: scale(.8)
+		visibility: hidden
+		opacity: 0
+		width: auto
+		border-radius: 28px
+		transition: all .25s  
+		&.show
+			transform: scale(1)
+			visibility: visible
+			opacity: 1
+	+m
+		position: fixed
+		top: 80px
+		border: none
+		border-radius: 0  
+	&__head
+		display: flex
+		align-items: center
+		height: 84px
+		padding: 0 32px
+		+m
+			height: 64px
+			padding: 0 24px 
+	&__full
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		box-shadow: 0 2px 7px rgba(#000, .1)   
+		font-size: 0 
+		transition: all .25s 
+		+d
+			display: none
+		.icon
+			font-size: 10px
+			fill: $text
+			transition: fill .25s 
+		&:hover
+			box-shadow: 0 5px 15px rgba(#000, .1) 
+			.icon
+				fill: $purple
+	&__close
+		display: none
+		width: 48px
+		height: 48px
+		border-radius: 50%
+		background: $bl
+		font-size: 0
+		+d
+			display: inline-block
+		+m
+			width: 40px
+			height: 40px
+		.icon
+			font-size: 14px
+			fill: $wh
+	&__body
+		position: relative
+		bottom: -1px
+		height: calc(100% - 84px) 
+		margin: 0 -1px
+		padding: 32px 0 90px 32px
+		border-radius: 32px
+		border: 1px solid $border-light
+		+m
+			height: calc(100% - 64px) 
+			padding: 0 0 70px 24px 
+			border: none 
+		&:before
+			content: "" 
+			position: absolute
+			left: 0
+			bottom: 90px
+			right: 0
+			z-index: 3
+			height: 24px
+			pointer-events: none
+			background: linear-gradient(to top, $wh 0, rgba($wh, 0) 100%) 
+			+m
+				bottom: 70px
+	&__list
+		max-height: 100%
+		overflow: auto
+		padding-right: 16px
+		padding-bottom: 24px 
+	&__item
+		display: flex
+		+nl
+			margin-bottom: 24px
+	&__ava
+		flex-shrink: 0
+		width: 32px
+		height: 32px
+		margin-right: 12px
+		font-size: 0
+	&__ava &__pic
+		width: 100%
+		min-height: 100%
+	&__details
+		flex-grow: 1
+	&__top
+		display: flex
+		align-items: center
+		margin-bottom: 11px
+	&__man
+		font-size: 13px
+		font-weight: 700
+	&__time
+		margin-left: 12px
+		font-size: 12px
+		color: $gray-dark
+	&__group
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+	&__text
+		position: relative
+		padding: 12px 23px
+		border-radius: 20px 
+		background: rgba($border, .5)
+		line-height: (24/14) 
+		color: $gray-dark 
+		cursor: pointer
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		&:nth-child(2n+1)
+			border-top-left-radius: 4px
+		&:nth-child(2n)
+			border-bottom-left-radius: 4px 
+		+nl
+			margin-bottom: 4px
+	&__foot
+		position: absolute
+		left: 8px
+		bottom: 10px
+		right: 8px
+		+m
+			left: 0
+			right: 0
+			bottom: 0
+	&__input
+		width: 100%
+		height: 80px
+		padding: 0 145px 0 64px 
+		border-radius: 25px
+		background: $border-light
+		font-size: 13px
+		font-weight: 700 
+		color: $text
+		+m
+			height: 70px
+			border-radius: 0 
+		+placeholder
+			color: $text 
+	&__smile
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 64px
+		padding-left: 8px
+		font-size: 0
+		.icon
+			font-size: 16px
+			fill: $gray-dark
+			transition: fill .25s
+		&:hover .icon
+			fill: $purple
+	&__btn
+		position: absolute
+		top: 50%
+		right: 12px
+		transform: translateY(-50%)
+		min-width: 122px
+	&__report
+		position: absolute
+		top: 0
+		right: 0
+		width: 23px
+		height: 48px 
+		font-size: 0
+		visibility: hidden
+		opacity: 0
+		transition: all .25s  
+		.icon
+			font-size: 16px
+	&__text:hover &__report
+		visibility: visible
+		opacity: 1
+	&__tooltip
+		position: absolute
+		right: -12px
+		bottom: calc(100% - 5px)
+		min-width: 76px
+		padding: 0 10px
+		border-radius: 16px
+		background: $blue  
+		text-align: center 
+		font-size: 12px
+		font-weight: 700 
+		line-height: 24px
+		color: $wh 
+		visibility: hidden
+		opacity: 0
+		transition: all .25s 
+		&:before
+			content: ""
+			position: absolute
+			top: 100%
+			right: 16px
+			+arr(16,6,$blue,b)
+	&__report:hover &__tooltip
+		visibility: visible
+		opacity: 1 
+
++dark
+	.messenger
+		border-color: $border-dark
+		background: $dark1
+		&__full
+			background: $dark1 
+			.icon
+				fill: $wh
+			&:hover .icon
+				fill: $blue
+		&__body
+			border-color: $border-dark
+			&:before
+				background: linear-gradient(to top, $dark1 0, rgba($dark1, 0) 100%) 
+		&__text
+			background: $border-dark 
+		&__input
+			background: $dark
+			color: $wh
+			+placeholder
+				color: $wh  
+		 

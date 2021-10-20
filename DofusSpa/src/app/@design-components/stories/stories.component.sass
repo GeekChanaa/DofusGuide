@@ -1,0 +1,174 @@
+.stories
+	&__container
+		margin: 0 -12px
+	&__slide
+		height: 812px
+		margin: 0 12px 
+		padding: 56px 0
+		transition: padding .25s
+		+w
+			height: 712px
+			padding: 40px 0
+		+d
+		 	height: 650px 
+		 	padding: 45px 0 
+		+t
+			height: 750px
+			padding: 0
+		+m
+			min-height: 500px
+			height: 100vh 
+	&__item
+		position: relative
+		height: 100% 
+		padding: 32px 
+		border-radius: 24px 
+		+cover
+		transition: height .25s
+		+m
+			padding: 24px
+			border-radius: 0   
+		&:before
+			content: ""
+			+coverdiv
+			background: linear-gradient(180deg, rgba(9, 10, 11, 0.671247) 13.03%, rgba(0, 0, 0, 0.366149) 57.3%) 
+			border-radius: 24px 
+			+m
+				border-radius: 0 
+	&__progress
+		position: relative
+		z-index: 2
+		display: flex
+		margin: 0 -2px 24px
+	&__line
+		flex: 1
+		height: 4px
+		border-radius: 2px 
+		margin: 0 2px
+		background: rgba($wh, .4)
+		transition: background .25s 
+		&.active
+			background: rgba($wh, .8)
+	&__user
+		position: relative
+		z-index: 2
+		display: flex
+		align-items: center
+		font-weight: 500 
+		color: $wh
+		transition: color .25s
+		+nl
+			margin-bottom: 24px
+	&__ava
+		flex-shrink: 0
+		width: 56px
+		height: 56px
+		margin-right: 16px
+		font-size: 0
+	&__pic
+		width: 100%
+		min-height: 100%
+	&__man
+		margin-bottom: 2px
+		font-size: 13px
+		&.confirm
+			&:after
+				content: ""
+				position: relative
+				bottom: -2px
+				display: inline-block
+				margin-left: 5px
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				background: $green url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='7' viewBox='0 0 8 7'%3E%3Cpolygon fill='%23FFF' points='6.8 9 5.2 7.4 4 8.6 6.8 11.4 12 6.2 10.8 5' transform='translate(-4 -5)'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 8px 7px  
+	&__user &__game
+		margin-bottom: 2px
+		font-size: 12px
+	.status
+		color: $wh
+	&__form
+		position: absolute
+		left: 8px
+		right: 8px
+		bottom: 8px
+		z-index: 2
+	&__input
+		width: 100%
+		height: 80px
+		padding: 0 145px 0 64px 
+		border-radius: 25px
+		background: rgba($border, .1)
+		font-size: 13px
+		font-weight: 700 
+		color: $wh
+		+d
+			padding: 0 120px 0 56px 
+		+placeholder
+			color: $wh 
+	&__smile
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 64px
+		padding-left: 12px
+		font-size: 0
+		transition: opacity .25s 
+		+d
+			width: 56px
+			padding-left: 8px
+		.icon
+			font-size: 16px
+			fill: $wh
+		&:hover
+			opacity: .8 
+	&__btn
+		position: absolute
+		top: 50%
+		right: 12px
+		transform: translateY(-50%)
+		min-width: 122px
+		+d
+			min-width: 100px
+	.slick-list
+		padding: 0 !important
+	.slick-center
+		padding: 0
+	.slick-arrow
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 3
+		width: 48px
+		height: 48px
+		border-radius: 50%
+		background: $blue
+		font-size: 0
+		transition: background .25s 
+		.icon
+			font-size: 12px
+			fill: $wh
+		&:hover
+			background: $blue-dark 
+	.slick-prev
+		left: -56px
+		+x
+			left: -12px
+		+d
+			left: 32px
+		+t
+			left: -56px
+		+m
+			left: 32px
+	.slick-next
+		right: -56px
+		+x
+			right: -12px
+		+d
+			right: 32px
+		+t
+			right: -56px
+		+m
+			right: 32px
+

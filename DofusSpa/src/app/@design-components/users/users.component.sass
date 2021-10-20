@@ -1,0 +1,105 @@
+.users
+	&__container
+		position: relative
+		padding: 32px
+		background: $wh
+		border-radius: 24px 
+		+m
+			padding: 0
+			background: none 
+			border-radius: 0   
+		&:before
+			content: ""
+			position: absolute
+			top: 14px
+			left: 32px
+			right: 32px
+			bottom: -14px
+			z-index: -1
+			+shadow 
+			+m
+				display: none
+	&__info
+		margin-bottom: 42px
+		+m
+			margin-bottom: 24px
+	&__list
+		display: flex
+		margin: 0 -20px
+		align-items: flex-start 
+		+m
+			margin: 0 -24px 
+			padding: 5px 0 0
+			overflow: auto
+			-ms-overflow-style: none
+			scrollbar-width: none
+			-webkit-overflow-scrolling: touch
+			&::-webkit-scrollbar
+				display: none  
+			&:before,
+			&:after
+				content: ""
+				flex-shrink: 0
+				width: 10px
+				height: 1px
+	&__item
+		flex: 1
+		padding: 0 15px
+		text-align: center
+		font-weight: 500 
+		color: $text
+		transition: color .25s
+		+w
+			padding: 0 5px
+		+d
+			padding: 0 10px
+		+m
+			flex-shrink: 0 
+			min-width: 102px 
+		&:hover
+			color: $purple 
+		&:nth-child(n+6)
+			+d
+				display: none
+			+m
+				display: block
+	.ava
+		margin: 0 auto 16px
+	&__title
+		font-size: 13px
+		font-weight: 500 
+	&__time
+		margin-top: 8px
+		font-size: 12px
+		color: $gray-dark
+	&__add
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 72px
+		height: 72px
+		margin: -2px auto 15px
+		background: $purple
+		border-radius: 50% 
+		font-size: 0
+		.icon
+			font-size: 20px
+			fill: $wh
+			transition: transform .25s
+	&__item_add:hover .icon
+		transform: rotate(90deg) 
+	+nl
+		margin-bottom: 54px
+		
++dark
+	.users
+		&__container
+			background: $dark1
+			+m
+				background: none 
+			&:before
+				+shadow-dark
+		&__item
+			color: $wh
+			&:hover
+				color: $blue  

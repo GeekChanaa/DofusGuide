@@ -1,0 +1,325 @@
+.main
+	&__container
+		position: relative
+	&__for,
+	&__nav,
+	&__slider
+	  visibility: hidden
+	  &.slick-initialized
+	    visibility: visible
+	&__item
+		position: relative
+		display: flex
+		align-items: flex-end
+		min-height: 488px
+		padding: 64px 
+		+cover
+		+t
+			padding: 64px 40px
+		+m
+			min-height: calc(100vh - 80px) 
+			padding: 40px 24px 160px
+		&:before
+			content: ""
+			+coverdiv 
+			background-image: linear-gradient(180deg, rgba(58,62,69,0.00) 31%, rgba(27,29,33,0.90) 82%)
+			+m
+				background: linear-gradient(360deg, rgba(27, 29, 33, 0.769012) 33.51%, rgba(27, 29, 33, 0.0001) 100%)
+	&__details
+		position: relative
+		z-index: 2
+		max-width: 515px
+		color: $wh 
+	&__live
+		margin-bottom: 8px
+	&__title
+		margin-bottom: 8px
+	&__parameters
+		display: flex
+		align-items: center
+		margin-bottom: 24px
+	&__parameter
+		display: flex
+		align-items: center
+		+nf
+			margin-left: 12px
+			&:before
+				content: "•"
+				margin-right: 12px 
+	&__icon
+		margin-right: 8px
+		font-size: 0
+	&__icon &__pic
+		max-width: 24px
+	&__btn
+		min-width: 130px
+	&__nav
+		position: absolute
+		right: 58px
+		bottom: 52px
+		max-width: 444px
+		+m
+			left: -6px
+			right: -6px
+			bottom: 46px
+			max-width: 375px
+			margin: 0 auto
+			padding: 0 24px   
+		.slick-list
+			padding: 12px 6px
+	&__preview
+		height: 56px
+		margin: 0 6px
+		+cover
+		border-radius: 12px 
+		font-size: 0
+		cursor: pointer
+		transition: box-shadow .25s
+		&:hover
+			box-shadow: 0 0 6px 1px rgba($wh, .8)
+		&.slick-current
+			box-shadow: 0 0 6px 2px $wh
+	&__foot
+		display: flex
+		justify-content: space-between
+		max-width: 785px
+		margin-top: 40px
+		font-size: 13px
+		font-weight: 500
+		color: $gray-dark
+		+d
+			max-width: 590px
+		+m
+			display: none
+	&__line
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 3
+		background: rgba($wh, .1) 
+	&__progress
+		position: relative
+		z-index: 2
+		display: block
+		width: 100%
+		height: 4px
+		overflow: hidden
+		background-image: linear-gradient(to right, $purple, $purple)
+		background-repeat: no-repeat
+		background-size: 0 100%
+		transition: background-size .3s ease-in-out
+	.status__sign
+		padding: 0 4px 
+	&__nav .slick-arrow
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 2
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		background: $blue
+		font-size: 0
+		transition: background .25s
+		.icon
+			font-size: 9px
+			fill: $wh
+		&:hover
+			background: darken($blue, 10) 
+	&__nav .slick-prev
+		left: -3px
+		padding-right: 1px
+		+m
+			left: 18px
+	&__nav .slick-next
+		right: -3px
+		padding-left: 2px
+		+m
+			right: 18px
+	&__for .slick-arrow
+		position: absolute
+		visibility: hidden
+		opacity: 0
+	.slick-dots
+		position: absolute
+		left: 16px
+		bottom: -58px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 785px
+		+d
+			width: 590px
+		li
+			button
+				position: relative
+				width: 16px
+				height: 16px
+				font-size: 0
+				&:before,
+				&:after
+					content: ""
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%,-50%)
+					width: 8px
+					height: 8px
+					border-radius: 50%
+					transition: all .25s
+				&:before
+					z-index: 2
+					background: $border
+				&:after
+					background: transparent
+				&:hover:before
+					background: darken($border, 10)  
+			&.slick-active button
+				&:before
+					background: $wh
+					box-shadow: 0 2px 4px 0 rgba(0,0,0,0.24)
+				&:after
+					transform: translate(-50%,-50%) scale(2)
+					background: $blue 
+			+nl
+				margin-right: 24px
+				+d
+					margin-right: 20px
+	&_trending
+		.slick-arrow
+			position: absolute
+			top: 16px
+			z-index: 2
+			width: 32px
+			height: 32px
+			border-radius: 50%
+			background: $wh
+			font-size: 0
+			transition: background .25s
+			.icon
+				font-size: 10px
+				fill: $text
+				transition: fill .25s 
+			&:hover
+				background: $blue
+				.icon
+					fill: $wh
+		.slick-prev
+			right: 72px
+			padding-right: 1px
+		.slick-next
+			right: 32px
+			padding-left: 2px
+	&_trending &__body
+		margin: 0 -80px 0 -16px
+		+t
+			margin-right: -56px
+		+m
+			margin: 0 -24px 
+	&_trending &__item
+		width: 785px
+		min-height: 560px
+		margin: 0 16px 
+		border-radius: 32px
+		overflow: hidden
+		+d
+			width: 590px
+		+m
+			display: flex
+			align-items: flex-end
+			width: auto
+			min-height: 580px
+			padding: 16px
+			&:before
+				background: linear-gradient(180deg, rgba(58, 62, 69, 0.0001) 30.57%, rgba(27, 29, 33, 0.900787) 81.59%)
+	&_trending &__title
+		+m
+			font-size: 24px 
+	&_channel &__item
+		padding-bottom: 188px
+		+w
+			padding-bottom: 150px
+		+m
+			min-height: 580px
+			padding-bottom: 180px 
+		&:before
+			background: linear-gradient(180deg, rgba(58, 62, 69, 0.0001) -65.29%, rgba(27, 29, 33, 0.900787) 100%)
+	&_channel &__nav
+		bottom: 177px
+		+w
+			bottom: 136px
+		+m
+			display: none
+	&_channel &__btn
+		min-width: 164px
+	&_channel &__for .slick-arrow
+		position: absolute
+		top: 64px
+		z-index: 2
+		width: 48px
+		height: 48px
+		border-radius: 50%
+		background: $wh
+		visibility: visible
+		opacity: 1
+		font-size: 0
+		transition: background .25s
+		+w
+			top: 90px
+		+m
+			top: auto
+			bottom: 190px
+			width: 32px
+			height: 32px
+		.icon
+			font-size: 10px
+			fill: $text
+			transition: fill .25s 
+		&:hover
+			background: $purple
+			.icon
+				fill: $wh 
+	&_channel &__for .slick-prev
+		right: 120px
+		padding-right: 1px
+		+m
+			right: 66px
+	&_channel &__for .slick-next
+		right: 64px
+		padding-left: 2px
+		+m
+			right: 24px
+
++dark
+	.main
+		&__line
+			background: rgba($border-dark, .1)
+		.slick-dots
+			li
+				button
+					&:before
+						z-index: 2
+						background: rgba($border-light, .1)
+					&:hover:before
+						background: rgba($border-light, .3)
+				&.slick-active button
+					&:before
+						background: $wh
+		&_trending
+			.slick-arrow
+				background: $dark1
+				.icon
+					fill: $wh
+				&:hover
+					background: $purple
+		&_channel .main__for
+			.slick-arrow
+				background: $dark1
+				.icon
+					fill: $wh
+				&:hover
+					background: $purple
+
+
+

@@ -1,0 +1,208 @@
+.categories
+	&__info
+		margin-bottom: 36px
+		+m
+			margin-bottom: 32px
+	&__list
+		margin: -32px -16px 0
+		+clr
+		+d
+			display: flex
+			flex-wrap: wrap
+		+m
+			display: block
+			margin: 0
+	&__item
+		position: relative
+		width: calc(50% - 32px)
+		margin: 32px 16px 0
+		border-radius: 24px
+		background: $wh
+		cursor: pointer
+		+m
+			width: 100%
+			max-width: 100% 
+			margin: 0   
+		&_big
+			float: left
+			color: $wh 
+			+d
+				float: none
+				flex: 0 0 calc(50% - 32px)
+				width: calc(50% - 32px)
+				max-width: calc(50% - 32px)
+				padding: 8px
+				color: $text
+				-webkit-tap-highlight-color: rgba(0,0,0,0) 
+				&:before
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					z-index: -1
+					+shadow-sm
+			.categories__preview
+				+coverdiv
+				border-radius: 24px
+				+d
+					position: static
+					height: 220px
+			.categories__title
+				+d
+					font-size: 18px
+					line-height: (24/18) 
+			.status
+				color: $wh
+				+d
+					color: $gray-dark 
+			.categories__tag
+				background: rgba($purple, .5) 
+				+d
+					background: rgba($purple, .1)
+					color: $blue 
+		&_sm
+			display: flex
+			align-items: center
+			float: left
+			padding: 8px
+			+d
+				display: block
+				float: none
+				flex: 0 0 calc(50% - 32px)
+			.categories__preview,
+			.categories__details
+				width: calc(50% - 12px)
+				+d
+					width: 100% 
+			.categories__preview
+				height: 188px
+				margin-right: 12px
+				border-radius: 24px 
+				+d
+					height: 220px
+					margin: 0
+			.categories__details
+				margin-left: 12px
+				+d
+					margin: 0
+			.categories__tag
+				background: rgba($purple, .1)
+				color: $blue 
+			&:before
+				content: ""
+				position: absolute
+				top: 14px
+				left: 7px
+				right: 7px
+				bottom: 0
+				z-index: -1
+				+shadow-sm
+				+d
+					top: 0
+					left: 0
+					right: 0
+			&:hover .categories__title
+				color: $purple
+		+nl
+			+m
+				margin-bottom: 32px 
+	&__box
+		position: relative
+		display: flex
+		align-items: flex-end
+		height: 676px
+		padding: 40px
+		+d
+			display: block
+			height: auto
+			padding: 0
+		&:after
+			content: ""
+			+coverdiv
+			border-radius: 24px
+			background-image: linear-gradient(180deg, rgba(58,62,69,0.00) 31%, rgba(27,29,33,0.90) 82%)
+			+d
+				display: none
+	&__preview
+		+cover
+	&__details
+		position: relative
+		z-index: 2
+		+d
+			padding: 32px 24px
+		+m
+			padding-bottom: 24px
+	&__tags
+		display: flex
+		flex-wrap: wrap
+		margin: -4px 0 8px -4px
+	&__tag
+		min-width: 80px
+		margin: 4px 0 0 4px
+		padding: 0 20px 
+		border-radius: 8px 
+		text-align: center
+		font-size: 13px
+		font-weight: 700 
+		line-height: 24px
+	&__title
+		margin-bottom: 8px
+		transition: color .25s
+	.status
+		margin-bottom: 16px
+	&__btn
+		min-width: 120px
+		height: 48px
+	.slick-arrow
+		position: absolute
+		top: 40px
+		z-index: 3
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background: $wh
+		font-size: 0
+		transition: background .25s
+		+d
+			top: 8px
+		.icon
+			font-size: 10px
+			fill: $text
+			transition: fill .25s 
+		&:hover
+			background: $purple
+			.icon
+				fill: $wh
+	.slick-prev
+		left: 40px
+		+d
+			left: 8px
+	.slick-next
+		left: 88px
+		+d
+			left: 56px
+	+nl
+		margin-bottom: 40px
+
++dark
+	.categories
+		&__item_sm
+			background: $dark1
+			&:before
+				+shadow-sm-dark
+		&__item_big
+			background: $dark1 
+			+d
+				background: $dark1
+				color: $wh 
+				&:before
+					+shadow-sm-dark 
+		.slick-arrow
+			background: $dark1
+			.icon
+				fill: $wh
+			&:hover
+				background: $purple
+

@@ -1,0 +1,232 @@
+.chat
+	position: relative
+	height: calc(100vh - 96px) 
+	padding-left: 375px
+	+d
+		padding-left: 300px
+	+m
+		height: auto
+		padding: 0
+	&__sidebar
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 375px
+		padding: 32px 0 
+		border-right: 1px solid $border 
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+		+d
+			width: 300px
+			padding: 24px 0
+		+m
+			position: static
+			width: 100% 
+			border: none 
+	&__item
+		padding: 0 20px
+		+d
+			padding: 0 5px 
+		+m
+			padding: 0 20px 
+		+nl
+			margin-bottom: 32px
+			padding-bottom: 32px
+			border-bottom: 1px solid $border 
+			+m
+				margin-bottom: 24px
+				padding-bottom: 24px
+	&__head
+		position: relative
+		display: flex
+		align-items: center
+		height: 32px
+		padding: 0 45px 0 20px
+		font-size: 12px
+		font-weight: 500
+		color: $gray-dark
+		cursor: pointer
+		-webkit-tap-highlight-color: rgba(0,0,0,0)
+		transition: color .25s
+		+d
+			padding: 0 36px 0 12px 
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			right: 25px
+			transform: translateY(-50%) 
+			width: 11px
+			height: 6px
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%2311142d' d='M13.707.293a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.32.083l-.094-.083-6-6A1 1 0 0 1 1.613.21l.094.083L7 5.585 12.293.293a1 1 0 0 1 1.32-.083l.094.083z'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+			transition: transform .25s 
+			+d
+				right: 16px
+		&:hover
+			color: $text
+	&__item.active &__head:before
+		transform: translateY(-50%) rotate(180deg)   
+	&__body
+		display: none
+		padding-top: 12px
+	&__line
+		display: flex
+		align-items: center
+		height: 80px
+		padding: 0 20px 0 22px 
+		border-radius: 16px
+		border: 1px solid $border-light
+		color: $text
+		transition: all .25s
+		+d
+			height: 72px
+			padding: 0 10px    
+		.ava
+			flex-shrink: 0 
+			width: 46px
+			height: 46px
+			border-width: 3px 
+			box-shadow: 0 0 0 2px $blue-dark
+			transition: border-color .25s 
+			&:before
+				top: -4px
+		&:hover
+			background: rgba($border, .5)
+			border-color: transparent
+		&.active
+			background: $purple
+			color: $wh 
+			.ava
+				border-color: $purple
+			.chat__time
+				color: $wh  
+		+nl
+			margin-bottom: 12px
+			+d
+				margin-bottom: 6px
+	&__details
+		flex-grow: 1
+		padding: 0 16px
+		+d
+			padding: 0 12px 
+		+m
+			padding-left: 16px
+	&__man
+		font-weight: 600
+	&__time
+		font-size: 13px
+		font-weight: 500 
+		color: $gray-dark
+		transition: color .25s 
+	&__ava,
+	&__counter
+		flex-shrink: 0
+		width: 32px
+		height: 32px
+		+d
+			width: 28px
+			height: 28px
+		+m
+			width: 32px
+			height: 32px
+	&__ava
+		font-size: 0
+	&__ava &__pic
+		width: 100%
+		min-height: 100%  
+		border-radius: 50% 
+	&__counter
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 50% 
+		font-size: 12px
+		font-weight: 600
+		color: $wh
+	&__games
+		display: flex
+	&__games &__ava
+		+nl
+			margin-right: 4px
+	&__users
+		display: flex
+	&__users &__ava,
+	&__users &__counter
+		+nf
+			margin-left: -8px
+	&__btns
+		margin-top: 32px
+		text-align: center
+	&__btns &__btn
+		min-width: 248px
+	&__container
+		max-height: 100%  
+		padding: 32px 64px
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+		+d
+			padding: 24px 
+	&__top
+		display: flex
+		align-items: center
+		margin-bottom: 32px
+	&__top &__info
+		+d
+			font-size: 24px
+		+m
+			font-weight: 500 
+	&__actions
+		display: flex
+		align-items: center
+		flex-shrink: 0
+		margin-left: 25px 
+	&__action
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 24px
+		height: 24px
+		font-size: 0
+		transition: opacity .25s 
+		.icon
+			font-size: 20px
+			fill: $text
+			&-star-fill
+				fill: $yellow
+		&:hover
+			opacity: .7 
+		+nl
+			margin-right: 40px
+			+d
+				margin-right: 24px
+			+m
+				margin-right: 20px
+
++dark
+	.chat
+		&__sidebar,
+		&__item
+			border-color: $border-dark 
+		&__head
+			color: $wh 
+			&:before
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath fill='%23ffffff' d='M13.707.293a1 1 0 0 1 .083 1.32l-.083.094-6 6a1 1 0 0 1-1.32.083l-.094-.083-6-6A1 1 0 0 1 1.613.21l.094.083L7 5.585 12.293.293a1 1 0 0 1 1.32-.083l.094.083z'/%3E%3C/svg%3E")
+		&__line
+			border-color: rgba($border-light, .1) 
+			color: $wh 
+			&:hover
+				border-color: transparent 
+				background: $border-dark 
+			&.active
+				background: $purple
+		&__action 
+			.icon
+				fill: $wh
+				&-star-fill
+					fill: $yellow
+			&:hover .icon
+				fill: $gray-light 
+
+

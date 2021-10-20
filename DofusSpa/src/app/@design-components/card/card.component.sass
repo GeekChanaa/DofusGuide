@@ -1,0 +1,219 @@
+.card
+	position: relative
+	display: block
+	border-radius: 24px
+	background: $wh  
+	color: $text
+	cursor: pointer 
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	&:before
+		content: ""
+		position: absolute
+		top: 15px
+		left: 7px
+		right: 7px
+		bottom: -15px
+		z-index: -1
+		+shadow-sm
+		transition: background .25s 
+		+m
+			top: 0
+			left: 0
+			right: 0
+	&:hover:before
+		background: darken($border-light, 15) 
+	&__preview
+		font-size: 0
+	&__preview &__pic
+		width: 100% 
+		border-radius: 24px 24px 0 0 
+	&__body
+		padding: 24px
+	&__title
+		font-weight: 500
+		transition: color .25s
+	&__body &__title
+		height: 46px
+		margin-bottom: 16px 
+		overflow: hidden
+	&__user
+		display: flex
+		align-items: center
+	&__ava
+		flex-shrink: 0
+		width: 32px
+		height: 32px
+		margin-right: 8px
+		font-size: 0
+	&__pic
+		width: 100%
+		min-height: 100%
+	&__man
+		font-size: 13px
+		font-weight: 500 
+		&.confirm
+			&:after
+				content: ""
+				position: relative
+				bottom: -2px
+				display: inline-block
+				margin-left: 5px
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				background: $green url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='7' viewBox='0 0 8 7'%3E%3Cpolygon fill='%23FFF' points='6.8 9 5.2 7.4 4 8.6 6.8 11.4 12 6.2 10.8 5' transform='translate(-4 -5)'/%3E%3C/svg%3E%0A") no-repeat 50% 50% / 8px 7px  
+	&__game
+		font-size: 12px
+		color: $gray-dark 
+	&__foot
+		display: flex
+		align-items: center
+		padding: 24px 
+		border-top: 1px solid $border-light
+		.live
+			flex-shrink: 0
+			margin-right: auto
+		.status
+			margin-left: 10px
+			+text-overflow
+	&__inner
+		display: flex
+		align-items: center
+		padding: 8px
+		+d
+			position: relative
+			z-index: 3
+			border-radius: 24px 
+			background: $wh
+			transition: transform .25s  
+		+m
+			display: block
+			padding: 0
+	&__bg
+		position: relative
+		flex-shrink: 0
+		width: 290px
+		height: 204px
+		border-radius: 24px
+		+cover  
+		+d
+			width: 240px
+		+m
+			width: 100%
+			height: 220px
+			border-radius: 24px 24px 0 0  
+	&__details
+		flex-grow: 1
+		padding: 0 95px 0 24px
+		+d
+			padding: 0 40px
+		+m
+			padding: 32px 
+	&__number
+		position: absolute
+		top: 4px
+		left: 4px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background-color: $wh
+		font-size: 18px
+		font-weight: 500
+		color: #5F75EE
+		+m
+			top: 16px
+			left: 16px
+		&_crown
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12' viewBox='0 0 16 12'%3E%3Cpath fill='%233F8CFF' fill-rule='evenodd' d='M28,14 L24,18 L20,14 L16,18 L12,14 L12,25 C12,25.5522852 12.4477153,26 13,26 L27,26 C27.5522852,26 28,25.5522852 28,25 L28,14 Z' transform='translate(-12 -14)'/%3E%3C/svg%3E%0A")    
+			background-repeat: no-repeat 
+			background-position: 50% 50%
+			background-size: 16px auto  
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 8px
+		.live
+			+nl
+				margin-right: 8px
+	&__category
+		display: inline-block
+		padding: 0 20px
+		background: rgba($purple, .1) 
+		border-radius: 8px
+		font-size: 13px
+		font-weight: 700 
+		line-height: 24px
+		color: $link 
+	&__details &__title
+		margin-bottom: 8px
+	&__status
+		display: flex
+		align-items: center
+		margin-bottom: 16px
+		.status
+			+nl
+				margin-right: 16px
+	&__actions
+		position: absolute
+		top: 8px
+		right: 8px
+		bottom: 8px
+		display: flex
+		flex-direction: column
+		width: 80px
+		padding: 8px 
+		background: $purple
+		border-radius: 24px
+		visibility: hidden
+		opacity: 0
+		transition: all .25s
+		+d
+			top: 0
+			left: 0
+			bottom: 0
+			justify-content: space-between
+			visibility: visible
+			opacity: 1
+			width: 130px
+			border-radius: 26px 0 0 26px 
+			padding: 8px 50px 8px 16px  
+	&__action
+		flex-grow: 1
+		border-radius: 24px
+		transition: background .25s
+		+m
+			flex: 0 0 64px
+			border-radius: 16px 
+		.icon
+			font-size: 15px
+			&-play-square
+				font-size: 19px
+		&:hover
+			background: rgba($purple-light, .5)  
+	&:hover &__actions
+		visibility: visible
+		opacity: 1
+	&.active &__inner
+		+d
+			transform: translateX(98px)
+
++dark
+	.card
+		background: $dark1
+		&:before
+			+shadow-sm-dark
+		&:hover:before
+			background: rgba(#000, .5)
+		&__title,
+		&__man
+			color: $wh
+		&__foot
+			border-color: rgba($border-light, .1)  
+		&__inner
+			background: $dark1 
+		&__number
+			background-color: $dark1
+			color: $blue 

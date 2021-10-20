@@ -1,0 +1,195 @@
+.widget
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 23px
+	&__head &__title
+		margin-right: auto
+	& > &__title
+		margin-bottom: 12px
+		&_mb40
+			margin-bottom: 40px
+	&__action
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-shrink: 0 
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		box-shadow: 0 2px 7px rgba(#000, .1)   
+		font-size: 0 
+		transition: all .25s 
+		.icon
+			font-size: 12px
+			fill: $text
+			transition: fill .25s 
+		&:hover
+			box-shadow: 0 5px 15px rgba(#000, .1) 
+			.icon
+				fill: $purple
+	.games
+		+d
+			display: flex
+			flex-wrap: wrap
+			margin: -24px -16px 0
+		+m
+			display: block
+			margin: 0
+		+nl
+			margin-bottom: 16px
+	.games__item
+		+d
+			flex: 0 0 calc(50% - 32px)
+			width: calc(50% - 32px)
+			margin: 24px 16px 0 
+		+m
+			width: 100%
+			margin: 0 
+		+nl
+			margin-bottom: 16px
+			+d
+				margin-bottom: 0
+			+m
+				margin-bottom: 16px
+	&__chart
+		max-width: 130px
+		height: 115px
+		margin: 0 auto 32px 
+	&__counter
+		margin-bottom: 12px
+	&__text
+		margin-bottom: 32px
+	&__slider
+		visibility: hidden
+		&.slick-initialized
+			visibility: visible
+	&__parameters
+		position: relative
+		margin-top: -40px
+		padding: 76px 24px 32px
+		background: $wh 
+		border-radius: 24px 
+		+x
+			padding-top: 60px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: -12px
+			z-index: -2 
+			+shadow
+	&__parameter
+		display: flex
+		font-size: 13px
+		font-weight: 500 
+		+nl
+			margin-bottom: 24px
+	&__parameter &__category
+		flex-grow: 1
+		color: $gray-dark 
+	.player
+		position: relative
+		z-index: 2
+		margin: 0
+		+d
+			margin: 0
+	.player__container:before
+		top: 55px
+		left: 10px
+		right: 10px
+		bottom: -20px
+	.player__control
+		+w
+			left: 16px
+			bottom: 16px
+			right: 16px
+	.player__view
+		+d
+			border-radius: 24px 
+	.player__parameter
+		color: $gray-dark 
+	.slick-list
+		overflow: visible
+	.slick-slide
+		opacity: 0
+		transition: opacity .25s
+		&.slick-active
+			opacity: 1
+	.slick-arrow
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		background: $wh
+		box-shadow: 0 5px 15px rgba($bl, .08)
+		font-size: 0
+		transition: background .25s  
+		.icon
+			font-size: 10px
+			fill: $text
+			transition: fill .25s 
+		&:hover
+			background: $blue
+			.icon
+				fill: $wh
+	&_center
+		text-align: center
+	&_earning
+		padding: 70px 50px 41px
+		+w
+			padding: 70px 32px 41px 
+		+m
+			padding: 40px 32px
+	&_shadow
+		position: relative
+		background: $wh
+		border-radius: 24px
+		&:before
+			content: ""
+			position: absolute
+			top: 28px
+			left: 18px
+			right: 18px
+			bottom: -50px
+			z-index: -2
+			+shadow
+	&_videos
+		.slick-arrow
+			position: absolute
+			top: -65px
+		.slick-prev
+			right: 40px
+		.slick-next
+			right: 0
+	&_videos &__title
+		margin-bottom: 40px
+	&_videos &__btn
+		margin-top: 24px
+
++dark
+	.widget
+		&__action
+			background: $dark1 
+			.icon
+				fill: $wh
+			&:hover .icon
+				fill: $blue
+		&__parameters
+			background: $dark1
+			&:before
+				+shadow-sm-dark
+		.player__container:before
+			background: #000
+			opacity: 0.3
+		&_shadow
+			background: $dark1
+			&:before
+				+shadow-dark
+		.slick-arrow
+			background: $dark1
+			.icon
+				fill: $wh
+			&:hover
+				background: $purple
