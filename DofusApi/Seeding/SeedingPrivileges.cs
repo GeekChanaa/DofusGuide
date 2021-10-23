@@ -9,8 +9,8 @@ namespace DofusApi.Seeding
     {
         public static void Seed(DofusDataContext context)
         {
-            context.Privilege.Add(new Privilege { Title = "Admin" });
-            context.Privilege.Add(new Privilege { Title = "Guest" });
+            context.Privilege.Add(new Privilege { Name = "Admin" });
+            context.Privilege.Add(new Privilege { Name = "Guest" });
             context.SaveChanges();
         }
     }
