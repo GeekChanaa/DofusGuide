@@ -1,0 +1,156 @@
+<div class="sidebar">
+    <div class="sidebar__top">
+        <a class="sidebar__logo" href="index.html">
+            <img class="sidebar__pic sidebar__pic_black" src="img/logo.svg" alt="" />
+            <img class="sidebar__pic sidebar__pic_white" src="img/logo-white.svg" alt="" />
+        </a>
+        <button class="sidebar__burger">
+
+        </button>
+        <button class="sidebar__close">
+            <svg class="icon icon-close">
+                <use xlink:href="img/sprite.svg#icon-close">
+                </use>
+            </svg>
+        </button>
+    </div>
+    <div class="sidebar__wrapper">
+        <div class="sidebar__inner">
+            <app-sidebar-group>
+                <app-sidebar-item [active]="true" name="Wikipedia" link="/wikipedia"></app-sidebar-item>
+            </app-sidebar-group>
+            <div class="sidebar__group">
+                <div class="sidebar__caption caption-sm">Following</div>
+                <div class="sidebar__list">
+                    <a class="sidebar__item" href="channel-profile.html">
+                        <div class="sidebar__ava">
+                            <img class="sidebar__pic" src="img/ava-1.png" alt="" />
+                        </div>
+                        <div class="sidebar__text">Dylan Hodges</div>
+                    </a>
+                    <a class="sidebar__item online" href="channel-profile.html">
+                        <div class="sidebar__ava">
+                            <img class="sidebar__pic" src="img/ava-2.png" alt="" />
+                        </div>
+                        <div class="sidebar__text">Vincent Parks</div>
+                    </a>
+                    <a class="sidebar__item" href="channel-profile.html">
+                        <div class="sidebar__ava">
+                            <img class="sidebar__pic" src="img/ava-3.png" alt="" />
+                        </div>
+                        <div class="sidebar__text">Richard Bowers</div>
+                    </a>
+                    <a class="sidebar__item" href="channel-profile.html">
+                        <div class="sidebar__ava">
+                            <img class="sidebar__pic" src="img/ava-4.png" alt="" />
+                        </div>
+                        <div class="sidebar__text">Isaac Lambert</div>
+                    </a>
+                    <a class="sidebar__item online" href="channel-profile.html">
+                        <div class="sidebar__ava">
+                            <img class="sidebar__pic" src="img/ava-2.png" alt="" />
+                        </div>
+                        <div class="sidebar__text">Lillie Nash</div>
+                    </a>
+                    <a class="sidebar__item" href="channel-profile.html">
+                        <div class="sidebar__ava">
+                            <img class="sidebar__pic" src="img/ava-5.png" alt="" />
+                        </div>
+                        <div class="sidebar__text">Edith Cain</div>
+                    </a>
+                    <a class="sidebar__item online" href="channel-profile.html">
+                        <div class="sidebar__ava">
+                            <img class="sidebar__pic" src="img/ava-1.png" alt="" />
+                        </div>
+                        <div class="sidebar__text">Jerry Sherman</div>
+                    </a>
+                </div>
+                <a class="sidebar__more" href="#">
+                    <div class="sidebar__arrow">
+                        <svg class="icon icon-arrow-down">
+                            <use xlink:href="img/sprite.svg#icon-arrow-down">
+                            </use>
+                        </svg>
+                    </div>
+                    <div class="sidebar__text">Load more</div>
+                </a>
+            </div>
+            <div class="sidebar__group">
+                <div class="sidebar__caption caption-sm">
+                    <span>Unity </span>Gaming
+                </div>
+                <div class="sidebar__menu">
+                    <a class="sidebar__item" href="chat.html">
+                        <div class="sidebar__icon">
+                            <svg class="icon icon-chat">
+                                <use xlink:href="img/sprite.svg#icon-chat">
+                                </use>
+                            </svg>
+                        </div>
+                        <div class="sidebar__text">Chat</div>
+                        <div class="sidebar__counter">20</div>
+                    </a>
+                    <a class="sidebar__item js-popup-open" href="#popup-settings" data-effect="mfp-zoom-in">
+                        <div class="sidebar__icon">
+                            <svg class="icon icon-settings">
+                                <use xlink:href="img/sprite.svg#icon-settings">
+                                </use>
+                            </svg>
+                        </div>
+                        <div class="sidebar__text">Settings</div>
+                    </a>
+                    <a class="sidebar__item" href="channel-analytics.html">
+                        <div class="sidebar__icon">
+                            <svg class="icon icon-chart">
+                                <use xlink:href="img/sprite.svg#icon-chart">
+                                </use>
+                            </svg>
+                        </div>
+                        <div class="sidebar__text">Analytics</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar__banner">
+            <div class="sidebar__bg" style="background-image: url('img/sidebar-banner.png');">
+            </div>
+            <button class="sidebar__remove">
+                <svg class="icon icon-remove">
+                    <use xlink:href="img/sprite.svg#icon-remove">
+                    </use>
+                </svg>
+            </button>
+            <div class="sidebar__details">
+                <div class="sidebar__title h5">Join the Unity&nbsp;Gaming</div>
+                <div class="sidebar__info caption-sm">Discover the best livestreams anywhere.</div>
+                <button class="sidebar__btn btn btn_purple btn_wide">Join Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar__bottom">
+        <label class="switch switch_theme js-switch-theme">
+            <input class="switch__input" type="checkbox" />
+            <span class="switch__in">
+                <span class="switch__box">
+
+                </span>
+                <span class="switch__icon">
+                    <svg class="icon icon-moon">
+                        <use xlink:href="img/sprite.svg#icon-moon">
+                        </use>
+                    </svg>
+                    <svg class="icon icon-sun">
+                        <use xlink:href="img/sprite.svg#icon-sun">
+                        </use>
+                    </svg>
+                </span>
+            </span>
+        </label>
+        <a class="sidebar__download" href="#">
+            <svg class="icon icon-download">
+                <use xlink:href="img/sprite.svg#icon-download">
+                </use>
+            </svg>
+        </a>
+    </div>
+</div>
