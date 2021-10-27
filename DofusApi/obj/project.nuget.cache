@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "J71ozsKOtuWJM969waSxvlnULMDRHzUa9/6TJAnJY8Jkvwx2SO8Bm073VdBWYZlav/sxoZshRjhgqWlwGquSkA==",
+  "dgSpecHash": "sP4hSvo2Gei719evij2qRaVYXpbNepwFPH4+afh8ailHhWCRVOS4iJAsK9G+Db3NqZrXW1AOEbn/l6J3GLXRgg==",
   "success": true,
   "projectFilePath": "/Users/macbookpro/Desktop/Dofus/dofus/DofusApi/DofusApi.csproj",
   "expectedPackageFiles": [
@@ -90,6 +90,7 @@
     "/Users/macbookpro/.nuget/packages/system.io.filesystem/4.3.0/system.io.filesystem.4.3.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/system.io.filesystem.primitives/4.3.0/system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/system.linq/4.3.0/system.linq.4.3.0.nupkg.sha512",
+    "/Users/macbookpro/.nuget/packages/system.linq.dynamic.core/1.2.13/system.linq.dynamic.core.1.2.13.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/system.linq.expressions/4.3.0/system.linq.expressions.4.3.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/system.net.nameresolution/4.3.0/system.net.nameresolution.4.3.0.nupkg.sha512",
@@ -141,8 +142,8 @@
       "code": "NU3028",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.EntityFrameworkCore.SqlServer 5.0.11' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: ExplicitDistrust: The trust setting for this policy was set to Deny.",
-      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer"
+      "message": "Package 'System.Linq.Dynamic.Core 1.2.13' from source 'https://api.nuget.org/v3/index.json': The repository primary signature's timestamp found a chain building issue: ExplicitDistrust: The trust setting for this policy was set to Deny.",
+      "libraryId": "System.Linq.Dynamic.Core"
     }
   ]
 }

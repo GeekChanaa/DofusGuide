@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DofusApi.Data;
 using DofusApi.Models;
+using DofusApi.Helpers;
 
 namespace DofusApi.Controllers
 {
@@ -15,17 +16,21 @@ namespace DofusApi.Controllers
     public class ClassesController : ControllerBase
     {
         private readonly DofusDataContext _context;
+        private readonly IBaseRepository<Classe> _repo;
 
-        public ClassesController(DofusDataContext context)
+        public ClassesController(DofusDataContext context, IBaseRepository<Classe> repo)
         {
             _context = context;
+            _repo = repo;
         }
 
         // GET: api/Classes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Classe>>> GetClasse()
+        public async Task<ActionResult<IEnumerable<Classe>>> GetClasse([FromQuery] GlobalParams globalParams)
         {
-            return await _context.Classe.ToListAsync();
+            var classes = await _repo.Get(globalParams);
+            Response.AddPagination(classes.CurrentPage, classes.PageSize, classes.TotalCount, classes.TotalPages);
+            return Ok(classes); 
         }
 
         // GET: api/Classes/5

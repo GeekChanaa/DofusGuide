@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using DofusApi.Seeding;
-using DofusApi.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using DofusApi.Helpers;
+using DofusApi.Data;
+using DofusApi.Seeding;
+using Microsoft.EntityFrameworkCore;
 
 namespace DofusApi
 {
@@ -17,8 +18,8 @@ namespace DofusApi
     {
         public static void Main(string[] args)
         {
-             var host = CreateHostBuilder(args).Build();
-            
+            var host = CreateHostBuilder(args).Build();
+
             using(var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;

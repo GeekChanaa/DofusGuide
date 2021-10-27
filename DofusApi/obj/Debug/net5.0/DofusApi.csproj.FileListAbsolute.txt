@@ -147,3 +147,4 @@
 /Users/macbookpro/Desktop/Dofus/dofus/DofusApi/obj/Debug/net5.0/ref/DofusApi.dll
 /Users/macbookpro/Desktop/Dofus/dofus/DofusApi/obj/Debug/net5.0/DofusApi.pdb
 /Users/macbookpro/Desktop/Dofus/dofus/DofusApi/obj/Debug/net5.0/DofusApi.genruntimeconfig.cache
+/Users/macbookpro/Desktop/Dofus/dofus/DofusApi/bin/Debug/net5.0/System.Linq.Dynamic.Core.dll

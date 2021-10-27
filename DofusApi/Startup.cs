@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using DofusApi.Data;
+using DofusApi.Models;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -32,6 +33,7 @@ namespace DofusApi
 
             services.AddControllers();
             services.AddDbContext<DofusDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DofusDataContext")));
+            services.AddScoped<IBaseRepository<Classe>,BaseRepository<Classe>>();
 
             services.AddSwaggerGen(c =>
             {

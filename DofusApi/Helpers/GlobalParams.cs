@@ -8,6 +8,11 @@ namespace DofusApi.Helpers
         public string OrderBy { get; set; }
         public string SearchBy {get; set;}
         public string SearchValue {get; set;}
+        public string FilterBy { get; set; }
+        
+        public string FilterValue { get; set; }
+        
+        
         public string ReverseOrder { get; set; }   
     }
 }
