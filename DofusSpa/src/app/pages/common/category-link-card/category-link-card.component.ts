@@ -12,6 +12,7 @@ export class CategoryLinkCardComponent implements OnInit {
   @Input() name : string;  
   @Input() subname : string;
   @Input() count : number;
+  @Input() link : string;
 
   constructor() { }
 
