@@ -1,0 +1,47 @@
+[
+    {
+        "name" : "classes"
+    },
+    {
+        "name" : "jobs"
+    },
+    {
+        "name" : "monsters"
+    },
+    {
+        "name" : "weapons"
+    },
+    {
+        "name" : "equipments"
+    },
+    {
+        "name" : "sets"
+    },
+    {
+        "name" : "pets"
+    },
+    {
+        "name" : "mounts"
+    },
+    {
+        "name" : "consumables"
+    },
+    {
+        "name" : "resources"
+    },
+    {
+        "name" : "skin-equipments"
+    },
+    {
+        "name" : "companions"
+    },
+    {
+        "name" : "idols"
+    },
+    {
+        "name" : "haven-bags"
+    },
+    {
+        "name" : "harnesses"
+    }
+]

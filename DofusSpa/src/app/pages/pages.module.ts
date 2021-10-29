@@ -7,20 +7,21 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { PagesComponent } from './pages.component';
 import { SidebarItemComponent } from './common/sidebar/sidebar-item/sidebar-item.component';
 import { SidebarGroupComponent } from './common/sidebar/sidebar-group/sidebar-group.component';
+import { PageHeaderComponent } from './common/page-header/page-header.component';
+import { PagesCommonModule } from './common/pages-common.module';
 
 
 @NgModule({
   declarations: [						
       HomeComponent,
-      NavbarComponent,
-      SidebarComponent,
       PagesComponent,
-      SidebarItemComponent,
-      SidebarGroupComponent
    ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    PagesCommonModule
+  ],
+  exports : [
   ],
   providers: [
   ]

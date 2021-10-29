@@ -1,0 +1,30 @@
+<div class="page__center">
+  <div class="player">
+    <app-page-header
+      [subtitle]="'Dofus'"
+      title="Wikipedia"
+      description="this section is for seeing all the items and monsters of the game"
+    >
+  </app-page-header>
+  </div>
+  <div class="games">
+    <div class="games__head">
+      <div class="games__title h5">Categories</div>
+      <div class="games__field field">
+        <div class="field__wrap"><select class="field__select">
+            <option>Added Time</option>
+            <option>New</option>
+            <option>Free</option>
+          </select></div>
+      </div>
+    </div>
+    <div class="games__list">
+      <app-category-link-card *ngFor="let category of categories"
+        [name]="category.name"
+        [subname]="category.subname"
+        [count]=""
+      ></app-category-link-card>
+    </div>
+    <div class="games__btns"><button class="games__btn btn btn_gray btn_wide">Manage Your Playlist</button></div>
+  </div>
+</div>
