@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class MountsController : BaseController<Mount>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Mount> _repo;
 
         public MountsController(DofusDataContext context, IBaseRepository<Mount> repo) : base(context,repo)
         {

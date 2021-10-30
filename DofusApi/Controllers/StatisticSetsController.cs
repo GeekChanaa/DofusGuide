@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class StatisticSetsController : BaseController<StatisticSet>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<StatisticSet> _repo;
 
         public StatisticSetsController(DofusDataContext context, IBaseRepository<StatisticSet> repo) : base(context,repo)
         {

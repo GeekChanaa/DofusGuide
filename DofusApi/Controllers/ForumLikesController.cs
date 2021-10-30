@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class ForumLikesController : BaseController<ForumLike>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<ForumLike> _repo;
-
+        
         public ForumLikesController(DofusDataContext context, IBaseRepository<ForumLike> repo) : base(context,repo)
         {
             

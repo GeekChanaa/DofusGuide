@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class IdolsController : BaseController<Idol>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Idol> _repo;
-
+       
         public IdolsController(DofusDataContext context, IBaseRepository<Idol> repo) : base(context,repo)
         {
             

@@ -6,5 +6,6 @@ namespace DofusApi.Models
         public string Name { get; set; }
         public string Variant { get; set; }
         public int ClasseID { get; set; }
+        public Classe Classe {get ; set ;}
     }
 }

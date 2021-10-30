@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class HarnessesController : BaseController<Harness>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Harness> _repo;
 
         public HarnessesController(DofusDataContext context, IBaseRepository<Harness> repo) : base(context,repo)
         {

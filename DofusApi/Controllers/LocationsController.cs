@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class LocationsController : BaseController<Location>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Location> _repo;
-
+        
         public LocationsController(DofusDataContext context, IBaseRepository<Location> repo) : base(context,repo)
         {
             

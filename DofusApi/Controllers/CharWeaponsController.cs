@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class CharWeaponsController : BaseController<CharWeapon>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<CharWeapon> _repo;
-
+        
         public CharWeaponsController(DofusDataContext context, IBaseRepository<CharWeapon> repo) : base(context,repo)
         {
             

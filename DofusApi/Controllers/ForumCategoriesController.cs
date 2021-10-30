@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class ForumCategoriesController : BaseController<ForumCategory>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<ForumCategory> _repo;
-
+        
         public ForumCategoriesController(DofusDataContext context, IBaseRepository<ForumCategory> repo) : base(context,repo)
         {
             

@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class FurnituresController : BaseController<Furniture>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Furniture> _repo;
 
         public FurnituresController(DofusDataContext context, IBaseRepository<Furniture> repo) : base(context,repo)
         {

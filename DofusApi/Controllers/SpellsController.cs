@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class SpellsController : BaseController<Spell>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Spell> _repo;
 
         public SpellsController(DofusDataContext context, IBaseRepository<Spell> repo) : base(context,repo)
         {

@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class ForumCommentsController : BaseController<ForumComment>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<ForumComment> _repo;
-
+        
         public ForumCommentsController(DofusDataContext context, IBaseRepository<ForumComment> repo) : base(context,repo)
         {
             

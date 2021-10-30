@@ -7,5 +7,8 @@ namespace DofusApi.Models
         public int Min { get; set; }
         public int? Max { get; set; }
         public int ConsumableID { get; set; }
+        public Consumable Consumable { get; set; }
+        
+        
     }
 }

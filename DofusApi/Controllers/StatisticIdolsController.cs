@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class StatisticIdolsController : BaseController<StatisticIdolsController>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<StatisticIdolsController> _repo;
 
         public StatisticIdolsController(DofusDataContext context, IBaseRepository<StatisticIdolsController> repo) : base(context,repo)
         {

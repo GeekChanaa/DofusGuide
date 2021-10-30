@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class HarvestsController : BaseController<Harvest>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Harvest> _repo;
-
+ 
         public HarvestsController(DofusDataContext context, IBaseRepository<Harvest> repo) : base(context,repo)
         {
             

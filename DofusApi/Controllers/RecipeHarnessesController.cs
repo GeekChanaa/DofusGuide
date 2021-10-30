@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class RecipeHarnessesController : BaseController<RecipeHarness>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<RecipeHarness> _repo;
 
         public RecipeHarnessesController(DofusDataContext context, IBaseRepository<RecipeHarness> repo) : base(context,repo)
         {

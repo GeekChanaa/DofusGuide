@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class RecipeResources : BaseController<RecipeResource>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<RecipeResource> _repo;
 
         public RecipeResources(DofusDataContext context, IBaseRepository<RecipeResource> repo) : base(context,repo)
         {

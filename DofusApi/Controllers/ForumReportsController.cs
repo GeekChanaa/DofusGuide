@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class ForumReportsController : BaseController<ForumReport>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<ForumReport> _repo;
 
         public ForumReportsController(DofusDataContext context, IBaseRepository<ForumReport> repo) : base(context,repo)
         {

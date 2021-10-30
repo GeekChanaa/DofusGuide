@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DofusApi.Migrations
 {
     [DbContext(typeof(DofusDataContext))]
-    [Migration("20211020132823_initial_create")]
-    partial class initial_create
+    [Migration("20211030131523_recreate")]
+    partial class recreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -359,6 +359,57 @@ namespace DofusApi.Migrations
                     b.ToTable("Furniture");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.Ground", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("HavenBagID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Ground");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.Harness", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AnkamaID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Harness");
+                });
+
             modelBuilder.Entity("DofusApi.Models.Harvest", b =>
                 {
                     b.Property<int>("ID")
@@ -494,6 +545,69 @@ namespace DofusApi.Migrations
                     b.ToTable("Monster");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.Mount", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AnkamaID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Mount");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.Pet", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("AnkamaID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Pet");
+                });
+
             modelBuilder.Entity("DofusApi.Models.Privilege", b =>
                 {
                     b.Property<int>("ID")
@@ -501,7 +615,7 @@ namespace DofusApi.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Title")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -534,6 +648,21 @@ namespace DofusApi.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Profession");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.Rank", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Rank");
                 });
 
             modelBuilder.Entity("DofusApi.Models.RecipeConsumable", b =>
@@ -839,12 +968,17 @@ namespace DofusApi.Migrations
                     b.Property<int>("PrivilegeID")
                         .HasColumnType("int");
 
+                    b.Property<int?>("RankID")
+                        .HasColumnType("int");
+
                     b.Property<int>("RoleID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
                     b.HasIndex("PrivilegeID");
+
+                    b.HasIndex("RankID");
 
                     b.HasIndex("RoleID");
 
@@ -911,6 +1045,30 @@ namespace DofusApi.Migrations
                     b.ToTable("Spell");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.Statistic", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("EquipmentID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Max")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Min")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Statistic");
+                });
+
             modelBuilder.Entity("DofusApi.Models.StatisticConsumable", b =>
                 {
                     b.Property<int>("ID")
@@ -935,6 +1093,147 @@ namespace DofusApi.Migrations
                     b.HasIndex("ConsumableID");
 
                     b.ToTable("StatisticConsumable");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.StatisticIdol", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("IdolID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Power")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("StatisticIdol");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.StatisticMonster", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("Max")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Min")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MonsterID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("StatisticMonster");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.StatisticMount", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("Max")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Min")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MountID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("StatisticMount");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.StatisticPet", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("Max")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Min")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PetID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("StatisticPet");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.StatisticSet", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("Max")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Min")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SetID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("StatisticSet");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.StatisticWeapon", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("Max")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Min")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("WeaponID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("StatisticWeapon");
                 });
 
             modelBuilder.Entity("DofusApi.Models.User", b =>
@@ -962,10 +1261,15 @@ namespace DofusApi.Migrations
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RankID")
+                        .HasColumnType("int");
+
                     b.Property<int?>("RolePrivilegeID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("RankID");
 
                     b.HasIndex("RolePrivilegeID");
 
@@ -1113,6 +1417,10 @@ namespace DofusApi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("DofusApi.Models.Rank", null)
+                        .WithMany("RolePrivileges")
+                        .HasForeignKey("RankID");
+
                     b.HasOne("DofusApi.Models.Role", "Role")
                         .WithMany()
                         .HasForeignKey("RoleID")
@@ -1135,9 +1443,17 @@ namespace DofusApi.Migrations
 
             modelBuilder.Entity("DofusApi.Models.User", b =>
                 {
+                    b.HasOne("DofusApi.Models.Rank", "Rank")
+                        .WithMany()
+                        .HasForeignKey("RankID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("DofusApi.Models.RolePrivilege", "RolePrivilege")
                         .WithMany()
                         .HasForeignKey("RolePrivilegeID");
+
+                    b.Navigation("Rank");
 
                     b.Navigation("RolePrivilege");
                 });
@@ -1147,6 +1463,11 @@ namespace DofusApi.Migrations
                     b.Navigation("RecipeConsumables");
 
                     b.Navigation("StatisticConsumables");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.Rank", b =>
+                {
+                    b.Navigation("RolePrivileges");
                 });
 #pragma warning restore 612, 618
         }

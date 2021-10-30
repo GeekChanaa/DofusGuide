@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class DecorsController : BaseController<Decor>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Decor> _repo;
-
+        
         public DecorsController(DofusDataContext context, IBaseRepository<Decor> repo) : base(context,repo)
         {
             

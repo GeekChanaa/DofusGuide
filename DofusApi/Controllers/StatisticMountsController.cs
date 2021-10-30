@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class StatisticMountsController : BaseController<Consumable>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Consumable> _repo;
 
         public StatisticMountsController(DofusDataContext context, IBaseRepository<Consumable> repo) : base(context,repo)
         {

@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class RolePrivilegesController : BaseController<RolePrivilege>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<RolePrivilege> _repo;
 
         public RolePrivilegesController(DofusDataContext context, IBaseRepository<RolePrivilege> repo) : base(context,repo)
         {

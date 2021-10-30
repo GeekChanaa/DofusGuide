@@ -11,6 +11,7 @@ namespace DofusApi.Models
         public string Description { get; set; }
         public string MaleImg { get; set; }
         public string FemaleImg { get; set; }
-
+        public ICollection<Spell> Spells {get; set;}
+        public ICollection<Role> Roles {get; set;}
     }
 }

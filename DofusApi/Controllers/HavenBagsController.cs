@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class HavenBagsController : BaseController<HavenBag>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<HavenBag> _repo;
-
+        
         public HavenBagsController(DofusDataContext context, IBaseRepository<HavenBag> repo) : base(context,repo)
         {
             

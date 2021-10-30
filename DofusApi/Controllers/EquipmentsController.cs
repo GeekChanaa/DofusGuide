@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class EquipmentsController : BaseController<Equipment>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Equipment> _repo;
-
+        
         public EquipmentsController(DofusDataContext context, IBaseRepository<Equipment> repo) : base(context,repo)
         {
             

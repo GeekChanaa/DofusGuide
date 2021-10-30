@@ -11,5 +11,8 @@ namespace DofusApi.Models
         public int Level { get; set; }
         public string Type { get; set; }
         public int ConsumableID { get; set; }
+        public Consumable Consumable { get; set; }
+        
+        
     }
 }

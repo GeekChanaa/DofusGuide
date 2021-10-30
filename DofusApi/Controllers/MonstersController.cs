@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class MonstersController : BaseController<Monster>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Monster> _repo;
-
+        
         public MonstersController(DofusDataContext context, IBaseRepository<Monster> repo) : base(context,repo)
         {
             

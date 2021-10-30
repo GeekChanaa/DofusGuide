@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DofusApi.Migrations
 {
-    public partial class initial_create : Migration
+    public partial class recreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -110,6 +110,39 @@ namespace DofusApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Ground",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ImgUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    HavenBagID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Ground", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Harness",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AnkamaID = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Level = table.Column<int>(type: "int", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImgUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Url = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Harness", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Harvest",
                 columns: table => new
                 {
@@ -195,12 +228,49 @@ namespace DofusApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Mount",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AnkamaID = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Level = table.Column<int>(type: "int", nullable: false),
+                    ImgUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Url = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mount", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Pet",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AnkamaID = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Level = table.Column<int>(type: "int", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImgUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Url = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pet", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Privilege",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -222,6 +292,19 @@ namespace DofusApi.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Profession", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Rank",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Rank", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -410,6 +493,117 @@ namespace DofusApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Statistic",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Min = table.Column<int>(type: "int", nullable: true),
+                    Max = table.Column<int>(type: "int", nullable: true),
+                    EquipmentID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Statistic", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "StatisticIdol",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Power = table.Column<int>(type: "int", nullable: false),
+                    IdolID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StatisticIdol", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "StatisticMonster",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Min = table.Column<int>(type: "int", nullable: true),
+                    Max = table.Column<int>(type: "int", nullable: true),
+                    MonsterID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StatisticMonster", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "StatisticMount",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Min = table.Column<int>(type: "int", nullable: true),
+                    Max = table.Column<int>(type: "int", nullable: true),
+                    MountID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StatisticMount", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "StatisticPet",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Min = table.Column<int>(type: "int", nullable: true),
+                    Max = table.Column<int>(type: "int", nullable: true),
+                    PetID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StatisticPet", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "StatisticSet",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Min = table.Column<int>(type: "int", nullable: true),
+                    Max = table.Column<int>(type: "int", nullable: true),
+                    SetID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StatisticSet", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "StatisticWeapon",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Min = table.Column<int>(type: "int", nullable: true),
+                    Max = table.Column<int>(type: "int", nullable: true),
+                    WeaponID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StatisticWeapon", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Weapon",
                 columns: table => new
                 {
@@ -503,7 +697,8 @@ namespace DofusApi.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleID = table.Column<int>(type: "int", nullable: false),
-                    PrivilegeID = table.Column<int>(type: "int", nullable: false)
+                    PrivilegeID = table.Column<int>(type: "int", nullable: false),
+                    RankID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -514,6 +709,12 @@ namespace DofusApi.Migrations
                         principalTable: "Privilege",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_RolePrivilege_Rank_RankID",
+                        column: x => x.RankID,
+                        principalTable: "Rank",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_RolePrivilege_Role_RoleID",
                         column: x => x.RoleID,
@@ -553,6 +754,7 @@ namespace DofusApi.Migrations
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RankID = table.Column<int>(type: "int", nullable: false),
                     PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     RolePrivilegeID = table.Column<int>(type: "int", nullable: true)
@@ -560,6 +762,12 @@ namespace DofusApi.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_User_Rank_RankID",
+                        column: x => x.RankID,
+                        principalTable: "Rank",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_User_RolePrivilege_RolePrivilegeID",
                         column: x => x.RolePrivilegeID,
@@ -756,6 +964,11 @@ namespace DofusApi.Migrations
                 column: "PrivilegeID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_RolePrivilege_RankID",
+                table: "RolePrivilege",
+                column: "RankID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_RolePrivilege_RoleID",
                 table: "RolePrivilege",
                 column: "RoleID");
@@ -764,6 +977,11 @@ namespace DofusApi.Migrations
                 name: "IX_StatisticConsumable_ConsumableID",
                 table: "StatisticConsumable",
                 column: "ConsumableID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_User_RankID",
+                table: "User",
+                column: "RankID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_User_RolePrivilegeID",
@@ -804,6 +1022,12 @@ namespace DofusApi.Migrations
                 name: "Furniture");
 
             migrationBuilder.DropTable(
+                name: "Ground");
+
+            migrationBuilder.DropTable(
+                name: "Harness");
+
+            migrationBuilder.DropTable(
                 name: "Harvest");
 
             migrationBuilder.DropTable(
@@ -814,6 +1038,12 @@ namespace DofusApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "Location");
+
+            migrationBuilder.DropTable(
+                name: "Mount");
+
+            migrationBuilder.DropTable(
+                name: "Pet");
 
             migrationBuilder.DropTable(
                 name: "Profession");
@@ -849,7 +1079,28 @@ namespace DofusApi.Migrations
                 name: "Spell");
 
             migrationBuilder.DropTable(
+                name: "Statistic");
+
+            migrationBuilder.DropTable(
                 name: "StatisticConsumable");
+
+            migrationBuilder.DropTable(
+                name: "StatisticIdol");
+
+            migrationBuilder.DropTable(
+                name: "StatisticMonster");
+
+            migrationBuilder.DropTable(
+                name: "StatisticMount");
+
+            migrationBuilder.DropTable(
+                name: "StatisticPet");
+
+            migrationBuilder.DropTable(
+                name: "StatisticSet");
+
+            migrationBuilder.DropTable(
+                name: "StatisticWeapon");
 
             migrationBuilder.DropTable(
                 name: "Monster");
@@ -874,6 +1125,9 @@ namespace DofusApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "Privilege");
+
+            migrationBuilder.DropTable(
+                name: "Rank");
 
             migrationBuilder.DropTable(
                 name: "Role");

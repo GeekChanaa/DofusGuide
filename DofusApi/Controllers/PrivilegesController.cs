@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class PrivilegesController : BaseController<Privilege>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Privilege> _repo;
 
         public PrivilegesController(DofusDataContext context, IBaseRepository<Privilege> repo) : base(context,repo)
         {

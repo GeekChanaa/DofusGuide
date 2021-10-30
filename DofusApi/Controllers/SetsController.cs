@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class SetsController : BaseController<Set>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Set> _repo;
 
         public SetsController(DofusDataContext context, IBaseRepository<Set> repo) : base(context,repo)
         {

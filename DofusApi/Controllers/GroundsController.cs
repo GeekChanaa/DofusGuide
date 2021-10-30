@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class GroundsController : BaseController<Ground>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Ground> _repo;
 
         public GroundsController(DofusDataContext context, IBaseRepository<Ground> repo) : base(context,repo)
         {

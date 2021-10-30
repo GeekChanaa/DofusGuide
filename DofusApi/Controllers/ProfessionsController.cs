@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class ProfessionsController : BaseController<Profession>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Profession> _repo;
 
         public ProfessionsController(DofusDataContext context, IBaseRepository<Profession> repo) : base(context,repo)
         {

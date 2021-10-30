@@ -15,8 +15,6 @@ namespace DofusApi.Controllers
     [ApiController]
     public class PetsController : BaseController<Pet>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<Pet> _repo;
 
         public PetsController(DofusDataContext context, IBaseRepository<Pet> repo) : base(context,repo)
         {

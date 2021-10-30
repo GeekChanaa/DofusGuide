@@ -15,9 +15,7 @@ namespace DofusApi.Controllers
     [ApiController]
     public class DropMonstersController : BaseController<DropMonster>
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<DropMonster> _repo;
-
+       
         public DropMonstersController(DofusDataContext context, IBaseRepository<DropMonster> repo) : base(context,repo)
         {
             
