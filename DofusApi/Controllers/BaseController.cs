@@ -12,7 +12,7 @@ using DofusApi.Helpers;
 namespace DofusApi.Controllers
 {
     [Route("api/[controller]")]
-    public class BaseController<T> : Controller where T : class
+    public class BaseController<T> : ControllerBase where T : class
     {
         private readonly DofusDataContext _context;
         private readonly IBaseRepository<T> _repo;
@@ -38,7 +38,7 @@ namespace DofusApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<T>> Get(int id)
         {
-            var item = await _dbSet.FindAsync(id);
+            var item = await this._repo.GetByID(id);
 
             if (item == null)
             {
@@ -53,20 +53,17 @@ namespace DofusApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutClasse(int id, T item)
         {
-            if (id != item.ID)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(item).State = EntityState.Modified;
-
+            // if (id != item.ID)
+            // {
+            //     return BadRequest();
+            // }
             try
             {
-                await _context.SaveChangesAsync();
+                await this._repo.Update(item);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClasseExists(id))
+                if (!(await ClasseExists(id)))
                 {
                     return NotFound();
                 }
@@ -82,33 +79,34 @@ namespace DofusApi.Controllers
         // POST: api/Classes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Classe>> PostClasse(Classe classe)
+        public async Task<ActionResult<T>> Post(T item)
         {
-            _context.Classe.Add(classe);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetClasse", new { id = classe.ID }, classe);
+            await this._repo.Insert(item);
+            return CreatedAtAction("GetClasse", item);
         }
 
         // DELETE: api/Classes/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteClasse(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var classe = await _context.Classe.FindAsync(id);
-            if (classe == null)
+            var item = await _dbSet.FindAsync(id);
+            if (item == null)
             {
                 return NotFound();
             }
 
-            _context.Classe.Remove(classe);
+            _dbSet.Remove(item);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool ClasseExists(int id)
+        private async Task<bool> ClasseExists(int id)
         {
-            return _context.Classe.Any(e => e.ID == id);
+            var item = await this._repo.GetByID(id);
+            if(item != null)
+            return true;
+            return false;
         }
     }
 }

@@ -7,102 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DofusApi.Data;
 using DofusApi.Models;
+using DofusApi.Helpers;
 
 namespace DofusApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StatisticMountsController : ControllerBase
+    public class StatisticMountsController : BaseController<Consumable>
     {
         private readonly DofusDataContext _context;
+        private readonly IBaseRepository<Consumable> _repo;
 
-        public StatisticMountsController(DofusDataContext context)
+        public StatisticMountsController(DofusDataContext context, IBaseRepository<Consumable> repo) : base(context,repo)
         {
-            _context = context;
-        }
-
-        // GET: api/StatisticMounts
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<StatisticMount>>> GetStatisticMount()
-        {
-            return await _context.StatisticMount.ToListAsync();
-        }
-
-        // GET: api/StatisticMounts/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<StatisticMount>> GetStatisticMount(int id)
-        {
-            var statisticMount = await _context.StatisticMount.FindAsync(id);
-
-            if (statisticMount == null)
-            {
-                return NotFound();
-            }
-
-            return statisticMount;
-        }
-
-        // PUT: api/StatisticMounts/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStatisticMount(int id, StatisticMount statisticMount)
-        {
-            if (id != statisticMount.ID)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(statisticMount).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StatisticMountExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/StatisticMounts
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<StatisticMount>> PostStatisticMount(StatisticMount statisticMount)
-        {
-            _context.StatisticMount.Add(statisticMount);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetStatisticMount", new { id = statisticMount.ID }, statisticMount);
-        }
-
-        // DELETE: api/StatisticMounts/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStatisticMount(int id)
-        {
-            var statisticMount = await _context.StatisticMount.FindAsync(id);
-            if (statisticMount == null)
-            {
-                return NotFound();
-            }
-
-            _context.StatisticMount.Remove(statisticMount);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool StatisticMountExists(int id)
-        {
-            return _context.StatisticMount.Any(e => e.ID == id);
+            
         }
     }
 }

@@ -7,102 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DofusApi.Data;
 using DofusApi.Models;
+using DofusApi.Helpers;
 
 namespace DofusApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DecorsController : ControllerBase
+    public class DecorsController : BaseController<Decor>
     {
         private readonly DofusDataContext _context;
+        private readonly IBaseRepository<Decor> _repo;
 
-        public DecorsController(DofusDataContext context)
+        public DecorsController(DofusDataContext context, IBaseRepository<Decor> repo) : base(context,repo)
         {
-            _context = context;
-        }
-
-        // GET: api/Decors
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Decor>>> GetDecor()
-        {
-            return await _context.Decor.ToListAsync();
-        }
-
-        // GET: api/Decors/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Decor>> GetDecor(int id)
-        {
-            var decor = await _context.Decor.FindAsync(id);
-
-            if (decor == null)
-            {
-                return NotFound();
-            }
-
-            return decor;
-        }
-
-        // PUT: api/Decors/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutDecor(int id, Decor decor)
-        {
-            if (id != decor.ID)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(decor).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!DecorExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/Decors
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Decor>> PostDecor(Decor decor)
-        {
-            _context.Decor.Add(decor);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetDecor", new { id = decor.ID }, decor);
-        }
-
-        // DELETE: api/Decors/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteDecor(int id)
-        {
-            var decor = await _context.Decor.FindAsync(id);
-            if (decor == null)
-            {
-                return NotFound();
-            }
-
-            _context.Decor.Remove(decor);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool DecorExists(int id)
-        {
-            return _context.Decor.Any(e => e.ID == id);
+            
         }
     }
 }

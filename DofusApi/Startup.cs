@@ -34,7 +34,8 @@ namespace DofusApi
             services.AddControllers();
             services.AddDbContext<DofusDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DofusDataContext")));
             services.AddScoped<IBaseRepository<Classe>,BaseRepository<Classe>>();
-
+            services.AddScoped<IBaseRepository<Consumable>,BaseRepository<Consumable>>();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DofusApi", Version = "v1" });

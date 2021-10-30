@@ -9,6 +9,7 @@ using System.Linq.Dynamic.Core;
 using System.Linq.Dynamic.Core.CustomTypeProviders;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Mvc;
 namespace DofusApi.Data
 {
     public class BaseRepository<M> : IBaseRepository<M> where M : class
@@ -77,6 +78,42 @@ namespace DofusApi.Data
             return await PagedList<M>.CreateAsync(data, objectParams.PageNumber, objectParams.PageSize);
         }
 
+
+        // Getting the object
+        public async Task<M> GetByID(int id)
+        {
+            return await this.dbSet.FindAsync(id);
+        }
+
+        // Inserting the object
+        public async Task<M> Insert(M entity)
+        {
+            this.dbSet.Add(entity);
+            await this._context.SaveChangesAsync();
+            return entity;
+        }
+
+        // Deleting the object using id
+        public async Task Delete(int id)
+        {
+            var item = await this.dbSet.FindAsync(id);
+            this.dbSet.Remove(item);
+            await this._context.SaveChangesAsync();
+        }
+
+        // Deleting object
+        public async Task Delete(M entity)
+        {
+            this.dbSet.Remove(entity);
+            await this._context.SaveChangesAsync();
+        }
+
+        // Updating the object
+        public async Task Update(M entity)
+        {
+            this._context.Entry(entity).State = EntityState.Modified;
+            await this._context.SaveChangesAsync();
+        }
     }
 
     
