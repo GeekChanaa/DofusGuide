@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DofusApi.Models
 {
     public class Set
@@ -12,5 +14,8 @@ namespace DofusApi.Models
         public int Number { get; set; }
         public int EquipmentID { get; set; }
         public int WeaponID { get; set; }
+        public ICollection<SetStatistic> SetStatistics { get; set; }
+        
+        
     }
 }

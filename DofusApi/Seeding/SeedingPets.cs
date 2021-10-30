@@ -25,44 +25,46 @@ namespace DofusApi.Seeding
             StreamReader r9 = new StreamReader(RootPath+"pets.json");
             string json9 = r9.ReadToEnd();
 
+            Console.WriteLine(" =========== Populating Pets ========= ");
+            List<Pet> petsj = JsonConvert.DeserializeObject<List<Pet>>(json9);
+            context.Pet.AddRange(petsj);
+            context.SaveChanges();
 
-
-            List<PetJson> petsj = JsonConvert.DeserializeObject<List<PetJson>>(json9);
             ///// Populating Pets
-            foreach (var petj in petsj)
-            {
-                var pet = new Pet
-                {
-                    AnkamaID = petj.AnkamaID,
-                    Name = petj.Name,
-                    Level = petj.Level,
-                    Type = petj.Type,
-                    ImgUrl = petj.ImgUrl,
-                    Url = petj.Url,
-                    Description = petj.Description,
-                };
-                context.Pet.Add(pet);
-                context.SaveChanges();
-                Console.WriteLine("Pets");
+            // foreach (var petj in petsj)
+            // {
+            //     var pet = new Pet
+            //     {
+            //         AnkamaID = petj.AnkamaID,
+            //         Name = petj.Name,
+            //         Level = petj.Level,
+            //         Type = petj.Type,
+            //         ImgUrl = petj.ImgUrl,
+            //         Url = petj.Url,
+            //         Description = petj.Description,
+            //     };
+            //     context.Pet.Add(pet);
+            //     context.SaveChanges();
+            //     Console.WriteLine("Pets");
 
-                // Populating Pets Statistics
-                if (petj.Statistics != null)
-                    foreach (var statisticPetj in petj.Statistics)
-                    {
-                        var statisticPet = new StatisticPet
-                        {
-                            Name = statisticPetj.Name,
-                            Min = statisticPetj.Min,
-                            Max = statisticPetj.Max,
-                            PetID = pet.ID,
-                        };
-                        context.StatisticPet.Add(statisticPet);
-                        context.SaveChanges();
-                        Console.WriteLine("StatisticPets");
-                    };
+            //     // Populating Pets Statistics
+            //     if (petj.Statistics != null)
+            //         foreach (var statisticPetj in petj.Statistics)
+            //         {
+            //             var statisticPet = new StatisticPet
+            //             {
+            //                 Name = statisticPetj.Name,
+            //                 Min = statisticPetj.Min,
+            //                 Max = statisticPetj.Max,
+            //                 PetID = pet.ID,
+            //             };
+            //             context.StatisticPet.Add(statisticPet);
+            //             context.SaveChanges();
+            //             Console.WriteLine("StatisticPets");
+            //         };
 
 
-            }
+            // }
         }
     }
 }

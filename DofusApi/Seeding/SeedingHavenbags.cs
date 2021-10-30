@@ -25,70 +25,73 @@ namespace DofusApi.Seeding
             string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
             StreamReader r5 = new StreamReader(RootPath+"havenbags.json");
             string json5 = r5.ReadToEnd();
+            
+            Console.WriteLine("============ Populating Harnesses =========");
+            List<HavenBag> havenbagsj = JsonConvert.DeserializeObject<List<HavenBag>>(json5);
+            context.HavenBag.AddRange(havenbagsj);
+            context.SaveChanges();
+            
+            // foreach (var havenbagj in havenbagsj)
+            // {
+            //     var havenbag = new HavenBag
+            //     {
+            //         AnkamaID = havenbagj.AnkamaID,
+            //         Name = havenbagj.Name,
+            //         ImgUrl = havenbagj.ImgUrl,
+            //         Url = havenbagj.Url,
+            //     };
+            //     context.HavenBag.Add(havenbag);
 
-            List<HavenBagJson> havenbagsj = JsonConvert.DeserializeObject<List<HavenBagJson>>(json5);
-
-            foreach (var havenbagj in havenbagsj)
-            {
-                var havenbag = new HavenBag
-                {
-                    AnkamaID = havenbagj.AnkamaID,
-                    Name = havenbagj.Name,
-                    ImgUrl = havenbagj.ImgUrl,
-                    Url = havenbagj.Url,
-                };
-                context.HavenBag.Add(havenbag);
-
-                Console.WriteLine("HavenBags");
-                context.SaveChanges();
+            //     Console.WriteLine("HavenBags");
+            //     context.SaveChanges();
 
 
-                // Populating Decors
-                foreach (var decorj in havenbagj.Decors)
-                {
-                    var decor = new Decor
-                    {
-                        ImgUrl = decorj,
-                        HavenBagID = havenbag.ID,
-                    };
-                    context.Decor.Add(decor);
+            //     // Populating Decors
+            //     foreach (var decorj in havenbagj.Decors)
+            //     {
+            //         var decor = new Decor
+            //         {
+            //             ImgUrl = decorj,
+            //             HavenBagID = havenbag.ID,
+            //         };
+            //         context.Decor.Add(decor);
 
-                    Console.WriteLine("Decors");
-                    context.SaveChanges();
+            //         Console.WriteLine("Decors");
+            //         context.SaveChanges();
 
-                }
+            //     }
 
-                // Populating Ground
-                foreach (var groundj in havenbagj.Grounds)
-                {
-                    var ground = new Ground
-                    {
-                        ImgUrl = groundj,
-                        HavenBagID = havenbag.ID,
+            //     // Populating Ground
+            //     foreach (var groundj in havenbagj.Grounds)
+            //     {
+            //         var ground = new Ground
+            //         {
+            //             ImgUrl = groundj,
+            //             HavenBagID = havenbag.ID,
 
-                    };
-                    context.Ground.Add(ground);
+            //         };
+            //         context.Ground.Add(ground);
 
-                    Console.WriteLine("Grounds");
-                    context.SaveChanges();
+            //         Console.WriteLine("Grounds");
+            //         context.SaveChanges();
 
-                }
+            //     }
 
-                // Populating Furnitures
-                foreach (var furniturej in havenbagj.Furnitures)
-                {
-                    var furniture = new Furniture
-                    {
-                        HavenBagID = havenbag.ID,
-                        ImgUrl = furniturej,
-                    };
-                    context.Furniture.Add(furniture);
+            //     // Populating Furnitures
+            //     foreach (var furniturej in havenbagj.Furnitures)
+            //     {
+            //         var furniture = new Furniture
+            //         {
+            //             HavenBagID = havenbag.ID,
+            //             ImgUrl = furniturej,
+            //         };
+            //         context.Furniture.Add(furniture);
 
-                    Console.WriteLine("Furnitures");
-                    context.SaveChanges();
+            //         Console.WriteLine("Furnitures");
+            //         context.SaveChanges();
 
-                }
-            }
+            //     }
+            // }
             r5.Close();
         }
     }

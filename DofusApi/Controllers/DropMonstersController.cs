@@ -13,10 +13,10 @@ namespace DofusApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DropMonstersController : BaseController<DropMonster>
+    public class MonsterDropsController : BaseController<MonsterDrop>
     {
        
-        public DropMonstersController(DofusDataContext context, IBaseRepository<DropMonster> repo) : base(context,repo)
+        public MonsterDropsController(DofusDataContext context, IBaseRepository<MonsterDrop> repo) : base(context,repo)
         {
             
         }

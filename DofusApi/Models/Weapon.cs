@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DofusApi.Models
 {
     public class Weapon
@@ -10,5 +12,12 @@ namespace DofusApi.Models
         public string Url { get; set; }
         public string ImgUrl { get; set; }
         public string Description { get; set; }
+        public ICollection<WeaponChar> WeaponChars { get; set; }
+        public ICollection<WeaponStatistic> WeaponStatistics { get; set; }
+        public ICollection<WeaponRecipe> WeaponRecipes { get; set; }
+        
+        
+        
+        
     }
 }

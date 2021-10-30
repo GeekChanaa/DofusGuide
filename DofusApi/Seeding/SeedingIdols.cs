@@ -26,64 +26,68 @@ namespace DofusApi.Seeding
             string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
             StreamReader r6 = new StreamReader(RootPath+"idols.json");
             string json6 = r6.ReadToEnd();
+            
+            
+            Console.WriteLine(" =========== Populating Idols ========= ");
+            List<Idol> idolsj = JsonConvert.DeserializeObject<List<Idol>>(json6);
+            context.Idol.AddRange(idolsj);
+            context.SaveChanges();
 
-            List<IdolJson> idolsj = JsonConvert.DeserializeObject<List<IdolJson>>(json6);
+            // foreach (var idolj in idolsj)
+            // {
+            //     var idol = new Idol
+            //     {
+            //         AnkamaID = idolj.AnkamaID,
+            //         Name = idolj.Name,
+            //         Level = idolj.Level,
+            //         Type = idolj.Type,
+            //         ImgUrl = idolj.ImgUrl,
+            //         Url = idolj.Url,
+            //         Description = idolj.Description,
+            //     };
+            //     context.Idol.Add(idol);
 
-            foreach (var idolj in idolsj)
-            {
-                var idol = new Idol
-                {
-                    AnkamaID = idolj.AnkamaID,
-                    Name = idolj.Name,
-                    Level = idolj.Level,
-                    Type = idolj.Type,
-                    ImgUrl = idolj.ImgUrl,
-                    Url = idolj.Url,
-                    Description = idolj.Description,
-                };
-                context.Idol.Add(idol);
-
-                Console.WriteLine("Idols");
-                context.SaveChanges();
+            //     Console.WriteLine("Idols");
+            //     context.SaveChanges();
 
 
-                // Populating StatisticIdol
-                foreach (var statisticIdolj in idolj.Statistics)
-                {
-                    var statisticIdol = new StatisticIdol
-                    {
-                        Name = statisticIdolj.Name,
-                        Power = statisticIdolj.Power,
-                        IdolID = idol.ID,
-                    };
-                    context.StatisticIdol.Add(statisticIdol);
+            //     // Populating StatisticIdol
+            //     foreach (var statisticIdolj in idolj.Statistics)
+            //     {
+            //         var statisticIdol = new StatisticIdol
+            //         {
+            //             Name = statisticIdolj.Name,
+            //             Power = statisticIdolj.Power,
+            //             IdolID = idol.ID,
+            //         };
+            //         context.StatisticIdol.Add(statisticIdol);
 
-                    Console.WriteLine("StatisticIdols");
-                    context.SaveChanges();
+            //         Console.WriteLine("StatisticIdols");
+            //         context.SaveChanges();
 
-                }
+            //     }
 
-                // Populating RecipeIdol
-                foreach (var recipeIdolj in idolj.Recipe)
-                {
-                    var recipeIdol = new RecipeIdol
-                    {
-                        AnkamaID = recipeIdolj.AnkamaID,
-                        Name = recipeIdolj.Name,
-                        Url = recipeIdolj.Url,
-                        ImgUrl = recipeIdolj.ImgUrl,
-                        Quantity = recipeIdolj.Quantity,
-                        Level = recipeIdolj.Level,
-                        Type = recipeIdolj.Type,
-                        IdolID = idol.ID,
-                    };
-                    context.RecipeIdol.Add(recipeIdol);
+            //     // Populating RecipeIdol
+            //     foreach (var recipeIdolj in idolj.Recipe)
+            //     {
+            //         var recipeIdol = new RecipeIdol
+            //         {
+            //             AnkamaID = recipeIdolj.AnkamaID,
+            //             Name = recipeIdolj.Name,
+            //             Url = recipeIdolj.Url,
+            //             ImgUrl = recipeIdolj.ImgUrl,
+            //             Quantity = recipeIdolj.Quantity,
+            //             Level = recipeIdolj.Level,
+            //             Type = recipeIdolj.Type,
+            //             IdolID = idol.ID,
+            //         };
+            //         context.RecipeIdol.Add(recipeIdol);
 
-                    Console.WriteLine("RecipeIdols");
-                    context.SaveChanges();
+            //         Console.WriteLine("RecipeIdols");
+            //         context.SaveChanges();
 
-                }
-            }
+            //     }
+            // }
             r6.Close();
         }
     }

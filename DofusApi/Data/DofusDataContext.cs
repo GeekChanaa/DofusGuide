@@ -11,9 +11,9 @@ namespace DofusApi.Data
 
         }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.AreaMonster> AreaMonster { get; set; }
+        public DbSet<DofusApi.Models.MonsterArea> MonsterArea { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.CharWeapon> CharWeapon { get; set; }
+        public DbSet<DofusApi.Models.WeaponChar> WeaponChar { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.Classe> Classe { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
@@ -21,7 +21,7 @@ namespace DofusApi.Data
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.Decor> Decor { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.DropMonster> DropMonster { get; set; }
+        public DbSet<DofusApi.Models.MonsterDrop> MonsterDrop { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.Equipment> Equipment { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
@@ -47,19 +47,19 @@ namespace DofusApi.Data
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.Profession> Profession { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.RecipeConsumable> RecipeConsumable { get; set; }
+        public DbSet<DofusApi.Models.ConsumableRecipe> ConsumableRecipe { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.RecipeHarness> RecipeHarness { get; set; }
+        public DbSet<DofusApi.Models.HarnessRecipe> HarnessRecipe { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.RecipeIdol> RecipeIdol { get; set; }
+        public DbSet<DofusApi.Models.IdolRecipe> IdolRecipe { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.RecipeItem> RecipeItem { get; set; }
+        public DbSet<DofusApi.Models.EquipmentRecipe> EquipmentRecipe { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.RecipeResource> RecipeResource { get; set; }
+        public DbSet<DofusApi.Models.ResourceRecipe> ResourceRecipe { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.RecipeWeapon> RecipeWeapon { get; set; }
+        public DbSet<DofusApi.Models.WeaponRecipe> WeaponRecipe { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.ResistenceMonster> ResistenceMonster { get; set; }
+        public DbSet<DofusApi.Models.MonsterResistence> MonsterResistence { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.Resource> Resource { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
@@ -83,21 +83,21 @@ namespace DofusApi.Data
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.Harness> Harness { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.Statistic> Statistic { get; set; }
+        public DbSet<DofusApi.Models.EquipmentStatistic> EquipmentStatistic { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.StatisticConsumable> StatisticConsumable { get; set; }
+        public DbSet<DofusApi.Models.ConsumableStatistic> ConsumableStatistic { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.StatisticIdol> StatisticIdol { get; set; }
+        public DbSet<DofusApi.Models.IdolStatistic> IdolStatistic { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.StatisticMonster> StatisticMonster { get; set; }
+        public DbSet<DofusApi.Models.MonsterStatistic> MonsterStatistic { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.StatisticMount> StatisticMount { get; set; }
+        public DbSet<DofusApi.Models.MountStatistic> MountStatistic { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.StatisticPet> StatisticPet { get; set; }
+        public DbSet<DofusApi.Models.PetStatistic> PetStatistic { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.StatisticSet> StatisticSet { get; set; }
+        public DbSet<DofusApi.Models.SetStatistic> SetStatistic { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
-        public DbSet<DofusApi.Models.StatisticWeapon> StatisticWeapon { get; set; } 
+        public DbSet<DofusApi.Models.WeaponStatistic> StatisticWeapon { get; set; } 
         public DbSet<DofusApi.Models.Ground> Ground { get; set; }
 
     }

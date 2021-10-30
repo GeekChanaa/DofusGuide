@@ -25,55 +25,12 @@ namespace DofusApi.Seeding
             StreamReader r10 = new StreamReader(RootPath+"professions.json");
             string json10 = r10.ReadToEnd();
 
-            List<ProfessionJson> professionsj = JsonConvert.DeserializeObject<List<ProfessionJson>>(json10);
+            List<Profession> professionsj = JsonConvert.DeserializeObject<List<Profession>>(json10);
+            context.Profession.AddRange(professionsj);
+            context.SaveChanges();
 
             ///// Populating Professions
-            foreach (var professionj in professionsj)
-            {
-                var profession = new Profession
-                {
-                    AnkamaID = professionj.AnkamaID,
-                    Name = professionj.Name,
-                    ImgUrl = professionj.ImgUrl,
-                    Url = professionj.Url,
-                    Description = professionj.Description,
-                };
-                context.Profession.Add(profession);
-                context.SaveChanges();
-                Console.WriteLine("Professions");
-
-                // Populating Profession Harvests
-                if (professionj.Harvests != null)
-                    foreach (var harvestj in professionj.Harvests)
-                    {
-                        var harvest = new Harvest
-                        {
-                            Name = harvestj.Name,
-                            ImgUrl = harvestj.ImgUrl,
-                            Url = harvestj.Url,
-                            AnkamaID = harvestj.AnkamaID,
-                            Level = harvestj.Level,
-                            ProfessionID = profession.ID
-                        };
-                        context.Harvest.Add(harvest);
-                        context.SaveChanges();
-                        Console.WriteLine("Harvests");
-
-                        // Populating Harvest Locations
-                        if (harvestj.Location != null)
-                            foreach (var locationj in harvestj.Location)
-                            {
-                                var location = new Location
-                                {
-                                    ProfessionID = profession.ID,
-                                    Name = locationj.Name,
-                                };
-                                context.Location.Add(location);
-                                context.SaveChanges();
-                                Console.WriteLine("Locations");
-                            }
-                    }
-            }
+            
             r10.Close();
         }
     }

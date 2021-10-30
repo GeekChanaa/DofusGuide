@@ -13,9 +13,9 @@ namespace DofusApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StatisticWeaponsController : BaseController<StatisticWeapon>
+    public class WeaponStatisticsController : BaseController<WeaponStatistic>
     {
-        public StatisticWeaponsController(DofusDataContext context, IBaseRepository<StatisticWeapon> repo) : base(context,repo)
+        public WeaponStatisticsController(DofusDataContext context, IBaseRepository<WeaponStatistic> repo) : base(context,repo)
         {
             
         }

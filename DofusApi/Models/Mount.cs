@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DofusApi.Models
 {
     public class Mount
@@ -9,5 +11,6 @@ namespace DofusApi.Models
         public int Level { get; set; }
         public string ImgUrl { get; set; }
         public string Url { get; set; }
+        public ICollection<MountStatistic> MountStatistics { get; set; }
     }
 }

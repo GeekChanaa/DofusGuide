@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DofusApi.Models
 {
     public class Equipment
@@ -10,5 +12,9 @@ namespace DofusApi.Models
         public string ImgUrl { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
+        public ICollection<EquipmentStatistic> EquipmentStatistics { get; set; }
+        public ICollection<EquipmentRecipe> EquipmentRecipes { get; set; }
+        
+        
     }
 }

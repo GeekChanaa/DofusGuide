@@ -8,7 +8,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178034.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/4-nyoro",
         "description": "L'arroseur arrosé a rossé et rossera.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 30
@@ -18,7 +18,7 @@
                 "power": 30
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Ebonite",
                     "ankamaId": 746,
@@ -75,7 +75,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178033.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/6-nyoro-mineure",
         "description": "L'arroseur arrosé a rossé et rossera.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -85,7 +85,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Œuf de Tofu",
                     "ankamaId": 367,
@@ -133,7 +133,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178035.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/7-nyoro-majeure",
         "description": "L'arroseur arrosé a rossé et rossera.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 45
@@ -143,7 +143,7 @@
                 "power": 45
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Poils de Black Tiwabbit",
                     "ankamaId": 646,
@@ -209,7 +209,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178036.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/8-nyoro-magistrale",
         "description": "L'arroseur arrosé a rossé et rossera.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 60
@@ -219,7 +219,7 @@
                 "power": 60
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kriptonite",
                     "ankamaId": 6457,
@@ -294,7 +294,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178085.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/9-proxima",
         "description": "Ceux qui partent emmènent toujours quelque chose avec eux.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -304,7 +304,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bougie du Mineur Sombre",
                     "ankamaId": 2274,
@@ -352,7 +352,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178053.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/10-butor-mineure",
         "description": "Il y a plus d'honneur à montrer son visage que ses talons. Surtout si vous êtes montés sur un étalon.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -362,7 +362,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Os Invisible du Chafer Invisible",
                     "ankamaId": 430,
@@ -410,7 +410,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178054.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/11-butor",
         "description": "Il y a plus d'honneur à montrer son visage que ses talons. Surtout si vous êtes montés sur un étalon.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -420,7 +420,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Souris verte",
                     "ankamaId": 1771,
@@ -477,7 +477,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178055.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/12-butor-majeure",
         "description": "Il y a plus d'honneur à montrer son visage que ses talons. Surtout si vous êtes montés sur un étalon.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 30
@@ -487,7 +487,7 @@
                 "power": 30
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kouartz",
                     "ankamaId": 750,
@@ -553,7 +553,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178056.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/13-butor-magistrale",
         "description": "Il y a plus d'honneur à montrer son visage que ses talons. Surtout si vous êtes montés sur un étalon.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -563,7 +563,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Écorce de Chiendent",
                     "ankamaId": 8775,
@@ -638,7 +638,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178061.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/14-horize-mineure",
         "description": "Quand le sage désigne l'horizon, l'idiot regarde le doigt et le monstre mange le doigt. L'idiot survit, le sage n'a plus de doigt et le monstre est rassasié.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -648,7 +648,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Ivoire",
                     "ankamaId": 479,
@@ -696,7 +696,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178062.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/15-horize",
         "description": "Quand le sage désigne l'horizon, l'idiot regarde le doigt et le monstre mange le doigt. L'idiot survit, le sage n'a plus de doigt et le monstre est rassasié.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -706,7 +706,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Collier Cassé de Macien",
                     "ankamaId": 2320,
@@ -763,7 +763,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178063.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/16-horize-majeure",
         "description": "Quand le sage désigne l'horizon, l'idiot regarde le doigt et le monstre mange le doigt. L'idiot survit, le sage n'a plus de doigt et le monstre est rassasié.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 35
@@ -773,7 +773,7 @@
                 "power": 35
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kouartz",
                     "ankamaId": 750,
@@ -839,7 +839,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178064.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/17-horize-magistrale",
         "description": "Quand le sage désigne l'horizon, l'idiot regarde le doigt et le monstre mange le doigt. L'idiot survit, le sage n'a plus de doigt et le monstre est rassasié.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 45
@@ -849,7 +849,7 @@
                 "power": 45
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Poils de Maho Firefoux",
                     "ankamaId": 7292,
@@ -924,7 +924,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178057.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/18-bihilete-mineure",
         "description": "Celui qui cherche à dominer ses adversaires, meurt avec une laisse autour du cou.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -934,7 +934,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bec du Tofu",
                     "ankamaId": 366,
@@ -982,7 +982,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178058.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/19-bihilete",
         "description": "Celui qui cherche à dominer ses adversaires, meurt avec une laisse autour du cou.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 35
@@ -992,7 +992,7 @@
                 "power": 35
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Ebonite",
                     "ankamaId": 746,
@@ -1049,7 +1049,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178059.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/20-bihilete-majeure",
         "description": "Celui qui cherche à dominer ses adversaires, meurt avec une laisse autour du cou.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 50
@@ -1059,7 +1059,7 @@
                 "power": 50
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Magnésite",
                     "ankamaId": 748,
@@ -1116,7 +1116,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178060.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/21-bihilete-magistrale",
         "description": "Celui qui cherche à dominer ses adversaires, meurt avec une laisse autour du cou.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 65
@@ -1126,7 +1126,7 @@
                 "power": 65
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Peau de Don Dorgan",
                     "ankamaId": 8391,
@@ -1192,7 +1192,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178025.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/22-dagob-mineure",
         "description": "Lorsqu'un combat correctement se déroule, c'est que le pire encore arrivé n'est pas.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -1202,7 +1202,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Dent de Garglyphe",
                     "ankamaId": 2249,
@@ -1259,7 +1259,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178026.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/23-dagob",
         "description": "Lorsqu'un combat correctement se déroule, c'est que le pire encore arrivé n'est pas.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -1269,7 +1269,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Œil d'Arakmuté",
                     "ankamaId": 2491,
@@ -1335,7 +1335,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178027.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/24-dagob-majeure",
         "description": "Lorsqu'un combat correctement se déroule, c'est que le pire encore arrivé n'est pas.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -1345,7 +1345,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Calice de Fécorce",
                     "ankamaId": 8781,
@@ -1420,7 +1420,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178028.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/25-dagob-magistrale",
         "description": "Lorsqu'un combat correctement se déroule, c'est que le pire encore arrivé n'est pas.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 55
@@ -1430,7 +1430,7 @@
                 "power": 55
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Rutile",
                     "ankamaId": 7036,
@@ -1514,7 +1514,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178037.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/26-sak-mineure",
         "description": "Ce qui ne vous mange pas vous rend plus fort.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -1524,7 +1524,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Ebonite",
                     "ankamaId": 746,
@@ -1581,7 +1581,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178038.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/27-sak",
         "description": "Ce qui ne vous mange pas vous rend plus fort.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -1591,7 +1591,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bakélélite",
                     "ankamaId": 749,
@@ -1657,7 +1657,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178039.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/28-sak-majeure",
         "description": "Ce qui ne vous mange pas vous rend plus fort.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 35
@@ -1667,7 +1667,7 @@
                 "power": 35
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Peau de Soryo Firefoux",
                     "ankamaId": 7299,
@@ -1742,7 +1742,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178040.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/29-sak-magistrale",
         "description": "Ce qui ne vous mange pas vous rend plus fort.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 45
@@ -1752,7 +1752,7 @@
                 "power": 45
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Pyrute",
                     "ankamaId": 7035,
@@ -1836,7 +1836,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178087.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/30-nekineko",
         "description": "Tout peut cuire à point pour qui sait attendre.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -1846,7 +1846,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Peau de Mandrine",
                     "ankamaId": 8315,
@@ -1912,7 +1912,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178001.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/31-dynamo-mineure",
         "description": "Rien ne sert de partir à point ; il faut courir.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -1922,7 +1922,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Blé",
                     "ankamaId": 289,
@@ -1979,7 +1979,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178002.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/32-dynamo",
         "description": "Rien ne sert de partir à point ; il faut courir.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -1989,7 +1989,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Grelot",
                     "ankamaId": 2506,
@@ -2046,7 +2046,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178003.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/33-dynamo-majeure",
         "description": "Rien ne sert de partir à point ; il faut courir.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 35
@@ -2056,7 +2056,7 @@
                 "power": 35
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bakélélite",
                     "ankamaId": 749,
@@ -2122,7 +2122,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178004.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/34-dynamo-magistrale",
         "description": "Rien ne sert de partir à point ; il faut courir.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 45
@@ -2132,7 +2132,7 @@
                 "power": 45
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Braguette du Maître Zoth",
                     "ankamaId": 8804,
@@ -2207,7 +2207,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178104.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/35-penitent",
         "description": "Seul le pénitent pourra le passer.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -2217,7 +2217,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kriptonite",
                     "ankamaId": 6457,
@@ -2292,7 +2292,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178086.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/36-corrode",
         "description": "Petit à petit, le Tofu fait son nid.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -2302,7 +2302,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Poil de Gamino",
                     "ankamaId": 8311,
@@ -2377,7 +2377,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178097.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/37-critus",
         "description": "Mieux vaut les critiques d'un seul que les coups de mille.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -2387,7 +2387,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Graine de l'Abrakleur sombre",
                     "ankamaId": 8785,
@@ -2462,7 +2462,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178077.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/38-boble-mineure",
         "description": "Qui veut gouter le Dofus doit briser la coquille.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -2472,7 +2472,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Sourcils de Tronknyde",
                     "ankamaId": 2564,
@@ -2529,7 +2529,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178079.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/39-boble",
         "description": "Qui veut gouter le Dofus doit briser la coquille.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -2539,7 +2539,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bakélélite",
                     "ankamaId": 749,
@@ -2605,7 +2605,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178080.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/40-boble-majeure",
         "description": "Qui veut gouter le Dofus doit briser la coquille.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -2615,7 +2615,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kriptonite",
                     "ankamaId": 6457,
@@ -2690,7 +2690,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178078.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/41-boble-magistrale",
         "description": "Qui veut gouter le Dofus doit briser la coquille.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 55
@@ -2700,7 +2700,7 @@
                 "power": 55
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bave du Kaskargo",
                     "ankamaId": 8832,
@@ -2784,7 +2784,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178094.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/42-ougah",
         "description": "Le pieu est l'ennemi du bien.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -2794,7 +2794,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Ebonite",
                     "ankamaId": 746,
@@ -2851,7 +2851,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178093.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/43-muta",
         "description": "Garde tes amis près de toi et tes ennemis encore plus près.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 30
@@ -2861,7 +2861,7 @@
                 "power": 30
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Magnésite",
                     "ankamaId": 748,
@@ -2918,7 +2918,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178098.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/44-nyan",
         "description": "S'enfuir en reculant, c'est foncer pour se rapprocher d'un ennemi qui s'éloigne. Mais à l'envers.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -2928,7 +2928,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Queue du Mulou",
                     "ankamaId": 438,
@@ -2994,7 +2994,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178089.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/45-hoskar",
         "description": "Si l'ennemi est à portée, vous l'êtes aussi.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -3004,7 +3004,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kriptonite",
                     "ankamaId": 6457,
@@ -3079,7 +3079,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178092.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/46-leukide",
         "description": "Celui qui se couche avec ses ennemis se réveille avec la mort.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 50
@@ -3089,7 +3089,7 @@
                 "power": 50
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Substrat de Fascine",
                     "ankamaId": 2543,
@@ -3155,7 +3155,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178065.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/47-zaihn-mineure",
         "description": "L'œil du cyclone est moins dangereux que la massue du cyclope.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 5
@@ -3165,7 +3165,7 @@
                 "power": 5
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Dent de Dragodinde",
                     "ankamaId": 2179,
@@ -3222,7 +3222,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178066.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/48-zaihn",
         "description": "L'œil du cyclone est moins dangereux que la massue du cyclope.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -3232,7 +3232,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Œil de Cocholou",
                     "ankamaId": 2578,
@@ -3298,7 +3298,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178067.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/49-zaihn-majeure",
         "description": "L'œil du cyclone est moins dangereux que la massue du cyclope.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 35
@@ -3308,7 +3308,7 @@
                 "power": 35
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kobalite",
                     "ankamaId": 6458,
@@ -3383,7 +3383,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178068.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/50-zaihn-magistrale",
         "description": "L'œil du cyclone est moins dangereux que la massue du cyclope.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 50
@@ -3393,7 +3393,7 @@
                 "power": 50
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Pyrute",
                     "ankamaId": 7035,
@@ -3477,7 +3477,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178101.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/51-djim",
         "description": "Celui qui combat toujours au même endroit perd l'opportunité de gagner ailleurs.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -3487,7 +3487,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Rutile",
                     "ankamaId": 7036,
@@ -3571,7 +3571,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178096.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/52-binar",
         "description": "01000011 01100101 01110100 01110100 01100101 00100000 01101001 01100100 01101111 01101100 01100101 00100000 01100011 01100001 01110101 01110011 01100101 01110010 01100001 00100000 01110110 01101111 01110100 01110010 01100101 00100000 01110000 01100101 01110010 01110100 01100101",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -3581,7 +3581,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Écorce de Champaknyde",
                     "ankamaId": 9263,
@@ -3665,7 +3665,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178088.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/54-korria",
         "description": "Là où je passe, je ne repasse pas.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -3675,7 +3675,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Coco du Bitouf aérien",
                     "ankamaId": 8792,
@@ -3759,7 +3759,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178045.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/57-hulhu-mineure",
         "description": "La peur fait courir le Bouftou plus vite que le Tofu.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -3769,7 +3769,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Aluminite",
                     "ankamaId": 747,
@@ -3817,7 +3817,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178046.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/58-hulhu",
         "description": "La peur fait courir le Bouftou plus vite que le Tofu.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -3827,7 +3827,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Sang d'Oni",
                     "ankamaId": 838,
@@ -3884,7 +3884,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178047.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/59-hulhu-majeure",
         "description": "La peur fait courir le Bouftou plus vite que le Tofu.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 30
@@ -3894,7 +3894,7 @@
                 "power": 30
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kouartz",
                     "ankamaId": 750,
@@ -3960,7 +3960,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178048.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/60-hulhu-magistrale",
         "description": "La peur fait courir le Bouftou plus vite que le Tofu.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -3970,7 +3970,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kobalite",
                     "ankamaId": 6458,
@@ -4045,7 +4045,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178029.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/61-yoche-mineure",
         "description": "Loin des yeux, flèche dans le cœur.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -4055,7 +4055,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Substrat de Buisson",
                     "ankamaId": 2539,
@@ -4103,7 +4103,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178030.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/62-yoche",
         "description": "Loin des yeux, flèche dans le cœur.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -4113,7 +4113,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bandeau du Black Tiwabbit",
                     "ankamaId": 372,
@@ -4170,7 +4170,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178031.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/63-yoche-majeure",
         "description": "Loin des yeux, flèche dans le cœur.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -4180,7 +4180,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bakélélite",
                     "ankamaId": 749,
@@ -4246,7 +4246,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178032.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/64-yoche-magistrale",
         "description": "Loin des yeux, flèche dans le cœur.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 50
@@ -4256,7 +4256,7 @@
                 "power": 50
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kriptonite",
                     "ankamaId": 6457,
@@ -4331,7 +4331,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178069.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/65-cafra-mineure",
         "description": "Le plus proche a toujours tort. Et le tort tue.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -4341,7 +4341,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Substrat de Futaie",
                     "ankamaId": 2540,
@@ -4398,7 +4398,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178070.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/66-cafra",
         "description": "Le plus proche a toujours tort. Et le tort tue.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -4408,7 +4408,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kouartz",
                     "ankamaId": 750,
@@ -4474,7 +4474,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178071.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/67-cafra-majeure",
         "description": "Le plus proche a toujours tort. Et le tort tue.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 35
@@ -4484,7 +4484,7 @@
                 "power": 35
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Laine du Trooll Furieux",
                     "ankamaId": 1694,
@@ -4559,7 +4559,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178072.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/68-cafra-magistrale",
         "description": "Le plus proche a toujours tort. Et le tort tue.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 45
@@ -4569,7 +4569,7 @@
                 "power": 45
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Pyrute",
                     "ankamaId": 7035,
@@ -4653,7 +4653,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178102.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/69-aroumb",
         "description": "Un ennemi soigné peut être achevé plusieurs fois.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -4663,7 +4663,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Substrat de Fascine",
                     "ankamaId": 2543,
@@ -4729,7 +4729,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178090.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/70-vaude",
         "description": "Si un de vos alliés est aligné avec vous, il est déjà mort, mais il ne le sait pas encore.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -4739,7 +4739,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Magnésite",
                     "ankamaId": 748,
@@ -4796,7 +4796,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178081.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/71-petunia-mineure",
         "description": "Plus on est de souffre-douleurs, plus on subit.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 5
@@ -4806,7 +4806,7 @@
                 "power": 5
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Graine de Pavot",
                     "ankamaId": 300,
@@ -4854,7 +4854,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178083.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/72-petunia",
         "description": "Plus on est de souffre-douleurs, plus on subit.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -4864,7 +4864,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Ebonite",
                     "ankamaId": 746,
@@ -4921,7 +4921,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178084.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/73-petunia-majeure",
         "description": "Plus on est de souffre-douleurs, plus on subit.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -4931,7 +4931,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Substrat de Fascine",
                     "ankamaId": 2543,
@@ -4997,7 +4997,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178082.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/74-petunia-magistrale",
         "description": "Plus on est de souffre-douleurs, plus on subit.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 35
@@ -5007,7 +5007,7 @@
                 "power": 35
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bractée de Chiendent",
                     "ankamaId": 8782,
@@ -5082,7 +5082,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178100.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/79-ultram",
         "description": "Pour la première fois, tous vos ennemis souhaiteront prendre votre place.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -5092,7 +5092,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Arête géante du Shamansot",
                     "ankamaId": 11228,
@@ -5167,7 +5167,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178021.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/80-teleb-mineure",
         "description": "Garde tes amis loin de toi et tes ennemis plus loin encore.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -5177,7 +5177,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Oreilles du Tiwabbit",
                     "ankamaId": 360,
@@ -5234,7 +5234,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178022.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/81-teleb",
         "description": "Garde tes amis loin de toi et tes ennemis plus loin encore.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -5244,7 +5244,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Bakélélite",
                     "ankamaId": 749,
@@ -5310,7 +5310,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178023.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/82-teleb-majeure",
         "description": "Garde tes amis loin de toi et tes ennemis plus loin encore.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 30
@@ -5320,7 +5320,7 @@
                 "power": 30
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kriptonite",
                     "ankamaId": 6457,
@@ -5395,7 +5395,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178049.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/84-domo-mineure",
         "description": "La dispersion est généralement une mauvaise décision tactique. Rester groupés peut s'avérer pire.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 5
@@ -5405,7 +5405,7 @@
                 "power": 5
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Substrat de Buisson",
                     "ankamaId": 2539,
@@ -5453,7 +5453,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178050.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/85-domo",
         "description": "La dispersion est généralement une mauvaise décision tactique. Rester groupés peut s'avérer pire.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 15
@@ -5463,7 +5463,7 @@
                 "power": 15
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Patte de Wabbit",
                     "ankamaId": 2288,
@@ -5520,7 +5520,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178051.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/86-domo-majeure",
         "description": "La dispersion est généralement une mauvaise décision tactique. Rester groupés peut s'avérer pire.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -5530,7 +5530,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Substrat de Fascine",
                     "ankamaId": 2543,
@@ -5596,7 +5596,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178052.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/87-domo-magistrale",
         "description": "La dispersion est généralement une mauvaise décision tactique. Rester groupés peut s'avérer pire.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 35
@@ -5606,7 +5606,7 @@
                 "power": 35
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kriptonite",
                     "ankamaId": 6457,
@@ -5681,7 +5681,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178103.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/88-nahuatl",
         "description": "Ce qui est déjà mort peut encore être tué.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 50
@@ -5691,7 +5691,7 @@
                 "power": 50
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Patte de Soryo Givrefoux",
                     "ankamaId": 11335,
@@ -5775,7 +5775,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178041.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/89-pikmi-mineure",
         "description": "On ne fait pas d'omelette sans casser d'œufs.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -5785,7 +5785,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Aluminite",
                     "ankamaId": 747,
@@ -5833,7 +5833,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178042.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/90-pikmi",
         "description": "On ne fait pas d'omelette sans casser d'œufs.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -5843,7 +5843,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Étoffe du Wabbit",
                     "ankamaId": 654,
@@ -5900,7 +5900,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178043.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/91-pikmi-majeure",
         "description": "On ne fait pas d'omelette sans casser d'œufs.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 30
@@ -5910,7 +5910,7 @@
                 "power": 30
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Carapace de Scaratos",
                     "ankamaId": 8308,
@@ -5976,7 +5976,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178044.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/92-pikmi-magistrale",
         "description": "On ne fait pas d'omelette sans casser d'œufs.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -5986,7 +5986,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kobalite",
                     "ankamaId": 6458,
@@ -6061,7 +6061,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178009.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/93-peho-mineure",
         "description": "Il existe toujours quelque chose pour rapprocher ceux que tout sépare.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -6071,7 +6071,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Substrat de Buisson",
                     "ankamaId": 2539,
@@ -6119,7 +6119,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178011.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/94-peho-majeure",
         "description": "Il existe toujours quelque chose pour rapprocher ceux que tout sépare.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -6129,7 +6129,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Os de Fantôme Léopardo",
                     "ankamaId": 7403,
@@ -6195,7 +6195,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178010.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/95-peho",
         "description": "Il existe toujours quelque chose pour rapprocher ceux que tout sépare.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 25
@@ -6205,7 +6205,7 @@
                 "power": 25
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Oreille du Grand Pa Wabbit",
                     "ankamaId": 419,
@@ -6262,7 +6262,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178012.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/96-peho-magistrale",
         "description": "Il existe toujours quelque chose pour rapprocher ceux que tout sépare.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 55
@@ -6272,7 +6272,7 @@
                 "power": 55
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Kobalite",
                     "ankamaId": 6458,
@@ -6347,7 +6347,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178073.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/97-kyoub-mineure",
         "description": "Celui qui sous-estime le facteur de ralentissement des projectiles provoqué par la pénétration dans l'air, ne passe pas l'hiver.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 5
@@ -6357,7 +6357,7 @@
                 "power": 5
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Graine de Tournesol",
                     "ankamaId": 288,
@@ -6405,7 +6405,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178074.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/98-kyoub",
         "description": "Celui qui sous-estime le facteur de ralentissement des projectiles provoqué par la pénétration dans l'air, ne passe pas l'hiver.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 10
@@ -6415,7 +6415,7 @@
                 "power": 10
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Poils de Wo Wabbit",
                     "ankamaId": 649,
@@ -6472,7 +6472,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178075.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/99-kyoub-majeure",
         "description": "Celui qui sous-estime le facteur de ralentissement des projectiles provoqué par la pénétration dans l'air, ne passe pas l'hiver.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 20
@@ -6482,7 +6482,7 @@
                 "power": 20
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Canine de Mergranlou",
                     "ankamaId": 439,
@@ -6548,7 +6548,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178076.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/100-kyoub-magistrale",
         "description": "Celui qui sous-estime le facteur de ralentissement des projectiles provoqué par la pénétration dans l'air, ne passe pas l'hiver.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 80
@@ -6558,7 +6558,7 @@
                 "power": 80
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Étoffe de Kaniglou",
                     "ankamaId": 11249,
@@ -6633,7 +6633,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/178024.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/idoles/101-teleb-magistrale",
         "description": "Garde tes amis loin de toi et tes ennemis plus loin encore.",
-        "statistics": [
+        "idolStatistics": [
             {
                 "name": "Bonus d'expérience",
                 "power": 40
@@ -6643,7 +6643,7 @@
                 "power": 40
             }
         ],
-        "recipe": [
+        "idolRecipes": [
             {
                     "name" : "Rutile",
                     "ankamaId": 7036,

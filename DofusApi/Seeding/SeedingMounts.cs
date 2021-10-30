@@ -26,42 +26,44 @@ namespace DofusApi.Seeding
             StreamReader r8 = new StreamReader(RootPath+"mounts.json");
             string json8 = r8.ReadToEnd();
 
-            List<MountJson> mountsj = JsonConvert.DeserializeObject<List<MountJson>>(json8);
+            Console.WriteLine(" =========== Populating Mounts ========= ");
+            List<Mount> mountsj = JsonConvert.DeserializeObject<List<Mount>>(json8);
+            context.Mount.AddRange(mountsj);
+            context.SaveChanges();
+            // foreach (var mountj in mountsj)
+            // {
+            //     var mount = new Mount
+            //     {
+            //         AnkamaID = mountj.AnkamaID,
+            //         Name = mountj.Name,
+            //         Type = mountj.Type,
+            //         Level = mountj.Level,
+            //         ImgUrl = mountj.ImgUrl,
+            //         Url = mountj.Url,
+            //     };
+            //     context.Mount.Add(mount);
 
-            foreach (var mountj in mountsj)
-            {
-                var mount = new Mount
-                {
-                    AnkamaID = mountj.AnkamaID,
-                    Name = mountj.Name,
-                    Type = mountj.Type,
-                    Level = mountj.Level,
-                    ImgUrl = mountj.ImgUrl,
-                    Url = mountj.Url,
-                };
-                context.Mount.Add(mount);
+            //     Console.WriteLine("Mounts");
+            //     context.SaveChanges();
 
-                Console.WriteLine("Mounts");
-                context.SaveChanges();
+            //     // Populating Mount Statistics
+            //     if (mountj.Statistics != null)
+            //         foreach (var statisticMountj in mountj.Statistics)
+            //         {
+            //             var statisticMount = new StatisticMount
+            //             {
+            //                 Name = statisticMountj.Name,
+            //                 Min = statisticMountj.Min,
+            //                 Max = statisticMountj.Max,
+            //                 MountID = mount.ID,
+            //             };
+            //             context.StatisticMount.Add(statisticMount);
 
-                // Populating Mount Statistics
-                if (mountj.Statistics != null)
-                    foreach (var statisticMountj in mountj.Statistics)
-                    {
-                        var statisticMount = new StatisticMount
-                        {
-                            Name = statisticMountj.Name,
-                            Min = statisticMountj.Min,
-                            Max = statisticMountj.Max,
-                            MountID = mount.ID,
-                        };
-                        context.StatisticMount.Add(statisticMount);
+            //             Console.WriteLine("StatisticMounts");
+            //             context.SaveChanges();
 
-                        Console.WriteLine("StatisticMounts");
-                        context.SaveChanges();
-
-                    }
-            }
+            //         }
+            // }
 
             r8.Close();
         }

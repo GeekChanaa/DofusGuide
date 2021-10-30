@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DofusApi.Models
 {
     public class Resource
@@ -10,5 +12,8 @@ namespace DofusApi.Models
         public string Url { get; set; }
         public string ImgUrl { get; set; }
         public string Description { get; set; }
+        public ICollection<ResourceRecipe> ResourceRecipes { get; set; }
+        
+        
     }
 }

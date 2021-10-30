@@ -9,5 +9,8 @@ namespace DofusApi.Models
         public int AnkamaID { get; set; }
         public int Level { get; set; }
         public int ProfessionID { get; set; }
+        public Profession Profession { get; set; }
+        
+        
     }
 }

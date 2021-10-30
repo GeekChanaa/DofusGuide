@@ -8,7 +8,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182002.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17458-harnachement-dragodinde-brakmarien",
         "description": "Ce harnachement permettra à votre dragodinde de se camoufler dans les recoins les plus sombres.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 17459,
@@ -19,7 +19,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182001.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17459-harnachement-dragodinde-bontarien",
         "description": "Cet attirail sophistiqué vous permettra de mettre votre dinde aux couleurs de la ville lumière.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 17838,
@@ -30,7 +30,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182003.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17838-harnachement-dragodinde-pilote",
         "description": "Si vous n’avez pas froid aux yeux, vous pourrez transformer votre dragodinde en bête de course avec ce harnachement. Enfin, en apparence seulement.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 17839,
@@ -41,7 +41,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182004.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17839-harnachement-dragodinde-abraknyde",
         "description": "Si vous pouviez équiper votre belle-mère de ce harnachement, vous auriez une raison supplémentaire de l’appeler « vieille branche ».",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 17840,
@@ -52,7 +52,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182005.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/17840-harnachement-dragodinde-royal",
         "description": "On dit que « l’habit ne fait pas le moine », mais équiper votre dragodinde de cet attirail est un minimum nécessaire pour faire partie de la garde Royale d’Amakna.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18148,
@@ -63,7 +63,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182010.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18148-harnachement-muldo-brakmarien",
         "description": "Si « vilenie » est votre deuxième prénom, n’hésitez plus ; équipez votre Muldo de ce harnachement et montrez votre dévouement à la cause néfaste de Brâkmar.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18149,
@@ -74,7 +74,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182009.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18149-harnachement-muldo-bontarien",
         "description": "Revendiquez votre allégeance à Bonta en équipant ce harnachement sur votre Muldo.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18150,
@@ -85,7 +85,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182008.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18150-harnachement-muldo-steamer",
         "description": "Blindage résistant et propulseurs à vapeur ; ce harnachement a tout pour faire de votre Muldo un véhicule à la pointe de la technologie.",
-        "recipe": [
+        "harnessRecipes": [
             {
                     "name" : "Poil de Meno",
                     "ankamaId": 17976,
@@ -177,7 +177,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182007.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18151-harnachement-muldo-sufokien",
         "description": "Aux couleurs de Sufokia, votre Muldo en imposera.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18152,
@@ -188,7 +188,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182006.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18152-harnachement-muldo-coquillage",
         "description": "Grâce à ce harnachement constitué de coquillages et de coraux, votre Muldo se sentira comme un poisson dans l’eau lors de vos excursions sous-marines.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18157,
@@ -199,7 +199,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182011.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18157-harnachement-dragodinde-barbare",
         "description": "Les dragodindes possèdent déjà une partie des caractéristiques du barbare : la témérité et un certain ridicule. Pour ce qui est de la force, n'espérez pas qu'un simple Harnachement puisse y faire quelque chose.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18196,
@@ -210,7 +210,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182012.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18196-harnachement-dragodinde-likrone",
         "description": "Mythe ou réalité ? Il n'y a jamais eu autant de signalements de Likrone depuis la mise en service de ce Harnachement.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18453,
@@ -221,7 +221,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182013.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18453-harnachement-dragodinde-steamer",
         "description": "En équipant ce harnachement sur votre dragodinde, vous la transformerez en un moyen de locomotion mécanisé 100% écologique et bon marché.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18524,
@@ -232,7 +232,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182014.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18524-harnachement-dragodinde-glaces",
         "description": "Ce harnachement est insensible à la fonte des glaces. Vous pouvez donc continuer à vivre sans vous soucier des conséquences de vos actes sur le réchauffement climatique.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18558,
@@ -243,7 +243,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182020.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18558-harnachement-dragodinde-squelette",
         "description": "Vous avez envoyé votre dragodinde dans le royaume des morts pour que la légende prenne vie. Grâce à ce paradoxe et surtout ce harnachement, votre dragodinde n'aura jamais été aussi effrayante.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18631,
@@ -254,7 +254,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182015.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18631-harnachement-dragodinde-desertique",
         "description": "Ce harnachement est conçu pour récupérer et recycler les fluides corporels de la dragodinde afin de limiter sa déshydratation en milieu aride.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18800,
@@ -265,7 +265,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182016.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18800-harnachement-muldo-likrone",
         "description": "Mythe ou réalité ? Il n'y a jamais eu autant de signalements de Likrone depuis la mise en service de ce Harnachement.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 18881,
@@ -276,7 +276,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182017.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/18881-harnachement-dragodinde-magmatique",
         "description": "Ce harnachement est idéal pour protéger votre dragodinde lorsqu’elle doit traverser les landes de Sidimote à toute vitesse parce que vous avez le feu aux fesses.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 19136,
@@ -287,7 +287,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182018.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19136-harnachement-muldo-zombique",
         "description": "Si vous trouvez de bon goût d’affubler votre fidèle destrier de la dépouille nécrosée d’un de ses congénères, vous devriez sérieusement songer à arrêter de manger des Corbacs au petit-déjeuner ou d’écouter du Krâmstaïn toute la journée.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 19344,
@@ -298,7 +298,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182021.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19344-harnachement-muldo-squelette",
         "description": "Vous avez envoyé votre Muldo dans le royaume des morts pour que la légende prenne vie. Grâce à ce paradoxe et surtout ce harnachement, votre Muldo n'aura jamais été aussi effrayant.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 19616,
@@ -309,7 +309,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182022.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19616-harnachement-muldo-scarab",
         "description": "Avec ce harnachement équipé sur votre muldo, celui-ci risque de se prendre pour un Scarab et de faire rouler devant lui une boule d'excréments. Le point positif, c'est que les gens s'écarteront pour vous laisser passer, ce qui vous permettra de sortir rapidement des embouteillages à la sortie d'Astrub aux heures de grand trafic.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 19735,
@@ -320,7 +320,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182023.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19735-harnachement-muldo-cryptique",
         "description": "D'après son nom, on pourrait croire que cet harnachement est difficile à déchiffrer. Ce qui n'est pas vraiment un problème, un harnachement n'est pas le genre d'objet qu'on a besoin de décrypter. Sauf si il est dans une crypte et que vous avez besoin de l'en sortir, mais le \"décrypter\" n'est pas le bon terme non plus.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 19991,
@@ -331,7 +331,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182024.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/19991-harnachement-volkorne-dragosaure",
         "description": "Votre Volkorne a enfin l'air méchant.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 20026,
@@ -342,7 +342,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182025.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20026-harnachement-dragodinde-scintillant",
         "description": "Mieux vaut briller de mille feux que brûler de mille scintillements.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 20027,
@@ -353,7 +353,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182026.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20027-harnachement-muldo-scintillant",
         "description": "Mieux vaut briller de mille feux que brûler de mille scintillements.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 20068,
@@ -364,7 +364,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182028.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20068-harnachement-muldo-forban",
         "description": "Le gouvernail fixé à l'arrière de cet harnachement permet de diriger votre muldo comme un navire pirate. Cela nécessite juste de vous tenir sur votre muldo en sens inverse de la marche et donc de conduire sans voir où vous allez, ou bien de vous mettre dans le sens de la marche pour voir où vous allez mais de faire avancer votre muldo en sens inverse de votre orientation, c'est à dire en marche arrière dans le sens de la marche. Vous allez voir, on s'y fait très vite.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 20372,
@@ -375,7 +375,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182029.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20372-harnachement-dragombre",
         "description": "Est-ce un nez, une corne, un porte-manteau ? Quoi qu'il en soit, ce gros appendice permettra à votre volkorne d'enfoncer la cage thoracique de vos ennemis lorsque vous leur foncerez dessus.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 20769,
@@ -386,7 +386,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182031.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20769-harnachement-dragodinde-mordant",
         "description": "Une fois cet harnachement équipé sur votre Dragodinde, plus personne n'osera poser la main sur vous.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 20770,
@@ -397,7 +397,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182032.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20770-harnachement-muldo-mordant",
         "description": "En équipant cet harnachement, votre Muldo n'aura plus aucun mal à mâcher la nourriture que vous voudrez bien lui donner.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 20771,
@@ -408,7 +408,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182033.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/20771-harnachement-volkorne-mordant",
         "description": "Équiper cet harnachement sur votre Volkorne diminuera le risque qu'il se cogne la corne en passant les portes. Par contre, il aura tendance à mordre les jambes des aventuriers passant un peu trop près de lui.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21011,
@@ -419,7 +419,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182034.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21011-harnachement-dragokronique",
         "description": "Beaucoup on surestimés les capacités de leur Dragodinde après avoir équipé cet harnachement. Il est fortement déconseillé de tenter la traversée d'un lac de lave à la nage ou encore de sauter des falaises d'Incarnam.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21035,
@@ -430,7 +430,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182035.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21035-harnachement-dragodinde-noxine",
         "description": "Idéal pour être pris pour cible lors d’une attaque nocturne, ce harnachement mettra votre monture en lumière.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21037,
@@ -441,7 +441,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182036.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21037-harnachement-muldo-noxine",
         "description": "On ne sait jamais ce qu’on risque de croiser dans les profondeurs abyssales, notamment parce qu’on ne voit pas plus loin qu’à quelques kamètres. Ce harnachement règlera vos soucis de vision et fera de votre monture une proie de choix pour les prédateurs marins.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21038,
@@ -452,7 +452,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182037.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21038-harnachement-volkorne-noxine",
         "description": "Ce harnachement fera ressembler votre monture à une luciole géante et étendra ainsi la pollution lumineuse aux régions les plus sauvages.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21147,
@@ -463,7 +463,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182039.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21147-harnachement-lagon-dinde",
         "description": "Avec ce harnachement, votre Dragodinde aura des yeux trop mignons, des écailles d'un bleu profond et la peur constante d'arriver en second.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21148,
@@ -474,7 +474,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182040.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21148-harnachement-muldo-eau",
         "description": "Les histoires historiques parlent toujours de Dragons draconiques et de héros héroïques. Ecrivez à l'écrit votre propre aventure aventurière avec votre Muldo d'eau.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21168,
@@ -485,7 +485,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182038.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21168-harnachement-corbadinde",
         "description": "Cette dragodinde spectrale vous donnerait presque envie d'enfiler un costume et de terroriser vos compétiteurs. Quelle idée saugrenue. Vous ferez ça quand les Pious auront des dents. Ou quand le monde aura été submergé. Hein, quoi ?",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21294,
@@ -496,7 +496,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182041.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21294-harnachement-volkorne-squelette",
         "description": "Comment un insecte peut-il se retrouver avec des ossements à la place de son exosquelette ? Au lieu de vous triturer le cerveau à chercher une explication, contentez-vous d'exhiber fièrement votre terrifiante monture.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21319,
@@ -507,7 +507,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182042.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21319-harnachement-dragodinde-iop",
         "description": "Les dragodindes ne sont pas réputées pour leur intelligence, mais cet harnachement ne va pas améliorer les choses. Si votre dragodinde décide de foncer dans la mêlée sans aucune raison apparente ne soyez pas étonnés.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21322,
@@ -518,7 +518,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182043.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21322-harnachement-dragodinde-especuaire",
         "description": "Beaucoup d'aventuriers ayant essayé cet harnachement se sont plaints du manque de visibilité, dû à la collerette fixée sur la tête de la dragodinde. Le nombre d'accidents a en effet explosé depuis l'arrivée de cet harnachement, au plus grand bonheur des alchimistes.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21330,
@@ -529,7 +529,7 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182044.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21330-harnachement-volkorne-iop",
         "description": "Grâce à cet harnachement la corne de votre Volkorn se transforme en un formidable éperon. De quoi faire pâlir le plus aguerri des trools ou satisfaire le plus complexé des Iop.",
-        "recipe": []
+        "harnessRecipes": []
     },
     {
         "_id": 21333,
@@ -540,6 +540,6 @@
         "imgUrl": "https://s.ankama.com/www/static.ankama.com/dofus/www/game/items/200/182045.png",
         "url": "https://www.dofus.com/fr/mmorpg/encyclopedie/harnachements/21333-harnachement-muldo-iop",
         "description": "Habituée au milieu aquatique, la peau du muldo n'est pas reconnue pour sa résistance aux objets tranchants. Cette armure est parfaite pour ne pas finir en fricassée de muldo à la première escarmouche.",
-        "recipe": []
+        "harnessRecipes": []
     }
 ]

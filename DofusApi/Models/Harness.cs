@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DofusApi.Models
 {
     public class Harness
@@ -10,5 +12,8 @@ namespace DofusApi.Models
         public string ImgUrl { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
+        public ICollection<HarnessRecipe> HarnessRecipes { get; set; }
+                
+        
     }
 }
