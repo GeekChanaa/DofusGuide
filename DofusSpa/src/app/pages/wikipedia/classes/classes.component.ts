@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClasseService } from 'src/app/_services/classe.service';
 
 @Component({
   selector: 'app-classes',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassesComponent implements OnInit {
 
-  constructor() { }
+  classes : any[] = [];
+
+  constructor(
+    private _classeService : ClasseService
+  ) { }
 
   ngOnInit(): void {
+    this._classeService.getById(2).subscribe((data) => {
+      console.log(data);
+    })
   }
 
 }
