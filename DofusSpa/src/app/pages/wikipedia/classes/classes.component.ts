@@ -15,7 +15,13 @@ export class ClassesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this._classeService.getById(2).subscribe((data) => {
+    this.getAll();
+  }
+
+  // Getting Classes
+  getAll(){
+    this._classeService.getAll().subscribe((data) => {
+      this.classes = data;
       console.log(data);
     })
   }
