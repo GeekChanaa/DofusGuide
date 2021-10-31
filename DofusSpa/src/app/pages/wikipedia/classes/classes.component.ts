@@ -10,6 +10,12 @@ export class ClassesComponent implements OnInit {
 
   classes : any[] = [];
 
+  page : number = 1;
+  itemsPerPage : number = 10;
+  totalItems : number ; 
+  totalPages : number;
+  numbers : number[] = [];
+
   constructor(
     private _classeService : ClasseService
   ) { }
@@ -20,10 +26,19 @@ export class ClassesComponent implements OnInit {
 
   // Getting Classes
   getAll(){
-    this._classeService.getAll().subscribe((data) => {
-      this.classes = data;
-      console.log(data);
-    })
+    this._classeService.getAll(this.page,this.itemsPerPage).subscribe((data) => {
+      this.classes = data.result;
+      this.totalItems = data.pagination.totalItems;
+      this.totalPages = data.pagination.totalPages;
+    });
+  }
+
+  // Changing Page
+  changingPage(page : number){
+    this._classeService.getAll(page,this.itemsPerPage).subscribe((data) => {
+      this.classes = data.result;
+    });
+
   }
 
 }

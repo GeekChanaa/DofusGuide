@@ -8,7 +8,7 @@ import { HarnessesComponent } from './harnesses/harnesses.component';
 import { HavenBagsComponent } from './haven-bags/haven-bags.component';
 import { IdolsComponent } from './idols/idols.component';
 import { IndexComponent } from './index/index.component';
-import { JobsComponent } from './jobs/jobs.component';
+import { ProfessionsComponent } from './professions/professions.component';
 import { MonstersComponent } from './monsters/monsters.component';
 import { MountsComponent } from './mounts/mounts.component';
 import { PetsComponent } from './pets/pets.component';
@@ -26,7 +26,7 @@ export const PagesRoutes: Routes = [
     { path : 'harnesses' , component : HarnessesComponent},
     { path : 'haven-bags' , component : HavenBagsComponent},
     { path : 'idols' , component : IdolsComponent},
-    { path : 'jobs' , component : JobsComponent},
+    { path : 'professions' , component : ProfessionsComponent},
     { path : 'monsters' , component : MonstersComponent},
     { path : 'mounts' , component : MountsComponent},
     { path : 'pets' , component : PetsComponent},

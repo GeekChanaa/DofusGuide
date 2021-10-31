@@ -1,1 +1,28 @@
+<div class="page__center">
+    <div class="player">
+        <app-page-header
+          [subtitle]="'Wikipedia'"
+          title="Classes"
+          description="These are the classes Available in the game"
+        >
+      </app-page-header>
+    </div>
 
+    <div class="wikipedia-list">
+        <div class="list-filters">
+
+        </div>
+        <div class="list">
+            <app-wikipedia-item *ngFor="let classe of classes" routerLink="/wikipedia/classes/{{classe.id}}"
+                [img]="'assets/img/wikipedia/category.png'"
+                [name]="classe.name"
+                [props]="null">
+            </app-wikipedia-item>
+        </div>
+
+        <div class="pagination" >
+            <button *ngFor="let item of [].constructor(totalPages); let i = index" (click)="changingPage(i+1)">{{i+1}}</button>
+        </div>
+    </div>
+
+</div>

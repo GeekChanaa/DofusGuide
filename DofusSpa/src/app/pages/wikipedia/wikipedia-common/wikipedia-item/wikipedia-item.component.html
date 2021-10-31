@@ -1,0 +1,12 @@
+<div class="wikipedia-item">
+  <div class="wikipedia-item-header">
+      <img src="{{img}}" alt="">
+      <h6>{{name}}</h6>
+  </div>
+  <ng-container *ngIf="props">
+    <div class="wikipedia-item-prop" *ngFor="let prop of props">
+      <h6> <b>{{prop.name}}</b> : {{prop.value}}</h6>
+    </div>
+  </ng-container>
+  
+</div>

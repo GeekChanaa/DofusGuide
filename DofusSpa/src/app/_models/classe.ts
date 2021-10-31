@@ -5,6 +5,7 @@ export interface Classe{
     level : number,
     type : string,
     url : string,
-    imgUrl : string,
+    maleImg : string,
+    femaleImg : string,
     description : string
 }
