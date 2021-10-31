@@ -2,6 +2,7 @@
     <div class="player">
         <app-page-header
           [subtitle]="'Wikipedia'"
+          [subtitleLink] = "'/wikipedia'"
           title="Classes"
           description="These are the classes Available in the game"
         >
@@ -21,7 +22,11 @@
         </div>
 
         <div class="pagination" >
-            <button *ngFor="let item of [].constructor(totalPages); let i = index" (click)="changingPage(i+1)">{{i+1}}</button>
+            <mat-paginator [length]="totalItems"
+               [pageSize]="itemsPerPage"
+               (page) = "setPage($event)"
+               aria-label="Select page">
+            </mat-paginator>
         </div>
     </div>
 

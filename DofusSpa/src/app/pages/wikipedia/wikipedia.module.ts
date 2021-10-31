@@ -23,6 +23,7 @@ import { HavenBagsComponent } from './haven-bags/haven-bags.component';
 import { HarnessesComponent } from './harnesses/harnesses.component';
 import { WikipediaCommonModule } from './wikipedia-common/wikipedia-common.module';
 import { ProfessionsComponent } from './professions/professions.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ProfessionsComponent } from './professions/professions.component';
     RouterModule,
     PagesCommonModule,
     HttpClientModule,
-    WikipediaCommonModule
+    WikipediaCommonModule,
+    MatPaginatorModule
   ],
   providers: [
   ]

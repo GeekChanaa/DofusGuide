@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
 import { ClasseService } from 'src/app/_services/classe.service';
 
 @Component({
@@ -15,6 +16,8 @@ export class ClassesComponent implements OnInit {
   totalItems : number ; 
   totalPages : number;
   numbers : number[] = [];
+
+  pageEvent: PageEvent;
 
   constructor(
     private _classeService : ClasseService
@@ -39,6 +42,12 @@ export class ClassesComponent implements OnInit {
       this.classes = data.result;
     });
 
+  }
+
+  setPage($event){
+    this.page = ($event.pageIndex + 1);
+    console.log(this.page);
+    this.changingPage(this.page);
   }
 
 }

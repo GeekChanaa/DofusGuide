@@ -10,6 +10,7 @@ export class PageHeaderComponent implements OnInit {
   @Input() subtitle : string;
   @Input() title : string;
   @Input() description : string;
+  @Input() subtitleLink : string;
   constructor() { }
 
   ngOnInit() {
