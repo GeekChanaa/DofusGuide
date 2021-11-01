@@ -38,7 +38,12 @@ export class EquipmentsComponent implements OnInit {
     this._equipmentService.getAll(page,this.itemsPerPage).subscribe((data) => {
       this.equipments = data.result;
     });
+  }
 
+  setPage($event){
+    this.page = ($event.pageIndex + 1);
+    console.log(this.page);
+    this.changingPage(this.page);
   }
 
 }

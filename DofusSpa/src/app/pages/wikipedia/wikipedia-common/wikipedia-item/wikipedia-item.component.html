@@ -5,7 +5,7 @@
   </div>
   <ng-container *ngIf="props">
     <div class="wikipedia-item-prop" *ngFor="let prop of props">
-      <h6> <b>{{prop.name}}</b> : {{prop.value}}</h6>
+      <h6> <b class="prop-name">{{prop.name}}</b> : <span class="prop-value">{{prop.value}}</span> </h6>
     </div>
   </ng-container>
   

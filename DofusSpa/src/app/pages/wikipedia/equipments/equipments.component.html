@@ -2,26 +2,200 @@
     <div class="player">
         <app-page-header
           [subtitle]="'Wikipedia'"
-          title="Professions"
+          [subtitleLink] = "'/wikipedia'"
+          title="Equipments"
           description="These are the equipments Available in the game"
         >
       </app-page-header>
     </div>
   
     <div class="wikipedia-list">
-        <div class="list-filters">
-  
+        <!-- <div class="list-filters">
+          <div class="filter-search">
+            <div class="field">
+              <div class="field__wrap"><input class="field__input" type="email" placeholder="Search"></div>
+            </div>
+          </div>
+          <div class="filter-categories">
+            <button class="filter-category btn active">cat1</button>
+            <button class="filter-category btn">cat1</button>
+            <button class="filter-category btn">cat1</button>
+            <button class="filter-category btn">cat1</button>
+          </div>
+          <div class="filter-button">
+            <button class="login__btn btn btn_purple btn_wide">Filter</button>
+          </div>
         </div>
+        <div class="filters">
+          <div class="games__field field">
+            <div class="field__wrap">
+              <select class="field__select">
+                <option>Added Time</option>
+                <option>New</option>
+                <option>Free</option>
+              </select></div>
+          </div>
+        </div> -->
+        <div class="discover__center center filterr">
+          <div class="discover__top">
+            <div class="field">
+              <div class="field__wrap"><input class="field__input" type="email" placeholder="Search"></div>
+            </div>
+            <!-- <div class="discover__nav"><a class="discover__link active" href="#">All items</a><a class="discover__link" href="#">Art</a><a class="discover__link" href="#">Game</a><a class="discover__link" href="#">Photography</a><a class="discover__link" href="#">Music</a><a class="discover__link" href="#">Video</a></div>
+            <div class="tablet-show">
+              <select class="select">
+                <option>All items</option>
+                <option>Art</option>
+                <option>Game</option>
+                <option>Photography</option>
+                <option>Music</option>
+                <option>Video</option>
+              </select>
+            </div> -->
+            <button class="discover__filter">
+              <div class="discover__text">Filter</div>
+              <div class="discover__icon">
+                <svg class="icon icon-filter">
+                  <use xlink:href="#icon-filter"></use>
+                </svg>
+                <svg class="icon icon-close">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div class="discover__filters">
+            <div class="discover__sorting">
+              <div class="discover__cell">
+                <div class="field">
+                  <div class="field__label">Bonus Primaire</div>
+                  <div class="field__wrap">
+                    <select class="select">
+                      <option value="">Critique</option>
+                      <option value="">Agilité</option>
+                      <option value="">Force</option>
+                      <option value="">Chance</option>
+                      <option value="">Intelligence</option>
+                      <option value="">Vitalité</option>
+                      <option value="">Invocation</option>
+                      <option value="">PA</option>
+                      <option value="">PM</option>
+                      <option value="">Portée</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="discover__cell">
+                <div class="field">
+                  <div class="field__label">Bonus Secondaire</div>
+                  <div class="field__wrap">
+                    <select class="select">
+                      <option value="">% Critique sur le sortt</option>
+                      <option value="">% Dommages aux sorts</option>
+                      <option value="">% Dommages d'armes</option>
+                      <option value="">% Dommages distance</option>
+                      <option value="">% Dommages mêlée</option>
+                      <option value="">% Résistance Air</option>
+                      <option value="">% Résistance Eau</option>
+                      <option value="">% Résistance Feu</option>
+                      <option value="">% Résistance Neutre</option>
+                      <option value="">% Résistance Terre</option>
+                      <option value="">% Résistance distance </option>
+                      <option value="">% Résistance mêlée</option>
+                      <option value="">Ajouter un sort temporaire</option>
+                      <option value="">Attitude</option>
+                      <option value="">Augmente le nombre de lancer maximal par cible du sort</option>
+                      <option value="">Augmente le nombre de lancer maximal par tour du sort</option>
+                      <option value="">Augmente la porée maximale du sort de </option>
+                      <option value="">Augmente les dégâtts de base du sort de</option>
+                      <option value="">Change les paroles</option>
+                      <option value="">Craft coopératif impossible</option>
+                      <option value="">Dommages sur le sort</option>
+                      <option value="">Dommages</option>
+                      <option value="">Dommages air</option>
+                      <option value="">Dommages critiques</option>
+                      <option value="">Dommages eau</option>
+                      <option value="">Dommages feu</option>
+                      <option value="">Dommages neutre</option>
+                      <option value="">Dommages pièges</option>
+                      <option value="">Dommages poussée</option>
+                      <option value="">Dommages terre</option>
+                      <option value="">Désactive la ligne de vue du sort</option>
+                      <option value="">Désactive le lancer en ligne du sort</option>
+                      <option value="">Esquive PA</option>
+                      <option value="">Esquive PM</option>
+                      <option value="">Fuite</option>
+                      <option value="">Initiative</option>
+                      <option value="">Pod</option>
+                      <option value="">Prospection</option>
+                      <option value="">Puissance</option>
+                      <option value="">Puissance (piéges)</option>
+                      <option value="">Rend la portée du sort modifiable</option>
+                      <option value="">Renvoie dommage</option>
+                      <option value="">Retrait PA</option>
+                      <option value="">Retrait PM</option>
+                      <option value="">Réduit de le cout en PA du sort</option>
+                      <option value="">Réduitt de le délai de relance du sort</option>
+                      <option value="">Résistance air</option>
+                      <option value="">Résistance critiques</option>
+                      <option value="">Résistance eau</option>
+                      <option value="">Résistance feu</option>
+                      <option value="">Résistance neutre</option>
+                      <option value="">Résistance poussée</option>
+                      <option value="">Résistance terre</option>
+                      <option value="">Sagesse</option>
+                      <option value="">Soin</option>
+                      <option value="">Tacle</option>
+                      <option value="">Titre</option>
+                      <option value="">Vitalité</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="discover__cell">
+                <div class="field">
+                  <div class="field__label">Autre</div>
+                  <div class="field__wrap">
+                    <select class="select">
+                      <option>Most liked</option>
+                      <option>Least liked</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="discover__cell">
+                <div class="range">
+                  <div class="range__label">Level</div>
+                  <div class="range__slider js-slider" data-min="0.01" data-max="10" data-start="5" data-step="0.1" data-tooltips="true" data-postfix=" ETH"></div>
+                  <div class="range__indicators">
+                    <div class="range__text">0.01 ETH</div>
+                    <div class="range__text">10 ETH</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
         <div class="list">
             <app-wikipedia-item *ngFor="let equipment of equipments" routerLink="/wikipedia/equipments/{{equipment.id}}"
                 [img]="'assets/img/wikipedia/category.png'"
                 [name]="equipment.name"
-                [props]="null">
+                [props]="[
+                  {name : 'Level' , value : equipment.level},
+                  {name : 'Type' , value : equipment.type}
+                  ]">
             </app-wikipedia-item>
         </div>
   
         <div class="pagination" >
-            <button *ngFor="let item of [].constructor(totalPages); let i = index" (click)="changingPage(i+1)">{{i+1}}</button>
+          <mat-paginator [length]="totalItems"
+             [pageSize]="itemsPerPage"
+             (page) = "setPage($event)"
+             aria-label="Select page">
+          </mat-paginator>
         </div>
     </div>
   
