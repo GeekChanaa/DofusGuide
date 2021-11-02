@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsumablesComponent implements OnInit {
 
+  // constructor
   constructor() { }
 
   ngOnInit(): void {
