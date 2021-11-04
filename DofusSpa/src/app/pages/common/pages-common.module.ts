@@ -8,11 +8,13 @@ import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.compon
 import { SidebarGroupComponent } from './sidebar/sidebar-group/sidebar-group.component';
 import { RouterModule } from '@angular/router';
 import { PageHeaderComponent } from './page-header/page-header.component';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatRippleModule
   ],
   declarations: [
     PagesCommonComponent,

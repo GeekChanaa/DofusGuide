@@ -1,4 +1,30 @@
-<div class="page__center">
+<!-- Page Header -->
+<app-page-header
+    [subtitle]="'Wikipedia'"
+    [subtitleLink] = "'/wikipedia'"
+    title="Equipments"
+    description="These are the equipments Available in the game"
+    >
+</app-page-header>
+
+<div class="px-16 py-8">
+    <!-- List Of Items -->
+    <app-wikipedia-item *ngFor="let equipment of equipments" routerLink="/wikipedia/equipments/{{equipment.id}}"
+                [img]="'assets/img/wikipedia/category.png'"
+                [name]="equipment.name"
+                [props]="null">
+            </app-wikipedia-item>
+
+    <!-- Paginator -->
+    <mat-paginator [length]="totalItems"
+                [pageSize]="itemsPerPage"
+                (page) = "setPage($event)"
+                aria-label="Select page">
+            </mat-paginator>
+    
+  </div>
+
+<!-- <div class="page__center">
     <div class="player">
         <app-page-header
           [subtitle]="'Wikipedia'"
@@ -9,7 +35,7 @@
       </app-page-header>
     </div>
   
-    <div class="wikipedia-list">
+    <div class="wikipedia-list"> -->
         <!-- <div class="list-filters">
           <div class="filter-search">
             <div class="field">
@@ -36,11 +62,11 @@
               </select></div>
           </div>
         </div> -->
-        <div class="discover__center center filterr">
+        <!-- <div class="discover__center center filterr">
           <div class="discover__top">
             <div class="field">
               <div class="field__wrap"><input class="field__input" type="email" placeholder="Search"></div>
-            </div>
+            </div> -->
             <!-- <div class="discover__nav"><a class="discover__link active" href="#">All items</a><a class="discover__link" href="#">Art</a><a class="discover__link" href="#">Game</a><a class="discover__link" href="#">Photography</a><a class="discover__link" href="#">Music</a><a class="discover__link" href="#">Video</a></div>
             <div class="tablet-show">
               <select class="select">
@@ -52,7 +78,7 @@
                 <option>Video</option>
               </select>
             </div> -->
-            <button class="discover__filter">
+            <!-- <button class="discover__filter">
               <div class="discover__text">Filter</div>
               <div class="discover__icon">
                 <svg class="icon icon-filter">
@@ -199,4 +225,4 @@
         </div>
     </div>
   
-  </div>
+  </div> -->

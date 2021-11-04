@@ -1,33 +1,25 @@
-<div class="page__center">
-    <div class="player">
-        <app-page-header
-          [subtitle]="'Wikipedia'"
-          [subtitleLink] = "'/wikipedia'"
-          title="Classes"
-          description="These are the classes Available in the game"
-        >
-      </app-page-header>
-    </div>
+<!-- Page Header -->
+<app-page-header
+    [subtitle]="'Wikipedia'"
+    [subtitleLink] = "'/wikipedia'"
+    title="Classes"
+    description="These are the classes Available in the game"
+    >
+</app-page-header>
 
-    <div class="wikipedia-list">
-        <div class="list-filters">
-
-        </div>
-        <div class="list">
-            <app-wikipedia-item *ngFor="let classe of classes" routerLink="/wikipedia/classes/{{classe.id}}"
+<div class="px-16 py-8">
+    <!-- List Of Items -->
+    <app-wikipedia-item *ngFor="let classe of classes" routerLink="/wikipedia/classes/{{classe.id}}"
                 [img]="'assets/img/wikipedia/category.png'"
                 [name]="classe.name"
                 [props]="null">
             </app-wikipedia-item>
-        </div>
 
-        <div class="pagination" >
-            <mat-paginator [length]="totalItems"
-               [pageSize]="itemsPerPage"
-               (page) = "setPage($event)"
-               aria-label="Select page">
+    <!-- Paginator -->
+    <mat-paginator [length]="totalItems"
+                [pageSize]="itemsPerPage"
+                (page) = "setPage($event)"
+                aria-label="Select page">
             </mat-paginator>
-        </div>
-    </div>
-
-</div>
+    
+  </div>
