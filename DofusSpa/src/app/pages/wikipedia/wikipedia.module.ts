@@ -24,6 +24,7 @@ import { HarnessesComponent } from './harnesses/harnesses.component';
 import { WikipediaCommonModule } from './wikipedia-common/wikipedia-common.module';
 import { ProfessionsComponent } from './professions/professions.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatRippleModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     PagesCommonModule,
     HttpClientModule,
     WikipediaCommonModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatRippleModule
   ],
   providers: [
   ]
