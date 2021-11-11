@@ -14,9 +14,9 @@ namespace DofusApi.Controllers
     [Route("api/[controller]")]
     public class BaseController<T> : ControllerBase where T : class
     {
-        private readonly DofusDataContext _context;
-        private readonly IBaseRepository<T> _repo;
-        private readonly DbSet<T> _dbSet;
+        protected readonly DofusDataContext _context;
+        protected readonly IBaseRepository<T> _repo;
+        protected readonly DbSet<T> _dbSet;
 
         public BaseController(DofusDataContext context, IBaseRepository<T> repo)
         {
@@ -29,7 +29,7 @@ namespace DofusApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<T>>> Get([FromQuery] GlobalParams globalParams)
         {
-            var classes = await _repo.Get(globalParams);
+            var classes = await PagedList<T>.CreateAsync(_repo.Get(globalParams),globalParams.PageNumber,globalParams.PageSize);
             Response.AddPagination(classes.CurrentPage, classes.PageSize, classes.TotalCount, classes.TotalPages);
             return Ok(classes); 
         }
@@ -51,7 +51,7 @@ namespace DofusApi.Controllers
         // PUT: api/[items]/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutClasse(int id, T item)
+        public async Task<IActionResult> Put(int id, T item)
         {
             // if (id != item.ID)
             // {
@@ -63,7 +63,7 @@ namespace DofusApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!(await ClasseExists(id)))
+                if (!(await Exists(id)))
                 {
                     return NotFound();
                 }
@@ -101,7 +101,7 @@ namespace DofusApi.Controllers
             return NoContent();
         }
 
-        private async Task<bool> ClasseExists(int id)
+        private async Task<bool> Exists(int id)
         {
             var item = await this._repo.GetByID(id);
             if(item != null)

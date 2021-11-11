@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sP4hSvo2Gei719evij2qRaVYXpbNepwFPH4+afh8ailHhWCRVOS4iJAsK9G+Db3NqZrXW1AOEbn/l6J3GLXRgg==",
+  "dgSpecHash": "gCQVvaYZKRPNxOo05I6gqQes6ef9Hi8MPfjGNgpKghbGNDMfudecEKgOS7col2PV6Du/7BFa+XqGjXieR/AM3A==",
   "success": true,
   "projectFilePath": "/Users/macbookpro/Desktop/Dofus/dofus/DofusApi/DofusApi.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "/Users/macbookpro/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.0/microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/5.0.0/microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/microsoft.aspnetcore.html.abstractions/2.2.0/microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
+    "/Users/macbookpro/.nuget/packages/microsoft.aspnetcore.jsonpatch/5.0.1/microsoft.aspnetcore.jsonpatch.5.0.1.nupkg.sha512",
+    "/Users/macbookpro/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/5.0.1/microsoft.aspnetcore.mvc.newtonsoftjson.5.0.1.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/microsoft.aspnetcore.razor/2.2.0/microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/microsoft.aspnetcore.razor.language/5.0.0/microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/microsoft.aspnetcore.razor.runtime/2.2.0/microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
@@ -57,6 +59,7 @@
     "/Users/macbookpro/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/macbookpro/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/runtime.native.system/4.3.0/runtime.native.system.4.3.0.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "/Users/macbookpro/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
@@ -142,8 +145,15 @@
       "code": "NU3028",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Linq.Dynamic.Core 1.2.13' from source 'https://api.nuget.org/v3/index.json': The repository primary signature's timestamp found a chain building issue: ExplicitDistrust: The trust setting for this policy was set to Deny.",
-      "libraryId": "System.Linq.Dynamic.Core"
+      "message": "Package 'Microsoft.AspNetCore.Mvc.NewtonsoftJson 5.0.1' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: ExplicitDistrust: The trust setting for this policy was set to Deny.",
+      "libraryId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson"
+    },
+    {
+      "code": "NU3028",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNetCore.JsonPatch 5.0.1' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: ExplicitDistrust: The trust setting for this policy was set to Deny.",
+      "libraryId": "Microsoft.AspNetCore.JsonPatch"
     }
   ]
 }

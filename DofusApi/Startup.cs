@@ -14,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using DofusApi.Data;
 using DofusApi.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 
 
 namespace DofusApi
@@ -39,14 +40,23 @@ namespace DofusApi
             });
 
             services.AddControllers();
-            services.AddDbContext<DofusDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DofusDataContext")));
-
+            services.AddDbContext<DofusDataContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("DofusDataContext"));
+                options.EnableSensitiveDataLogging();
+            });
+            services.AddControllers().AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
             /*****
 
             Registering My Repo Services
 
             *****/
             services.AddScoped(typeof(IBaseRepository<>),typeof(BaseRepository<>));
+            services.AddScoped<IBaseRepository<Equipment>,EquipmentRepository>();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
             
             services.AddSwaggerGen(c =>
             {

@@ -1,7 +1,7 @@
 import { Mount } from "./mount";
 import { Product } from "./product";
 
-exportt interface MountProduct{
+export interface MountProduct{
     id : number,
     mountID : number,
     productID : number,

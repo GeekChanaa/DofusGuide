@@ -1,0 +1,9 @@
+<div class="pt-5">
+  <h4 class="">Order By</h4>
+  <button class="bg-white w-9/12 h-10 mt-2 px-5 pr-10 rounded-md text-sm text-left focus:outline-none" mat-ripple [mat-menu-trigger-for]="menu">
+    Order
+  </button>
+  <mat-menu #menu="matMenu">
+    <button (click)="sortBy(item)" *ngFor="let item of properties" mat-menu-item>{{item}}</button>
+  </mat-menu>
+</div>

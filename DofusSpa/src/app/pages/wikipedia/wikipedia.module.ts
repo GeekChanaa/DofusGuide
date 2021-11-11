@@ -25,7 +25,11 @@ import { WikipediaCommonModule } from './wikipedia-common/wikipedia-common.modul
 import { ProfessionsComponent } from './professions/professions.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRippleModule } from '@angular/material/core';
-
+import { MatMenuModule } from '@angular/material/menu';
+import { SortingFilterComponent } from './wikipedia-common/sorting-filter/sorting-filter.component';
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { FilteringFilterComponent } from './wikipedia-common/filtering-filter/filtering-filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,9 @@ import { MatRippleModule } from '@angular/material/core';
       IdolsComponent,
       HavenBagsComponent,
       HarnessesComponent,
-      ProfessionsComponent
+      ProfessionsComponent,
+      SortingFilterComponent,
+      FilteringFilterComponent
    ],
   imports: [
     CommonModule,
@@ -55,7 +61,10 @@ import { MatRippleModule } from '@angular/material/core';
     HttpClientModule,
     WikipediaCommonModule,
     MatPaginatorModule,
-    MatRippleModule
+    MatRippleModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    FormsModule
   ],
   providers: [
   ]
