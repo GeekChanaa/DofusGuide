@@ -11,10 +11,10 @@ namespace DofusApi.Models
         public int Level { get; set; }
         public string ImgUrl { get; set; }
         public string Url { get; set; }
-        public ICollection<MonsterDrop> MonsterDrops { get; set; }
-        public ICollection<MonsterResistence> MonsterResistences { get; set; }
-        public ICollection<MonsterArea> MonsterAreas { get; set; }
-        public ICollection<MonsterStatistic> MonsterStatistics { get; set; }
+        public ICollection<MonsterDrop> Drops { get; set; }
+        public ICollection<MonsterResistence> Resistance { get; set; }
+        public ICollection<MonsterArea> Areas { get; set; }
+        public ICollection<MonsterStatistic> Statistics { get; set; }
         
         
     }

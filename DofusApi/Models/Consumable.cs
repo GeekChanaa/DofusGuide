@@ -12,8 +12,8 @@ namespace DofusApi.Models
         public string ImgUrl { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
-        public virtual ICollection<ConsumableRecipe> ConsumableRecipes { get; set; }
-        public virtual ICollection<ConsumableStatistic> ConsumableStatistics { get; set; }
+        public virtual ICollection<ConsumableRecipe> Recipes { get; set; }
+        public virtual ICollection<ConsumableStatistic> Statistics { get; set; }
 
     }
 }

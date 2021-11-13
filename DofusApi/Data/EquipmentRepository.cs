@@ -15,10 +15,11 @@ namespace DofusApi.Data
 
         }
 
+        // Getting Params
         public override IQueryable<Equipment> Get(GlobalParams objectParams)
         {
             var data = base.Get(objectParams);
-            return data.Include(u => u.EquipmentStatistics);
+            return data.Include(u => u.Statistics);
         }
     }
 }

@@ -12,8 +12,8 @@ namespace DofusApi.Models
         public string ImgUrl { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
-        public ICollection<EquipmentStatistic> EquipmentStatistics { get; set; }
-        public ICollection<EquipmentRecipe> EquipmentRecipes { get; set; }
+        public ICollection<EquipmentStatistic> Statistics { get; set; }
+        public ICollection<EquipmentRecipe> Recipes { get; set; }
         
         
     }

@@ -12,7 +12,7 @@ namespace DofusApi.Models
         public string ImgUrl { get; set; }
         public string Url { get; set; }
         public string Description { get; set; }
-        public ICollection<PetStatistic> PetStatistics { get; set; }
+        public ICollection<PetStatistic> Statistics { get; set; }
         
         
     }

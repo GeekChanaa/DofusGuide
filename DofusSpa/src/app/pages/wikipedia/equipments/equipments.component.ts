@@ -21,8 +21,11 @@ export class EquipmentsComponent implements OnInit {
   // filtering parameters
   itemParams : any = {};
 
-  maxLevel :number;
-  minLevel : number;
+  maxLevel :number = 200;
+  minLevel : number = 1;
+
+  filterStatistics : string[] = [];
+  filter : string[] = [];
 
 
   primaryBonusFilters : string[] = [];
@@ -110,7 +113,7 @@ export class EquipmentsComponent implements OnInit {
       "Vitalité",
     ];
     this.primaryBonusFilters = [
-      "Critique",
+      "% Critique",
       "Agilité",
       "Force",
       "Chance",
@@ -149,7 +152,7 @@ export class EquipmentsComponent implements OnInit {
 
   // Changing Page
   changingPage(page : number){
-    this._equipmentService.getAll(page,this.itemsPerPage).subscribe((data) => {
+    this._equipmentService.getAll(page,this.itemsPerPage,this.itemParams).subscribe((data) => {
       this.equipments = data.result;
     });
   }
@@ -174,6 +177,56 @@ export class EquipmentsComponent implements OnInit {
       this.equipments = data.result;
     })
   }
+
+  filterByBonus(filter : string){
+    if(this.itemParams.filterValue.includes(filter)){
+      let x = this.itemParams.filterValue.indexOf(filter);
+      this.itemParams.filterBy.splice(x,1);
+      this.itemParams.filterValue.splice(x,1);
+    }
+    else
+    {
+      this.itemParams.filterValue.push(filter);
+      this.itemParams.filterBy.push("Statistics.Name");
+    }
+  }
+
+  // Reloading Data
+  reloadData(){
+    if(this.itemParams.filterBy.includes("minLevel")){
+      var i = this.itemParams.filterBy.indexOf("minLevel");
+      this.itemParams.filterBy.splice(i,1);
+      this.itemParams.filterValue.splice(i,1);
+    }
+    if(this.itemParams.filterBy.includes("maxLevel")){
+      var i = this.itemParams.filterBy.indexOf("maxLevel");
+      this.itemParams.filterBy.splice(i,1);
+      this.itemParams.filterValue.splice(i,1);
+    }
+    this.itemParams.filterBy.push("minLevel");
+    this.itemParams.filterValue.push(this.minLevel);
+    this.itemParams.filterBy.push("maxLevel");
+    this.itemParams.filterValue.push(this.maxLevel);
+    this._equipmentService.getAll(this.page,this.itemsPerPage,this.itemParams).subscribe((data)=> {
+      this.equipments = data.result;
+    })
+  }
+
+  // filtering by type
+  filterByType($event){
+    if(this.itemParams.filterValue.includes($event))
+    {
+      var i = this.itemParams.filterBy.indexOf($event);
+      this.itemParams.filterBy.splice(i,1);
+      this.itemParams.filterValue.splice(i,1);
+    }
+    else{
+      this.itemParams.filterBy.push("Type");
+      this.itemParams.filterValue.push($event);
+    }
+  }
+
+  
 
   
 }

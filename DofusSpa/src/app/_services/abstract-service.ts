@@ -28,8 +28,22 @@ export abstract class AbstractService<T> {
     // Other sorting and filtering params
     if (itemParams != null) {
       for (const p in itemParams) {
+        console.log(p);
+        console.log(itemParams[p]);
         if (itemParams[p] != null)
+        if(p == "filterBy"){
+          for(var i =0 ;i < itemParams.filterBy.length ;i++)
+          params = params.append(p,itemParams.filterBy[i]);
+        }
+        else if(p == "filterValue"){
+          for(var i =0 ;i < itemParams.filterValue.length ;i++)
+          params = params.append(p,itemParams.filterValue[i]);
+        }
+        else{
           params = params.append(p, itemParams[p]);
+        }
+        console.log(params);
+        
       }
     }
 

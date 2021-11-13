@@ -30,6 +30,7 @@ import { SortingFilterComponent } from './wikipedia-common/sorting-filter/sortin
 import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FilteringFilterComponent } from './wikipedia-common/filtering-filter/filtering-filter.component';
 import { FormsModule } from '@angular/forms';
+import { EquipmentComponent } from './equipments/equipment/equipment.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { FormsModule } from '@angular/forms';
       HarnessesComponent,
       ProfessionsComponent,
       SortingFilterComponent,
-      FilteringFilterComponent
+      FilteringFilterComponent,
+      EquipmentComponent
    ],
   imports: [
     CommonModule,

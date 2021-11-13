@@ -35,7 +35,6 @@ namespace DofusApi.Data
             // Sorting
             if (!string.IsNullOrEmpty(objectParams.OrderBy))
             {
-                Console.WriteLine(objectParams.OrderBy);
                 foreach(var prop in props) {
                     if(prop.Name.ToLower() == objectParams.OrderBy.ToLower()){
                         data = objectParams.ReverseOrder == "y" ? data.OrderBy(prop.Name+" descending") : data.OrderBy(prop.Name);
@@ -51,17 +50,18 @@ namespace DofusApi.Data
                     if(prop.Name == objectParams.SearchBy)
                         {
                             string filterQuery1 = "("+prop.Name+".Contains(\""+objectParams.SearchValue+"\"))";
-                            Console.WriteLine(filterQuery1);
                             data = data.Where(filterQuery1);
                         }
                 }
             }
 
-            // Searching for an exact value
+            // Filtering
             if (objectParams.FilterBy != null)
             {
                 
                 string filterQuery1 = "";
+                var minlvl = "1";
+                var maxlvl = "200";
                 foreach(var prop in props)
                 {
                     if(prop.PropertyType == typeof(string))
@@ -83,7 +83,20 @@ namespace DofusApi.Data
                                 var navigationProp = objectParams.FilterBy[i].Split('.').Last();
                                 data = data.Where(navigation+".Any("+navigationProp+" == \""+objectParams.FilterValue[i]+"\")");
                             }
+                            else if(objectParams.FilterBy[i] == "minLevel")
+                            {
+                                minlvl = objectParams.FilterValue[i];
+                            }
+                            else if(objectParams.FilterBy[i] == "maxLevel")
+                            {
+                                maxlvl = objectParams.FilterValue[i];
+                            }
                         }
+                    }
+                    if(prop.Name == "Level")
+                    {
+                        data = data.Where(" Level >= "+minlvl);
+                        data = data.Where(" Level <= "+maxlvl);
                     }
                 }
 

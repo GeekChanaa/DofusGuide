@@ -16,6 +16,7 @@ import { ResourcesComponent } from './resources/resources.component';
 import { SetsComponent } from './sets/sets.component';
 import { SkinEquipmentsComponent } from './skin-equipments/skin-equipments.component';
 import { WeaponsComponent } from './weapons/weapons.component';
+import { EquipmentComponent } from './equipments/equipment/equipment.component';
 
 export const PagesRoutes: Routes = [
     { path : '' , component : IndexComponent},
@@ -23,6 +24,7 @@ export const PagesRoutes: Routes = [
     { path : 'companions' , component : CompanionsComponent},
     { path : 'consumables' , component : ConsumablesComponent},
     { path : 'equipments' , component : EquipmentsComponent},
+    { path : 'equipment/:id' , component : EquipmentComponent},
     { path : 'harnesses' , component : HarnessesComponent},
     { path : 'haven-bags' , component : HavenBagsComponent},
     { path : 'idols' , component : IdolsComponent},

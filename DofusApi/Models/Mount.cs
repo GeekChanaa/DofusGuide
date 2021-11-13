@@ -11,6 +11,6 @@ namespace DofusApi.Models
         public int Level { get; set; }
         public string ImgUrl { get; set; }
         public string Url { get; set; }
-        public ICollection<MountStatistic> MountStatistics { get; set; }
+        public ICollection<MountStatistic> Statistics { get; set; }
     }
 }
