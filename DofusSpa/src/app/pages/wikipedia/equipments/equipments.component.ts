@@ -186,8 +186,8 @@ export class EquipmentsComponent implements OnInit {
     }
     else
     {
-      this.itemParams.filterValue.push(filter);
-      this.itemParams.filterBy.push("Statistics.Name");
+      this.itemParams.filterValue.unshift(filter);
+      this.itemParams.filterBy.unshift("Statistics.Name");
     }
   }
 
@@ -203,10 +203,10 @@ export class EquipmentsComponent implements OnInit {
       this.itemParams.filterBy.splice(i,1);
       this.itemParams.filterValue.splice(i,1);
     }
-    this.itemParams.filterBy.push("minLevel");
-    this.itemParams.filterValue.push(this.minLevel);
-    this.itemParams.filterBy.push("maxLevel");
-    this.itemParams.filterValue.push(this.maxLevel);
+    this.itemParams.filterBy.unshift("minLevel");
+    this.itemParams.filterValue.unshift(this.minLevel);
+    this.itemParams.filterBy.unshift("maxLevel");
+    this.itemParams.filterValue.unshift(this.maxLevel);
     this._equipmentService.getAll(this.page,this.itemsPerPage,this.itemParams).subscribe((data)=> {
       this.equipments = data.result;
     })

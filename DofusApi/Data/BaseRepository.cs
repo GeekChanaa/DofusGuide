@@ -70,12 +70,27 @@ namespace DofusApi.Data
                         {
                             if(prop.Name == objectParams.FilterBy[i] )
                             {
-                                if(i==0)
-                                filterQuery1 = prop.Name+" == \""+objectParams.FilterValue[i]+"\"";
-                                if(i!=0)
-                                filterQuery1 = filterQuery1+" "+objectParams.FilterMethod+" "+prop.Name+" == \""+objectParams.FilterValue[i]+"\"";
+                                Console.WriteLine(objectParams.FilterBy[i]);
+
+                                if(i!=0 && filterQuery1 != "")
+                                {
+                                    Console.WriteLine(i + " :this is the typooo : "+objectParams.FilterValue[i]);
+                                    filterQuery1 = filterQuery1+" "+objectParams.FilterMethod+" "+prop.Name+" == \""+objectParams.FilterValue[i]+"\"";
+                                }
+
+                                if(i==0 || filterQuery1 == "")
+                                {
+                                    Console.WriteLine(i + " : this is the type : "+objectParams.FilterValue[i]);
+                                    filterQuery1 = prop.Name+" == \""+objectParams.FilterValue[i]+"\"";
+                                }
+                                
                                 if(i==objectParams.FilterValue.Length-1)
-                                data = data.Where("( "+filterQuery1+" )"); 
+                                {
+                                    Console.WriteLine("this is the last query");
+                                    Console.WriteLine(objectParams.FilterValue[i]);
+                                    Console.WriteLine("( "+filterQuery1+" )");
+                                    data = data.Where("( "+filterQuery1+" )");
+                                }
                             }
                             else if(objectParams.FilterBy[i].Contains('.'))
                             {
@@ -83,11 +98,11 @@ namespace DofusApi.Data
                                 var navigationProp = objectParams.FilterBy[i].Split('.').Last();
                                 data = data.Where(navigation+".Any("+navigationProp+" == \""+objectParams.FilterValue[i]+"\")");
                             }
-                            else if(objectParams.FilterBy[i] == "minLevel")
+                            if(objectParams.FilterBy[i] == "minLevel")
                             {
                                 minlvl = objectParams.FilterValue[i];
                             }
-                            else if(objectParams.FilterBy[i] == "maxLevel")
+                            if(objectParams.FilterBy[i] == "maxLevel")
                             {
                                 maxlvl = objectParams.FilterValue[i];
                             }
@@ -95,6 +110,9 @@ namespace DofusApi.Data
                     }
                     if(prop.Name == "Level")
                     {
+                        Console.WriteLine(" Level >= "+minlvl);
+                        Console.WriteLine(" Level >= "+maxlvl);
+
                         data = data.Where(" Level >= "+minlvl);
                         data = data.Where(" Level <= "+maxlvl);
                     }

@@ -13,10 +13,10 @@ namespace DofusApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StatisticMonstersController : BaseController<Consumable>
+    public class IdolStatisticsController : BaseController<IdolStatistic>
     {
 
-        public StatisticMonstersController(DofusDataContext context, IBaseRepository<Consumable> repo) : base(context,repo)
+        public IdolStatisticsController(DofusDataContext context, IBaseRepository<IdolStatistic> repo) : base(context,repo)
         {
             
         }

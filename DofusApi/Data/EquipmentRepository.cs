@@ -15,7 +15,7 @@ namespace DofusApi.Data
 
         }
 
-        // Getting Params
+        // Getting Paramscd
         public override IQueryable<Equipment> Get(GlobalParams objectParams)
         {
             var data = base.Get(objectParams);
