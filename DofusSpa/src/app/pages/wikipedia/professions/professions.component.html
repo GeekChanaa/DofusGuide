@@ -13,11 +13,11 @@
 
       </div>
       <div class="list">
-          <app-wikipedia-item *ngFor="let profession of professions" routerLink="/wikipedia/professions/{{profession.id}}"
+          <app-wikipedia-list-item *ngFor="let profession of professions" routerLink="/wikipedia/professions/{{profession.id}}"
               [img]="'assets/img/wikipedia/category.png'"
               [name]="profession.name"
               [props]="null">
-          </app-wikipedia-item>
+          </app-wikipedia-list-item>
       </div>
 
       <div class="pagination" >

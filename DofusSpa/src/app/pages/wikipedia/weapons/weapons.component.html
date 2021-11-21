@@ -1,1 +1,81 @@
-<p>weapons works!</p>
+<!-- Page Header -->
+<app-page-header 
+    [subtitle]="'Wikipedia'" 
+    [subtitleLink]="'/wikipedia'" 
+    title="Weapon"
+    description="These are the weapons Available in the game">
+</app-page-header>
+
+<div class="px-16 py-8">
+  <!-- List Of Items -->
+  <div class="flex flex-wrap">
+    <div class="w-3/12">
+      <div class="w-9/12">
+        <h2 class="text-xl font-bold text-center py-4">Filter</h2>
+        <!-- Search Input -->
+        <div class="filter-section">
+          <h4 class="text-base font-bold">Search</h4>
+          <div class="relative text-gray-600 w-full">
+            <input type="search" name="serch" placeholder="Search"
+              class="bg-white h-10 px-5 pr-10 rounded-md text-sm focus:outline-none w-full">
+            <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+              <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+                width="512px" height="512px">
+                <path
+                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Sort By -->
+        <app-sorting-filter (sort)="sortData($event)" [type]="wikiType"></app-sorting-filter>
+
+        <!-- Type -->
+        <app-filtering-filter (filterBonus)="filterByType($event)" [name]="'Type'" [filters]="typeFilters">
+        </app-filtering-filter>
+
+        <!-- Bonus Primaire -->
+        <app-filtering-filter (filterBonus)="filterByBonus($event)" [name]="'Bonus Primare'"
+          [filters]="primaryBonusFilters"> </app-filtering-filter>
+
+        <!-- Bonus Secondaire -->
+        <app-filtering-filter (filterBonus)="filterByBonus($event)" [name]="'Bonus Secondaire'"
+          [filters]="secondaryBonusFilters"> </app-filtering-filter>
+
+        <!-- Level -->
+        <div class="">
+          <h4 class="text-base font-bold">Level</h4>
+          <div class="flex">
+            <input [(ngModel)]="minLevel" type="text"
+              class="bg-white w-4/12 h-10 mt-2 px-5 pr-10 rounded-md text-sm text-left focus:outline-none">
+            <input [(ngModel)]="maxLevel" type="text"
+              class="bg-white w-4/12 h-10 mt-2 px-5 pr-10 rounded-md text-sm text-left focus:outline-none">
+          </div>
+        </div>
+
+        <!-- Filter Button -->
+        <div>
+          <button (click)="reloadData()"
+            class="flex-no-shrink bg-red-500 px-5 py-2 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-black-500 text-white w-full rounded-md mt-4">Filter</button>
+
+        </div>
+        <!-- Autre -->
+        <!-- <app-filtering-filter [name]="'Autre'" [filters]="primaryBonusFilters"> </app-filtering-filter> -->
+
+      </div>
+    </div>
+    <div class="w-9/12">
+      <app-wikipedia-list-item *ngFor="let weapon of weapons" routerLink="/wikipedia/weapon/{{weapon.id}}"
+        [img]="'assets/img/wikipedia/category.png'" [name]="weapon.name" [props]="null">
+      </app-wikipedia-list-item>
+    </div>
+  </div>
+
+
+  <!-- Paginator -->
+  <mat-paginator [length]="totalItems" [pageSize]="itemsPerPage" (page)="setPage($event)" aria-label="Select page">
+  </mat-paginator>
+
+</div>

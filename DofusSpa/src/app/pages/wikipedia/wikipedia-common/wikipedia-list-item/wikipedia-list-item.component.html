@@ -1,0 +1,26 @@
+<!-- <div class="wikipedia-item">
+  <div class="wikipedia-item-header">
+      <img src="{{img}}" alt="">
+      <h6>{{name}}</h6>
+  </div>
+  <ng-container *ngIf="props">
+    <div class="wikipedia-item-prop" *ngFor="let prop of props">
+      <h6> <b class="prop-name">{{prop.name}}</b> : <span class="prop-value">{{prop.value}}</span> </h6>
+    </div>
+  </ng-container>
+  
+</div> -->
+
+<div matRipple class="flex cursor-pointer flex-col p-4 mt-4 bg-white shadow-md hover:shodow-lg rounded-2xl">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center">
+      <img class="w-16 h-16 rounded-2xl p-3 border border-blue-100 text-blue-400 bg-blue-50" src="{{img}}" alt="">
+      <div class="flex flex-col ml-3">
+        <div class="font-medium leading-none">{{name}}</div>
+        <p class="text-sm text-gray-600 leading-none mt-1">By deleting your account you will lose your all data
+        </p>
+      </div>
+    </div>
+    <button class="flex-no-shrink bg-red-500 px-5 ml-4 py-2 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-red-500 text-white rounded-full">Delete</button>
+  </div>
+</div>

@@ -22,7 +22,7 @@ namespace DofusApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Equipment>> Get(int id)
+        override public async Task<ActionResult<Equipment>> Get(int id)
         {
             var item = await this._repo.GetByID(id);
 

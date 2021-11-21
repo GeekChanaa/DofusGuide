@@ -17,6 +17,7 @@ import { SetsComponent } from './sets/sets.component';
 import { SkinEquipmentsComponent } from './skin-equipments/skin-equipments.component';
 import { WeaponsComponent } from './weapons/weapons.component';
 import { EquipmentComponent } from './equipments/equipment/equipment.component';
+import { WeaponComponent } from './weapons/weapon/weapon.component';
 
 export const PagesRoutes: Routes = [
     { path : '' , component : IndexComponent},
@@ -36,6 +37,7 @@ export const PagesRoutes: Routes = [
     { path : 'sets' , component : SetsComponent},
     { path : 'skin-equipments' , component : SkinEquipmentsComponent},
     { path : 'weapons' , component : WeaponsComponent},
+    { path : 'weapon/:id' , component : WeaponComponent}
 ];
 
 @NgModule({

@@ -7,26 +7,27 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DofusApi.Data
 {
-    public class EquipmentRepository : BaseRepository<Equipment>
+    public class WeaponRepository : BaseRepository<Weapon>
     {
         // Constructor
-        public EquipmentRepository(DofusDataContext context) : base(context)
+        public WeaponRepository(DofusDataContext context) : base(context)
         {
 
         }
 
         // Getting Paramscd
-        public override IQueryable<Equipment> Get(GlobalParams objectParams)
+        public override IQueryable<Weapon> Get(GlobalParams objectParams)
         {
             var data = base.Get(objectParams);
             return data.Include(u => u.Statistics);
         }
 
         // Get By ID 
-        override public async Task<Equipment> GetByID(int id)
+        override public async Task<Weapon> GetByID(int id)
         {
             return await this.dbSet.Include(u => u.Statistics)
                 .Include(u => u.Recipes)
+                .Include(u => u.Chars)
                 .FirstOrDefaultAsync(u => u.ID == id);
         }
     }

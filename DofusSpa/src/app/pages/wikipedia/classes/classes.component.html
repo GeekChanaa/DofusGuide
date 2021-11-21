@@ -9,11 +9,11 @@
 
 <div class="px-16 py-8">
     <!-- List Of Items -->
-    <app-wikipedia-item *ngFor="let classe of classes" routerLink="/wikipedia/classes/{{classe.id}}"
+    <app-wikipedia-list-item *ngFor="let classe of classes" routerLink="/wikipedia/classes/{{classe.id}}"
                 [img]="'assets/img/wikipedia/category.png'"
                 [name]="classe.name"
                 [props]="null">
-            </app-wikipedia-item>
+            </app-wikipedia-list-item>
 
     <!-- Paginator -->
     <mat-paginator [length]="totalItems"

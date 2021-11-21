@@ -16,7 +16,7 @@ namespace DofusApi.Data
     {
         protected readonly DofusDataContext _context;
 
-        private readonly DbSet<M> dbSet;
+        protected readonly DbSet<M> dbSet;
 
         public BaseRepository(DofusDataContext context)
         {
@@ -125,13 +125,13 @@ namespace DofusApi.Data
 
 
         // Getting the object
-        public async Task<M> GetByID(int id)
+        public virtual async Task<M> GetByID(int id)
         {
             return await this.dbSet.FindAsync(id);
         }
 
         // Inserting the object
-        public async Task<M> Insert(M entity)
+        public virtual async Task<M> Insert(M entity)
         {
             this.dbSet.Add(entity);
             await this._context.SaveChangesAsync();
@@ -139,7 +139,7 @@ namespace DofusApi.Data
         }
 
         // Deleting the object using id
-        public async Task Delete(int id)
+        public virtual async Task Delete(int id)
         {
             var item = await this.dbSet.FindAsync(id);
             this.dbSet.Remove(item);
@@ -147,14 +147,14 @@ namespace DofusApi.Data
         }
 
         // Deleting object
-        public async Task Delete(M entity)
+        public virtual async Task Delete(M entity)
         {
             this.dbSet.Remove(entity);
             await this._context.SaveChangesAsync();
         }
 
         // Updating the object
-        public async Task Update(M entity)
+        public virtual async Task Update(M entity)
         {
             this._context.Entry(entity).State = EntityState.Modified;
             await this._context.SaveChangesAsync();

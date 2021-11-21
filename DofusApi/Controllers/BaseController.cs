@@ -36,7 +36,7 @@ namespace DofusApi.Controllers
 
         // GET: api/[items]/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<T>> Get(int id)
+        public virtual async Task<ActionResult<T>> Get(int id)
         {
             var item = await this._repo.GetByID(id);
 
@@ -44,7 +44,6 @@ namespace DofusApi.Controllers
             {
                 return NotFound();
             }
-
             return item;
         }
 

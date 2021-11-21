@@ -7,12 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WikipediaItemComponent implements OnInit {
 
-  // Input parameters
-  @Input() img : string;
-  @Input() name : string;
-  @Input() props : any[];
+  @Input() item : any = {};
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }

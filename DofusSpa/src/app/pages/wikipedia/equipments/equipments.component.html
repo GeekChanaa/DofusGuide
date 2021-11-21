@@ -64,9 +64,9 @@
       </div>
     </div>
     <div class="w-9/12">
-      <app-wikipedia-item *ngFor="let equipment of equipments" routerLink="/wikipedia/equipments/{{equipment.id}}"
+      <app-wikipedia-list-item *ngFor="let equipment of equipments" routerLink="/wikipedia/equipment/{{equipment.id}}"
         [img]="'assets/img/wikipedia/category.png'" [name]="equipment.name" [props]="null">
-      </app-wikipedia-item>
+      </app-wikipedia-list-item>
     </div>
   </div>
 

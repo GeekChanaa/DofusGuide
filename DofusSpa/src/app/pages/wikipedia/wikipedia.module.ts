@@ -31,6 +31,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FilteringFilterComponent } from './wikipedia-common/filtering-filter/filtering-filter.component';
 import { FormsModule } from '@angular/forms';
 import { EquipmentComponent } from './equipments/equipment/equipment.component';
+import { WeaponComponent } from './weapons/weapon/weapon.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { EquipmentComponent } from './equipments/equipment/equipment.component';
       ProfessionsComponent,
       SortingFilterComponent,
       FilteringFilterComponent,
-      EquipmentComponent
+      EquipmentComponent,
+      WeaponComponent
    ],
   imports: [
     CommonModule,
