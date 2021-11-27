@@ -36,6 +36,7 @@ import { PetComponent } from './pets/pet/pet.component';
 import { ClasseComponent } from './classes/classe/classe.component';
 import { ProfessionComponent } from './professions/profession/profession.component';
 import { MonsterComponent } from './monsters/monster/monster.component';
+import { ResourceComponent } from './resources/resource/resource.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { MonsterComponent } from './monsters/monster/monster.component';
       PetComponent,
       ClasseComponent,
       ProfessionComponent,
-      MonsterComponent
+      MonsterComponent,
+      ResourceComponent,
    ],
   imports: [
     CommonModule,

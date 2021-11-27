@@ -1,1 +1,24 @@
-<p>resources works!</p>
+<!-- Page Header -->
+<app-page-header
+    [subtitle]="'Wikipedia'"
+    [subtitleLink] = "'/wikipedia'"
+    title="Classes"
+    description="These are the resources Available in the game"
+    >
+</app-page-header>
+
+<div class="px-16 py-8">
+    <!-- List Of Items -->
+    <app-wikipedia-list-item *ngFor="let resource of resources" routerLink="/wikipedia/resources/{{resource.id}}"
+                [img]="'assets/img/wikipedia/category.png'"
+                [name]="resource.name"
+                [props]="null">
+            </app-wikipedia-list-item>
+
+    <!-- Paginator -->
+    <mat-paginator [length]="totalItems"
+                [pageSize]="itemsPerPage"
+                (page) = "setPage($event)"
+                aria-label="Select page">
+            </mat-paginator>
+  </div>

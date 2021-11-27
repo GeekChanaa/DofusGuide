@@ -6,5 +6,6 @@ export interface Resource{
     type : string,
     url : string,
     imgUrl : string,
-    description : string
+    description : string,
+    recipes : any[],
 }
