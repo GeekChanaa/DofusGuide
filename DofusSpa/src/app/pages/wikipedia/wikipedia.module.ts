@@ -33,6 +33,7 @@ import { FormsModule } from '@angular/forms';
 import { EquipmentComponent } from './equipments/equipment/equipment.component';
 import { WeaponComponent } from './weapons/weapon/weapon.component';
 import { PetComponent } from './pets/pet/pet.component';
+import { ClasseComponent } from './classes/classe/classe.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { PetComponent } from './pets/pet/pet.component';
       FilteringFilterComponent,
       EquipmentComponent,
       WeaponComponent,
-      PetComponent
+      PetComponent,
+      ClasseComponent
    ],
   imports: [
     CommonModule,

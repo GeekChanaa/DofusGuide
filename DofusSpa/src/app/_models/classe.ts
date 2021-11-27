@@ -7,5 +7,7 @@ export interface Classe{
     url : string,
     maleImg : string,
     femaleImg : string,
-    description : string
+    description : string,
+    spells : any[],
+    roles : any[],
 }

@@ -19,6 +19,7 @@ import { WeaponsComponent } from './weapons/weapons.component';
 import { EquipmentComponent } from './equipments/equipment/equipment.component';
 import { WeaponComponent } from './weapons/weapon/weapon.component';
 import { PetComponent } from './pets/pet/pet.component';
+import { ClasseComponent } from './classes/classe/classe.component';
 
 export const PagesRoutes: Routes = [
     { path : '' , component : IndexComponent},
@@ -40,6 +41,7 @@ export const PagesRoutes: Routes = [
     { path : 'weapons' , component : WeaponsComponent},
     { path : 'weapon/:id' , component : WeaponComponent},
     { path : 'pet/:id' , component : PetComponent},
+    { path : 'classes/:id' , component : ClasseComponent},
 ];
 
 @NgModule({
