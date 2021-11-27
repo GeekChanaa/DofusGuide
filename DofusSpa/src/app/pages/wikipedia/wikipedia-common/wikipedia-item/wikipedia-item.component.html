@@ -6,17 +6,8 @@
 				alt='nike shoes'>
 		</div>
 		<div class="w-8/12 p-3">
-			<h1 class="capitalize text-4xl font-extrabold">Description</h1>
-			<p class="text-lg text-gray-500	">{{item.description}} .</p>
-			<div class="flex items-center gap-4 my-6 cursor-pointer ">
-				<div class="bg-blue-600 px-5 py-3 text-white rounded-lg w-2/4 text-center">Add to bag</div>
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400" viewBox="0 0 20 20"
-					fill="currentColor">
-					<path fill-rule="evenodd"
-						d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-						clip-rule="evenodd" />
-				</svg>
-			</div>
+			<h1 class="capitalize text-4xl font-extrabold">{{item.name}}</h1>
+			<p class="text-lg pt-8 text-gray-500	">{{item.description}}</p>
 		</div>
 	</div>
 </main>
@@ -26,8 +17,8 @@
 		<app-wikipedia-stats-item [statistics]="item.statistics" class="w-full ml-5"></app-wikipedia-stats-item>
 	</div>
 	<!-- Effects -->
-	<div class="mb-12 w-4/12 p-10 flex" *ngIf="item.effects != null">
-		<app-wikipedia-stats-item [effects]="item.effects" class="w-full ml-5"></app-wikipedia-stats-item>
+	<div class="mb-12 w-4/12 p-10 flex" *ngIf="item.chars != null">
+		<app-wikipedia-effects-item [effects]="item.chars" class="w-full ml-5"></app-wikipedia-effects-item>
 	</div>
 	<!-- Conditions -->
 	<div class="mb-12 w-4/12 p-10 flex" *ngIf="item.conditions != null">

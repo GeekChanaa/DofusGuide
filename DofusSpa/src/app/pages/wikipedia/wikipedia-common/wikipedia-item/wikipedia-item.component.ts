@@ -13,6 +13,8 @@ export class WikipediaItemComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("======= CHARS ======");
+    console.log(this.item.chars);
   }
 
 }

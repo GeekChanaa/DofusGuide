@@ -8,11 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class WikipediaEffectsItemComponent implements OnInit {
 
   // Input Parameters
-  @Input() effects : any = {};
+  @Input() effects : any[] = [];
 
   constructor() { }
 
+  // on init cycle hook
   ngOnInit() {
+    
   }
 
 }

@@ -32,6 +32,7 @@ import { FilteringFilterComponent } from './wikipedia-common/filtering-filter/fi
 import { FormsModule } from '@angular/forms';
 import { EquipmentComponent } from './equipments/equipment/equipment.component';
 import { WeaponComponent } from './weapons/weapon/weapon.component';
+import { PetComponent } from './pets/pet/pet.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { WeaponComponent } from './weapons/weapon/weapon.component';
       SortingFilterComponent,
       FilteringFilterComponent,
       EquipmentComponent,
-      WeaponComponent
+      WeaponComponent,
+      PetComponent
    ],
   imports: [
     CommonModule,
