@@ -41,4 +41,10 @@ export class ProfessionsComponent implements OnInit {
 
   }
 
+  setPage($event){
+    this.page = ($event.pageIndex + 1);
+    console.log(this.page);
+    this.changingPage(this.page);
+  }
+
 }

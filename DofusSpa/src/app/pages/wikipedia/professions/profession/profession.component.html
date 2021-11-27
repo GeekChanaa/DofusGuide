@@ -1,0 +1,55 @@
+<app-page-header [subtitle]="'Wikipedia'" [subtitleLink]="'/wikipedia'" title="Classes"
+  description="These are the equipments Available in the game">
+</app-page-header>
+
+<main class="p-10">
+  <div class="flex flex-wrap">
+    <div class="w-4/12 h-4/6 rounded-lg overflow-hidden object-cover">
+      <img class="w-full h-full object-cover"
+        src='https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'
+        alt='nike shoes'>
+    </div>
+    <div class="w-8/12 p-3">
+      <h1 class="capitalize text-4xl font-extrabold">{{profession.name}}</h1>
+      <p class="text-lg pt-8 text-gray-500	">{{profession.description}}</p>
+    </div>
+  </div>
+</main>
+<h1 class="ml-10 capitalize text-4xl font-extrabold">Harvests</h1>
+<div class="grid grid-cols-8 p-10">
+  <div *ngFor="let item of profession.harvests"
+    class="flex m-2 flex-col p-8 bg-gray-800 cursor-pointer shadow-md hover:shodow-lg rounded-2xl">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="w-16 h-16 rounded-2xl p-3 border border-gray-800 text-blue-400 bg-gray-900" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+<h1 class="ml-10 capitalize text-4xl font-extrabold">Locations</h1>
+<div class="">
+  <div *ngFor="let item of profession.locations"
+    class="flex m-2 flex-col p-8 bg-gray-800 cursor-pointer shadow-md hover:shodow-lg rounded-2xl">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="w-16 h-16 rounded-2xl p-3 border border-gray-800 text-blue-400 bg-gray-900" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+
+      </div>
+    </div>
+  </div>
