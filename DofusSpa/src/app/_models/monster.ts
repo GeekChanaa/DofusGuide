@@ -7,4 +7,8 @@ export interface Monster{
     level : number,
     type: string,
     description : string,
+    statistics : any[],
+    drops : any[],
+    resistances : any[],
+    areas : any[],
 }

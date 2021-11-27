@@ -1,0 +1,31 @@
+<app-page-header [subtitle]="'Wikipedia'" [subtitleLink]="'/wikipedia'" title="Equipments"
+  description="These are the monsters Available in the game">
+</app-page-header>
+
+<!-- Monster image and descriptiton -->
+<main class="p-10">
+	<div class="flex flex-wrap">
+		<div class="w-4/12 h-4/6 rounded-lg overflow-hidden object-cover">
+			<img class="w-full h-full object-cover"
+				src='https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80'
+				alt='nike shoes'>
+		</div>
+		<div class="w-8/12 p-3">
+			<h1 class="capitalize text-4xl font-extrabold">{{monster.name}}</h1>
+			<p class="text-lg pt-8 text-gray-500	">{{monster.description}}</p>
+		</div>
+	</div>
+</main>
+
+<!-- Monster Areas -->
+<app-wikipedia-stats-item [statistics]="monster.areas"></app-wikipedia-stats-item>
+
+<!-- Monster Resistences -->
+<app-wikipedia-stats-item [statistics]="monster.resistances"></app-wikipedia-stats-item>
+
+<!-- Monster Drops -->
+<app-wikipedia-stats-item [statistics]="monster.drops"></app-wikipedia-stats-item>
+
+<!-- Monster Statistics -->
+<app-wikipedia-stats-item [statistics]="monster.statistics"></app-wikipedia-stats-item>
+

@@ -12,7 +12,7 @@ namespace DofusApi.Models
         public string ImgUrl { get; set; }
         public string Url { get; set; }
         public ICollection<MonsterDrop> Drops { get; set; }
-        public ICollection<MonsterResistence> Resistance { get; set; }
+        public ICollection<MonsterResistence> Resistances { get; set; }
         public ICollection<MonsterArea> Areas { get; set; }
         public ICollection<MonsterStatistic> Statistics { get; set; }
         
