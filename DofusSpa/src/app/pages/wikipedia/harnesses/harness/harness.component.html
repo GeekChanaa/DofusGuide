@@ -1,5 +1,5 @@
 <app-page-header [subtitle]="'Wikipedia'" [subtitleLink]="'/wikipedia'" title="Resources"
-  description="These are the resources Available in the game">
+  description="These are the harnesss Available in the game">
 </app-page-header>
 
 <!-- Monster image and descriptiton -->
@@ -11,19 +11,19 @@
 				alt='nike shoes'>
 		</div>
 		<div class="w-8/12 p-3">
-			<h1 class="capitalize text-4xl font-extrabold">{{resource.name}}</h1>
-			<p class="text-lg pt-8 text-gray-500	">{{resource.description}}</p>
+			<h1 class="capitalize text-4xl font-extrabold">{{harness.name}}</h1>
+			<p class="text-lg pt-8 text-gray-500	">{{harness.description}}</p>
 		</div>
 	</div>
 </main>
 
 <!-- Resource Recipes -->
 <app-wikipedia-recipe-item 
-	*ngIf="resource.recipes.length != 0" 
-	[recipes]="resource.recipes">
+	*ngIf="harness.recipes.length != 0" 
+	[recipes]="harness.recipes">
 
 </app-wikipedia-recipe-item>
 
-<!-- Recipes where resource is utilized -->
+<!-- Recipes where harness is utilized -->
 
-<!-- Where the resources can be dropped -->
+<!-- Where the harnesss can be dropped -->

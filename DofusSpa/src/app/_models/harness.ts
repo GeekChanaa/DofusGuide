@@ -1,3 +1,5 @@
+import { HarnessRecipe } from "./harness-recipe";
+
 export interface Harness{
     id : number,
     ankamaID : number,
@@ -7,4 +9,5 @@ export interface Harness{
     level : number,
     type: string,
     description : string,
+    recipes : HarnessRecipe[],
 }

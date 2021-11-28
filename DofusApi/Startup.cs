@@ -59,6 +59,9 @@ namespace DofusApi
             services.AddScoped<IBaseRepository<Classe>,ClasseRepository>();
             services.AddScoped<IBaseRepository<Profession>,ProfessionRepository>();
             services.AddScoped<IBaseRepository<Monster>,MonsterRepository>();
+            services.AddScoped<IBaseRepository<Mount>,MountRepository>();
+            services.AddScoped<IBaseRepository<Resource>,ResourceRepository>();
+            services.AddScoped<IBaseRepository<Harness>,HarnessRepository>();
             services.AddControllers().AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
                 );

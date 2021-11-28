@@ -10,6 +10,6 @@ import { AbstractService } from './abstract-service';
 export class HarnessService extends AbstractService<Harness> {
 
   constructor(protected _http: HttpClient) {
-    super(_http, environment.apiUrl+"/api/Harnesss/");
+    super(_http, environment.apiUrl+"/api/Harnesses/");
   }
 }

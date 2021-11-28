@@ -37,6 +37,8 @@ import { ClasseComponent } from './classes/classe/classe.component';
 import { ProfessionComponent } from './professions/profession/profession.component';
 import { MonsterComponent } from './monsters/monster/monster.component';
 import { ResourceComponent } from './resources/resource/resource.component';
+import { MountComponent } from './mounts/mount/mount.component';
+import { HarnessComponent } from './harnesses/harness/harness.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { ResourceComponent } from './resources/resource/resource.component';
       ProfessionComponent,
       MonsterComponent,
       ResourceComponent,
+      MountComponent,
+      HarnessComponent
    ],
   imports: [
     CommonModule,

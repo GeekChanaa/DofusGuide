@@ -23,6 +23,8 @@ import { ClasseComponent } from './classes/classe/classe.component';
 import { ProfessionComponent } from './professions/profession/profession.component';
 import { MonsterComponent } from './monsters/monster/monster.component';
 import { ResourceComponent } from './resources/resource/resource.component';
+import { MountComponent } from './mounts/mount/mount.component';
+import { HarnessComponent } from './harnesses/harness/harness.component';
 
 export const PagesRoutes: Routes = [
     { path : '' , component : IndexComponent},
@@ -48,6 +50,8 @@ export const PagesRoutes: Routes = [
     { path : 'professions/:id' , component : ProfessionComponent},
     { path : 'monsters/:id' , component : MonsterComponent},
     { path : 'resources/:id' , component : ResourceComponent},
+    { path : 'mounts/:id' , component : MountComponent},
+    { path : 'harnesses/:id' , component : HarnessComponent},
 ];
 
 @NgModule({
