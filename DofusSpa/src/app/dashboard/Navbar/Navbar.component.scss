@@ -1,0 +1,44 @@
+.notification-menu{
+    max-width: 350px;
+    width: 350px
+}
+
+::ng-deep.mat-menu-panel {
+    max-width: 350px !important;
+    width: 350px !important;
+}
+
+::ng-deep.mat-menu-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.notification-menu-header{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white !important;
+}
+
+
+
+.no-outline{
+    outline: none;
+}
+
+
+.notification-menu-content{
+    max-height: 212px;
+    overflow-y: scroll;
+}
+
+.notification-menu-footer{
+    padding: 15px;
+    background: #e2e2e2;
+}
+
+.footer-text{
+    margin-bottom: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+}

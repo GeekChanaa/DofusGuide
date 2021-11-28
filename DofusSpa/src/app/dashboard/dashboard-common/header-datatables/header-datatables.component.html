@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="container-fluid">
+    <div class="data-table-header col-xl-8 offset-xl-2">
+      <div class="header-title">
+        <h3>{{entities}}</h3>
+      </div>
+      <div class="toolbar-table">
+        <div class="flex w-full pdt-10 flex-no-shrink">
+          <div class="w-1/2">
+            <mat-form-field appearance="legacy">
+              <mat-label>Search for {{entity}}</mat-label>
+              <input matInput [(ngModel)]="globalParams.searchValue" name="search" placeholder="search">
+            </mat-form-field>
+            <button mat-button (click)="search(searchBy)"> search </button>
+          </div>
+          <div class="w-1/2 text-right">
+            <button class="no-outline" matTooltip="Filter Columns" mat-icon-button
+              [mat-menu-trigger-for]="FilterShownColumns">
+              <mat-icon>filter_list</mat-icon>
+            </button>
+            <mat-menu #FilterShownColumns="matMenu" class="text-center">
+              <button *ngFor="let item of columns" class="no-outline" (click)="$event.stopPropagation();" mat-menu-item>
+                <mat-checkbox color="primary" [(ngModel)]="showColumns[item]">{{item}}</mat-checkbox>
+              </button>
+            </mat-menu>
+            <button class="dialog-create-btn" mat-raised-button (click)="openCreateDialog()">Create {{entity}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

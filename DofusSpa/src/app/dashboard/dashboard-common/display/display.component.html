@@ -1,0 +1,29 @@
+
+<div class="preloader-overlay-custom">
+  <mat-progress-spinner class="preloader-custom" [mode]="'indeterminate'"></mat-progress-spinner>
+</div>
+<mat-card>
+<ng-container *ngFor="let item of entity | keyvalue">
+  <div *ngIf="!isObj(item.value)">
+      <h6>{{item.key}}</h6> 
+      <span>{{item.value}}</span>
+  </div>
+  <ng-container *ngIf="isObj(item.value) && item.value != null">
+      <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{item.key}}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <ng-container *ngFor="let navigation of item.value | keyvalue">
+              <div *ngIf="!isObj(navigation.value)">
+                  <h6>{{navigation.key}}</h6> 
+                  <span>{{navigation.value}}</span>
+              </div>
+            </ng-container>
+          </mat-expansion-panel>
+        </mat-accordion>      
+    </ng-container>
+</ng-container>
+</mat-card>

@@ -1,0 +1,26 @@
+<app-header-datatables 
+  [searchBy]="'Name'"
+  [globalParams]="globalParams" 
+  (reloadData)="reloadData()"
+  [entity]="'Equipment'"
+  [entities]="'Equipments'"
+  [showColumns]="showColumns">
+</app-header-datatables>
+
+<div class="container-fluid">
+  <div class="">
+    <!-- Progress Bar -->
+    <mat-progress-bar mode="query" [hidden]="!loader"></mat-progress-bar>
+    <app-datatable
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+    [privilegeEntity]="'Equipment'"
+    [showColumns]="showColumns"
+    (deleteAction)="delete($event)"
+    (displayAction)="show($event)"
+      >
+
+    </app-datatable>
+    <mat-paginator [length]="totalItems" [pageSize]="10" (page)="setPage($event)" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

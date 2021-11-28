@@ -1,3 +1,88 @@
-<p>
-  dashboard works!
-</p>
+<mat-toolbar class="shadow">
+  <button mat-icon-button class="sidebar-button no-outline" aria-label="Example icon-button with menu icon"
+    (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="toolbar-left">
+    <app-Navbar></app-Navbar>
+  </div>
+
+
+</mat-toolbar>
+
+<mat-drawer-container class="sidebar-container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <div>
+      <button routerLink="/dashboard" class="no-outline" mat-icon-button>
+        <mat-icon class="">
+          home
+        </mat-icon>
+      </button>
+    </div>
+    <div class="text-center logo">
+      <img class="logo-img" src="/assets/img/concreet.png" alt="" style="">
+      <p class="sidebar-username">{{_authService.decodedToken.unique_name[1].charAt(0).toUpperCase() }}.
+        {{_authService.decodedToken.unique_name[2]}}</p>
+      <p class="sidebar-usermail">{{_authService.decodedToken.unique_name[0]}}</p>
+    </div>
+    <div class="" style="margin-top: 20px;">
+      <div>
+        <button mat-button class="sidebar-link active" routerLink="/dashboard">
+          <mat-icon class="sidebar-btn">dashboard</mat-icon> Dashboard
+        </button>
+      </div>
+      <div>
+        <button mat-button class="sidebar-link active" routerLink="/dashboard/informationReports">
+          <mat-icon class="sidebar-btn">dashboard</mat-icon> Information Corrections
+        </button>
+      </div>
+      <div>
+        <button mat-button class="sidebar-link active" routerLink="/dashboard/statistics">
+          <mat-icon class="sidebar-btn">bar_chart</mat-icon> Statistics
+        </button>
+      </div>
+      <div>
+        <button mat-button class="sidebar-link active" routerLink="/dashboard/mailing">
+          <mat-icon class="sidebar-btn">alternate_email</mat-icon> Mailbox
+        </button>
+      </div>
+      <div class="sidebar-link-group">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon class="sidebar-btn">location_on</mat-icon> Location
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <button class="sidebar-link active" routerLink="/dashboard/cities" mat-button>Cities</button>
+            <button class="sidebar-link active" routerLink="/dashboard/states" mat-button>States</button>
+            <button class="sidebar-link active" routerLink="/dashboard/countries" mat-button>Countries</button>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <div class="sidebar-link-group">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon class="sidebar-btn">account_circle</mat-icon> Users
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <button class="sidebar-link" routerLink="/dashboard/privileges" mat-button>Privileges</button>
+            <button class="sidebar-link" routerLink="/dashboard/role-privileges" mat-button>Role Privileges</button>
+            <button class="sidebar-link" routerLink="/dashboard/roles" mat-button>Roles</button>
+            <button class="sidebar-link" routerLink="/dashboard/users" mat-button>Users</button>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      
+    </div>
+
+  </mat-drawer>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>

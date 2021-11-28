@@ -1,0 +1,120 @@
+.mat-drawer-container{
+    height: 100vh;
+}
+
+.sidebar-username{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Inter";
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1em;
+}
+
+.sidebar-usermail{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Inter";
+    font-size: 0.8em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.sidebar-link{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3px;
+    outline: none;
+    font-size: 0.9em;
+    padding: 5px 3px 5px 14px;
+    font-weight: 500;
+}
+
+.sidebar-link-group{
+    margin-top: 11px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.mat-expansion-panel{
+    box-shadow: 0 0 0 0 ;
+    background: transparent;
+    color : #a1a2b6 !important
+}
+
+.mat-expansion-panel-header-title{
+    color: #a1a2b6 !important;
+}
+::ng-deep .mat-expansion-panel-header > .mat-expansion-indicator:after {
+    color: #a1a2b6;
+  }
+
+  .logo-img{
+      border-radius: 50%;
+      height: 120px;
+  }
+  .logo{
+      margin-top: 25px;
+  }
+
+.mat-expansion-panel-header{
+    padding: 5px 20px 5px 14px;
+}
+
+.sidebar-btn{
+    margin-right: 5px;
+}
+
+.sidenav{
+    max-width: 15%;
+}
+
+.sidebar-link:focus{
+    background-color: #2c3344 ;
+    color: white;
+}
+
+.sidebar-link:hover{
+    background-color: #2c3344 ;
+    color: white;
+}
+
+
+.toolbar-left{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.no-outline{
+    outline: none;
+}
+
+.mat-button{
+    text-align: left;
+}
+
+.sidenav{
+    background-color: #1a202e;
+    color: #a1a2b6;
+}
+
+
+.user-icon, .notification-icon{
+    background-color:#ced6ff;
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    text-align: center;
+}
+
+
+.mat-toolbar{
+    position: relative;
+    z-index: 666;
+    background-color: white;
+}
+
+.shadow{
+    --tw-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06) !important;
+   box-shadow:  var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow) !important;
+}

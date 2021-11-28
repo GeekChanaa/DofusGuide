@@ -15,6 +15,11 @@ export const AppRoutes: Routes= [
     component : AuthComponent,
     loadChildren : () => import('./auth/auth.module')
       .then(m => m.AuthModule),
+  },{
+    path : 'dashboard',
+    component : DashboardComponent,
+    loadChildren : () => import('./dashboard/dashboard.module')
+      .then(m => m.DashboardModule),
   }
 ]
 
