@@ -4,13 +4,16 @@
   (reloadData)="reloadData()"
   [entity]="'Equipment'"
   [entities]="'Equipments'"
-  [showColumns]="showColumns">
+  [showColumns]="showColumns"
+  (createDialog)="openCreateDialog()">
 </app-header-datatables>
 
 <div class="container-fluid">
   <div class="">
     <!-- Progress Bar -->
-    <mat-progress-bar mode="query" [hidden]="!loader"></mat-progress-bar>
+    <div [hidden]="!loader">
+      <mat-progress-bar mode="query" ></mat-progress-bar>
+    </div>
     <app-datatable
     [dataSource]="dataSource"
     [displayedColumns]="displayedColumns"
@@ -18,6 +21,7 @@
     [showColumns]="showColumns"
     (deleteAction)="delete($event)"
     (displayAction)="show($event)"
+    (updateAction)="openEditDialog($event)"
       >
 
     </app-datatable>

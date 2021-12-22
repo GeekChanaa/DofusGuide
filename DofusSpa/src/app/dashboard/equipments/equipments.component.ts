@@ -4,6 +4,8 @@ import { Equipment } from 'src/app/_models/equipment';
 import { AuthService } from 'src/app/_services/auth.service';
 import { EquipmentService } from 'src/app/_services/equipment.service';
 import { BaseDashboardComponent } from '../base-dashboard';
+import { CreateComponent } from './create/create.component';
+import { UpdateComponent } from './update/update.component';
 
 @Component({
   selector: 'app-equipments',
@@ -44,10 +46,23 @@ export class EquipmentsComponent extends BaseDashboardComponent<Equipment> imple
   ) {
     super(dialog,_equipmentService,_authService)
   }
-
   // On init cycle hook
   ngOnInit() {
     this.reloadData();
+  }
+
+  // Open Create Dialog
+  openCreateDialog(){
+    this.dialog.open(CreateComponent).afterClosed().subscribe((data) => {
+      this.reloadData();
+    });
+  }
+
+  // Open Update Dialog
+  openEditDialog(id : number){
+    this.dialog.open(UpdateComponent, {data : {id : id}}).afterClosed().subscribe((data) => {
+      this.reloadData
+    })
   }
 
 }

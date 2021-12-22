@@ -75,4 +75,12 @@ export abstract class AbstractService<T> {
     return this._http.post<T>(this.actionUrl, model, this.httpOptions)
   }
 
+  // Update Item
+  edit(id:number , model:any): Observable<T>{
+    return this._http.put<T>(this.actionUrl+id, model, this.httpOptions).pipe(map(response => {
+      model = response;
+      return response;
+    }));
+  }
+
 }

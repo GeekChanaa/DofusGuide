@@ -44,6 +44,7 @@ export class HeaderDatatablesComponent implements OnInit {
 
   // Opening create dialog
   openCreateDialog(){
+    console.log("opening function in header datatable component");
     this.createDialog.emit();
   }
 

@@ -81,7 +81,7 @@ namespace DofusApi.Controllers
         public async Task<ActionResult<T>> Post(T item)
         {
             await this._repo.Insert(item);
-            return CreatedAtAction("GetClasse", item);
+            return CreatedAtAction("Get", item);
         }
 
         // DELETE: api/Classes/5

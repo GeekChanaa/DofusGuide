@@ -27,6 +27,7 @@ export abstract class BaseDashboardComponent<T> {
 
   // loading Data
   reloadData() {
+    console.log("this loader : "  + this.loader);
     this.loader = true;
     this._entityService
       .getAll(this.pageNumber, this.pageSize, this.globalParams)
@@ -35,7 +36,8 @@ export abstract class BaseDashboardComponent<T> {
         this.dataSource = new MatTableDataSource<T>(this.dataList);
         this.totalItems = data.pagination.totalItems;
         this.loader = false;
-      });
+    console.log("this loader : "  + this.loader);
+});
   }
 
   // Pagination

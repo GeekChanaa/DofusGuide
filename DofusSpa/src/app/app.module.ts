@@ -8,10 +8,13 @@ import { AppRoutingModule } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatChipsModule } from '@angular/material/chips';
+import { ForumCommentsComponent } from './forum-comments/forum-comments.component';
 
 @NgModule({
   declarations: [			
-    AppComponent,
+    AppComponent, ForumCommentsComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,7 @@ import { MatMenuModule } from '@angular/material/menu';
     AppRoutingModule,
     HttpClientModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,11 @@ import { HomeComponent } from './home/home.component';
 
 export const PagesRoutes: Routes= [
     {path : '' , component : HomeComponent},
-    {path : 'equipments' , component : EquipmentsComponent},
+    {
+      path : 'equipments' , component : EquipmentsComponent, 
+      loadChildren : () => import('./equipments/equipments.module')
+        .then(m => m.EquipmentsModule)
+    },
 ]
 
 @NgModule({
