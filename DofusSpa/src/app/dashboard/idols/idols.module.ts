@@ -6,7 +6,7 @@ import { CreateComponent } from './create/create.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatChipsModule } from '@angular/material/chips';
 import { UpdateComponent } from './update/update.component';
-import { IdolsComponent } from 'src/app/pages/wikipedia/idols/idols.component';
+import { IdolsComponent } from './idols.component';
 
 
 @NgModule({

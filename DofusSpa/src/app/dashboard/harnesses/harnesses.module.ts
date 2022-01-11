@@ -11,7 +11,6 @@ import { HarnessesComponent } from 'src/app/pages/wikipedia/harnesses/harnesses.
 
 @NgModule({
   declarations: [
-    HarnessesComponent,
     CreateComponent,
     UpdateComponent
    ],

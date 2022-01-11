@@ -1,6 +1,6 @@
 import { User } from "./user";
 
-export interface follower{
+export interface Follower{
     id : number,
     userID : number,
     followID : number,

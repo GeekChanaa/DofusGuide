@@ -32,18 +32,8 @@
         </button>
       </div>
       <div>
-        <button mat-button class="sidebar-link active" routerLink="/dashboard/informationReports">
-          <mat-icon class="sidebar-btn">dashboard</mat-icon> Information Corrections
-        </button>
-      </div>
-      <div>
         <button mat-button class="sidebar-link active" routerLink="/dashboard/statistics">
           <mat-icon class="sidebar-btn">bar_chart</mat-icon> Statistics
-        </button>
-      </div>
-      <div>
-        <button mat-button class="sidebar-link active" routerLink="/dashboard/mailing">
-          <mat-icon class="sidebar-btn">alternate_email</mat-icon> Mailbox
         </button>
       </div>
       <div class="sidebar-link-group">
@@ -51,15 +41,67 @@
           <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                <mat-icon class="sidebar-btn">location_on</mat-icon> Location
+                <mat-icon class="sidebar-btn">location_on</mat-icon> Wikipedia
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <button class="sidebar-link active" routerLink="/dashboard/cities" mat-button>Cities</button>
-            <button class="sidebar-link active" routerLink="/dashboard/states" mat-button>States</button>
-            <button class="sidebar-link active" routerLink="/dashboard/countries" mat-button>Countries</button>
+            <button class="sidebar-link active" routerLink="/dashboard/classes" mat-button>Classes</button>
+            <button class="sidebar-link active" routerLink="/dashboard/consumables" mat-button>Consumables</button>
+            <button class="sidebar-link active" routerLink="/dashboard/decors" mat-button>Decors</button>
+            <button class="sidebar-link active" routerLink="/dashboard/equipments" mat-button>Equipments</button>
+            <button class="sidebar-link active" routerLink="/dashboard/followers" mat-button>Followers</button>
+            <button class="sidebar-link active" routerLink="/dashboard/furnitures" mat-button>Furnitures</button>
+            <button class="sidebar-link active" routerLink="/dashboard/grounds" mat-button>Grounds</button>
+            <button class="sidebar-link active" routerLink="/dashboard/harnesses" mat-button>Harnesses</button>
+            <button class="sidebar-link active" routerLink="/dashboard/harvests" mat-button>Harvests</button>
+            <button class="sidebar-link active" routerLink="/dashboard/haven-bags" mat-button>Haven Bags</button>
+            <button class="sidebar-link active" routerLink="/dashboard/idols" mat-button>Idols</button>
+            <button class="sidebar-link active" routerLink="/dashboard/locations" mat-button>Locations</button>
+            <button class="sidebar-link active" routerLink="/dashboard/monsters" mat-button>Monsters</button>
+            <button class="sidebar-link active" routerLink="/dashboard/mounts" mat-button>Mounts</button>
+            <button class="sidebar-link active" routerLink="/dashboard/pets" mat-button>Pets</button>
+            <button class="sidebar-link active" routerLink="/dashboard/professions" mat-button>Professions</button>
+            <button class="sidebar-link active" routerLink="/dashboard/resources" mat-button>Resources</button>
+            <button class="sidebar-link active" routerLink="/dashboard/sets" mat-button>Sets</button>
+            <button class="sidebar-link active" routerLink="/dashboard/spells" mat-button>Spells</button>
+            <button class="sidebar-link active" routerLink="/dashboard/weapons" mat-button>Weapons</button>
+
           </mat-expansion-panel>
         </mat-accordion>
       </div>
+
+
+      <div class="sidebar-link-group">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon class="sidebar-btn">location_on</mat-icon> Forum
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <button class="sidebar-link active" routerLink="/dashboard/forum-categories" mat-button>Forum Categories</button>
+            <button class="sidebar-link active" routerLink="/dashboard/forum-report-comments" mat-button>Forum Report Comments</button>
+            <button class="sidebar-link active" routerLink="/dashboard/forum-report-replies" mat-button>Forum Report replies</button>
+            <button class="sidebar-link active" routerLink="/dashboard/forum-reports" mat-button>Forum Reports</button>
+
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+
+      <div class="sidebar-link-group">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon class="sidebar-btn">location_on</mat-icon> Market
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <button class="sidebar-link active" routerLink="/dashboard/equipment-products" mat-button>Equipment Products</button>
+            <button class="sidebar-link active" routerLink="/dashboard/products" mat-button>Products</button>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+
+      
       <div class="sidebar-link-group">
         <mat-accordion>
           <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -70,7 +112,6 @@
             </mat-expansion-panel-header>
 
             <button class="sidebar-link" routerLink="/dashboard/privileges" mat-button>Privileges</button>
-            <button class="sidebar-link" routerLink="/dashboard/role-privileges" mat-button>Role Privileges</button>
             <button class="sidebar-link" routerLink="/dashboard/roles" mat-button>Roles</button>
             <button class="sidebar-link" routerLink="/dashboard/users" mat-button>Users</button>
           </mat-expansion-panel>
