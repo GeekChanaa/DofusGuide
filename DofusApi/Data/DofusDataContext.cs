@@ -99,6 +99,7 @@ namespace DofusApi.Data
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.WeaponStatistic> StatisticWeapon { get; set; } 
         public DbSet<DofusApi.Models.Ground> Ground { get; set; }
+        public DbSet<DofusApi.Models.DropPercent> DropPercent { get; set; }
 
     }
 }

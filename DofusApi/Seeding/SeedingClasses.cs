@@ -18,9 +18,8 @@ namespace DofusApi.Seeding
     {
         public static void Seed(DofusDataContext context)
         {
-            string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
             //Preparing file to read
-            StreamReader r1 = new StreamReader(RootPath+"classes.json");
+            StreamReader r1 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/classes.json");
             string json1 = r1.ReadToEnd();
 
             // Json Classes / Roles / spell list

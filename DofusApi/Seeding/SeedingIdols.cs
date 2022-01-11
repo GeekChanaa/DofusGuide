@@ -18,13 +18,8 @@ namespace DofusApi.Seeding
     {
         public static void Seed(DofusDataContext context)
         {
-
-
-
-
             // Populating Idols / 
-            string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
-            StreamReader r6 = new StreamReader(RootPath+"idols.json");
+            StreamReader r6 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/idols.json");
             string json6 = r6.ReadToEnd();
             
             

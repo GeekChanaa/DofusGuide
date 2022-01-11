@@ -19,8 +19,7 @@ namespace DofusApi.Seeding
         public static void Seed(DofusDataContext context)
         {
             // Populating Equipments / RecipeItems and Statistics
-            string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
-            StreamReader r3 = new StreamReader(RootPath+"equipments.json");
+            StreamReader r3 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/equipments.json");
             string json3 = r3.ReadToEnd();
             Console.WriteLine("========== Seeding Equipments ===============");
             List<Equipment> equipmentsj = JsonConvert.DeserializeObject<List<Equipment>>(json3);

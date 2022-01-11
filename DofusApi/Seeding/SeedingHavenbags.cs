@@ -18,12 +18,9 @@ namespace DofusApi.Seeding
     {
         public static void Seed(DofusDataContext context)
         {
-
-
-
             // Populating Havenbags Decors / 
             string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
-            StreamReader r5 = new StreamReader(RootPath+"havenbags.json");
+            StreamReader r5 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/havenbags.json");
             string json5 = r5.ReadToEnd();
             
             Console.WriteLine("============ Populating Harnesses =========");

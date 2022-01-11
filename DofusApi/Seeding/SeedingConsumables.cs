@@ -19,8 +19,7 @@ namespace DofusApi.Seeding
         public static void Seed(DofusDataContext context)
         {
             //// Populating Consumables / Consumable Statistics / Consumable Recipes
-            string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
-            StreamReader r2 = new StreamReader(RootPath+"consumables.json");
+            StreamReader r2 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/consumables.json");
             string json2 = r2.ReadToEnd();
 
             List<Consumable> consumablesj = JsonConvert.DeserializeObject<List<Consumable>>(json2);

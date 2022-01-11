@@ -7,7 +7,7 @@ namespace DofusApi.Models
         public string Name { get; set; }
         public string Url { get; set; }
         public string ImgUrl { get; set; }
-        public float? DropPercent { get; set; }
+        public DropPercent DropPercent { get; set; }
         public int MonsterID { get; set; }
         public Monster Monster { get; set; }
         

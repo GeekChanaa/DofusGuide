@@ -166,6 +166,30 @@ namespace DofusApi.Migrations
                     b.ToTable("Decor");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.DropPercent", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double?>("Max")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Min")
+                        .HasColumnType("float");
+
+                    b.Property<int>("MonsterDropID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("MonsterDropID")
+                        .IsUnique();
+
+                    b.ToTable("DropPercent");
+                });
+
             modelBuilder.Entity("DofusApi.Models.Equipment", b =>
                 {
                     b.Property<int>("ID")
@@ -736,9 +760,6 @@ namespace DofusApi.Migrations
 
                     b.Property<int>("AnkamaID")
                         .HasColumnType("int");
-
-                    b.Property<float?>("DropPercent")
-                        .HasColumnType("real");
 
                     b.Property<string>("ImgUrl")
                         .HasColumnType("nvarchar(max)");
@@ -1352,7 +1373,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.ConsumableRecipe", b =>
                 {
                     b.HasOne("DofusApi.Models.Consumable", "Consumable")
-                        .WithMany("ConsumableRecipes")
+                        .WithMany("Recipes")
                         .HasForeignKey("ConsumableID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1363,7 +1384,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.ConsumableStatistic", b =>
                 {
                     b.HasOne("DofusApi.Models.Consumable", "Consumable")
-                        .WithMany("ConsumableStatistics")
+                        .WithMany("Statistics")
                         .HasForeignKey("ConsumableID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1382,10 +1403,21 @@ namespace DofusApi.Migrations
                     b.Navigation("HavenBag");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.DropPercent", b =>
+                {
+                    b.HasOne("DofusApi.Models.MonsterDrop", "MonsterDrop")
+                        .WithOne("DropPercent")
+                        .HasForeignKey("DofusApi.Models.DropPercent", "MonsterDropID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MonsterDrop");
+                });
+
             modelBuilder.Entity("DofusApi.Models.EquipmentRecipe", b =>
                 {
                     b.HasOne("DofusApi.Models.Equipment", "Equipment")
-                        .WithMany("EquipmentRecipes")
+                        .WithMany("Recipes")
                         .HasForeignKey("EquipmentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1396,7 +1428,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.EquipmentStatistic", b =>
                 {
                     b.HasOne("DofusApi.Models.Equipment", "Equipment")
-                        .WithMany("EquipmentStatistics")
+                        .WithMany("Statistics")
                         .HasForeignKey("EquipmentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1498,7 +1530,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.HarnessRecipe", b =>
                 {
                     b.HasOne("DofusApi.Models.Harness", "Harness")
-                        .WithMany("HarnessRecipes")
+                        .WithMany("Recipes")
                         .HasForeignKey("HarnessID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1520,7 +1552,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.IdolRecipe", b =>
                 {
                     b.HasOne("DofusApi.Models.Idol", "Idol")
-                        .WithMany("IdolRecipes")
+                        .WithMany("Recipes")
                         .HasForeignKey("IdolID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1531,7 +1563,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.IdolStatistic", b =>
                 {
                     b.HasOne("DofusApi.Models.Idol", "Idol")
-                        .WithMany("IdolStatistics")
+                        .WithMany("Statistics")
                         .HasForeignKey("IdolID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1553,7 +1585,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.MonsterArea", b =>
                 {
                     b.HasOne("DofusApi.Models.Monster", "Monster")
-                        .WithMany("MonsterAreas")
+                        .WithMany("Areas")
                         .HasForeignKey("MonsterID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1564,7 +1596,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.MonsterDrop", b =>
                 {
                     b.HasOne("DofusApi.Models.Monster", "Monster")
-                        .WithMany("MonsterDrops")
+                        .WithMany("Drops")
                         .HasForeignKey("MonsterID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1575,7 +1607,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.MonsterResistence", b =>
                 {
                     b.HasOne("DofusApi.Models.Monster", "Monster")
-                        .WithMany("MonsterResistences")
+                        .WithMany("Resistances")
                         .HasForeignKey("MonsterID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1586,7 +1618,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.MonsterStatistic", b =>
                 {
                     b.HasOne("DofusApi.Models.Monster", "Monster")
-                        .WithMany("MonsterStatistics")
+                        .WithMany("Statistics")
                         .HasForeignKey("MonsterID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1597,7 +1629,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.MountStatistic", b =>
                 {
                     b.HasOne("DofusApi.Models.Mount", "Mount")
-                        .WithMany("MountStatistics")
+                        .WithMany("Statistics")
                         .HasForeignKey("MountID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1608,7 +1640,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.PetStatistic", b =>
                 {
                     b.HasOne("DofusApi.Models.Pet", null)
-                        .WithMany("PetStatistics")
+                        .WithMany("Statistics")
                         .HasForeignKey("PetID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1617,7 +1649,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.ResourceRecipe", b =>
                 {
                     b.HasOne("DofusApi.Models.Resource", null)
-                        .WithMany("ResourceRecipes")
+                        .WithMany("Recipes")
                         .HasForeignKey("ResourceID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1699,7 +1731,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.WeaponChar", b =>
                 {
                     b.HasOne("DofusApi.Models.Weapon", "Weapon")
-                        .WithMany("WeaponChars")
+                        .WithMany("Chars")
                         .HasForeignKey("WeaponID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1710,7 +1742,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.WeaponRecipe", b =>
                 {
                     b.HasOne("DofusApi.Models.Weapon", null)
-                        .WithMany("WeaponRecipes")
+                        .WithMany("Recipes")
                         .HasForeignKey("WeaponID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1719,7 +1751,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.WeaponStatistic", b =>
                 {
                     b.HasOne("DofusApi.Models.Weapon", null)
-                        .WithMany("WeaponStatistics")
+                        .WithMany("Statistics")
                         .HasForeignKey("WeaponID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1734,21 +1766,21 @@ namespace DofusApi.Migrations
 
             modelBuilder.Entity("DofusApi.Models.Consumable", b =>
                 {
-                    b.Navigation("ConsumableRecipes");
+                    b.Navigation("Recipes");
 
-                    b.Navigation("ConsumableStatistics");
+                    b.Navigation("Statistics");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Equipment", b =>
                 {
-                    b.Navigation("EquipmentRecipes");
+                    b.Navigation("Recipes");
 
-                    b.Navigation("EquipmentStatistics");
+                    b.Navigation("Statistics");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Harness", b =>
                 {
-                    b.Navigation("HarnessRecipes");
+                    b.Navigation("Recipes");
                 });
 
             modelBuilder.Entity("DofusApi.Models.HavenBag", b =>
@@ -1762,30 +1794,35 @@ namespace DofusApi.Migrations
 
             modelBuilder.Entity("DofusApi.Models.Idol", b =>
                 {
-                    b.Navigation("IdolRecipes");
+                    b.Navigation("Recipes");
 
-                    b.Navigation("IdolStatistics");
+                    b.Navigation("Statistics");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Monster", b =>
                 {
-                    b.Navigation("MonsterAreas");
+                    b.Navigation("Areas");
 
-                    b.Navigation("MonsterDrops");
+                    b.Navigation("Drops");
 
-                    b.Navigation("MonsterResistences");
+                    b.Navigation("Resistances");
 
-                    b.Navigation("MonsterStatistics");
+                    b.Navigation("Statistics");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.MonsterDrop", b =>
+                {
+                    b.Navigation("DropPercent");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Mount", b =>
                 {
-                    b.Navigation("MountStatistics");
+                    b.Navigation("Statistics");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Pet", b =>
                 {
-                    b.Navigation("PetStatistics");
+                    b.Navigation("Statistics");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Profession", b =>
@@ -1802,7 +1839,7 @@ namespace DofusApi.Migrations
 
             modelBuilder.Entity("DofusApi.Models.Resource", b =>
                 {
-                    b.Navigation("ResourceRecipes");
+                    b.Navigation("Recipes");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Set", b =>
@@ -1812,11 +1849,11 @@ namespace DofusApi.Migrations
 
             modelBuilder.Entity("DofusApi.Models.Weapon", b =>
                 {
-                    b.Navigation("WeaponChars");
+                    b.Navigation("Chars");
 
-                    b.Navigation("WeaponRecipes");
+                    b.Navigation("Recipes");
 
-                    b.Navigation("WeaponStatistics");
+                    b.Navigation("Statistics");
                 });
 #pragma warning restore 612, 618
         }

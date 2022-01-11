@@ -18,12 +18,8 @@ namespace DofusApi.Seeding
     {
         public static void Seed(DofusDataContext context)
         {
-
-
-
             // Populating Harnesses HarnessRecipes
-            string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
-            StreamReader r4 = new StreamReader(RootPath+"harnesses.json");
+            StreamReader r4 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/harnesses.json");
             string json4 = r4.ReadToEnd();
 
             Console.WriteLine("============ Populating Harnesses =========");

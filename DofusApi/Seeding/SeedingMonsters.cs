@@ -20,9 +20,7 @@ namespace DofusApi.Seeding
         {
 
             ///// Populating Monsters
-
-            string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
-            StreamReader r7 = new StreamReader(RootPath+"monsters.json");
+            StreamReader r7 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/monsters.json");
             string json7 = r7.ReadToEnd();
 
             Console.WriteLine(" =========== Populating Monsters ========= ");

@@ -7476,24 +7476,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/macbookpro/.nuget/packages/": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/macbookpro/Desktop/Dofus/dofus/DofusApi/DofusApi.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi\\DofusApi.csproj",
       "projectName": "DofusApi",
-      "projectPath": "/Users/macbookpro/Desktop/Dofus/dofus/DofusApi/DofusApi.csproj",
-      "packagesPath": "/Users/macbookpro/.nuget/packages/",
-      "outputPath": "/Users/macbookpro/Desktop/Dofus/dofus/DofusApi/obj/",
+      "projectPath": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi\\DofusApi.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/macbookpro/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7571,6 +7573,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.11, 5.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7579,24 +7587,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU3028",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNetCore.Mvc.NewtonsoftJson 5.0.1' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: ExplicitDistrust: The trust setting for this policy was set to Deny.",
-      "libraryId": "Microsoft.AspNetCore.Mvc.NewtonsoftJson"
-    },
-    {
-      "code": "NU3028",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNetCore.JsonPatch 5.0.1' from source 'https://api.nuget.org/v3/index.json': The author primary signature's timestamp found a chain building issue: ExplicitDistrust: The trust setting for this policy was set to Deny.",
-      "libraryId": "Microsoft.AspNetCore.JsonPatch"
-    }
-  ]
+  }
 }

@@ -18,11 +18,7 @@ namespace DofusApi.Seeding
     {
         public static void Seed(DofusDataContext context)
         {
-
-
-
-            string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
-            StreamReader r9 = new StreamReader(RootPath+"pets.json");
+            StreamReader r9 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/pets.json");
             string json9 = r9.ReadToEnd();
 
             Console.WriteLine(" =========== Populating Pets ========= ");

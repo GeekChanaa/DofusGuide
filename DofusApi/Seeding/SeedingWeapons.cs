@@ -18,9 +18,7 @@ namespace DofusApi.Seeding
     {
         public static void Seed(DofusDataContext context)
         {
-            string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
-
-            StreamReader r13 = new StreamReader(RootPath+"weapons.json");
+            StreamReader r13 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/weapons.json");
             string json13 = r13.ReadToEnd();
             
             Console.WriteLine("======== Seeding Weapons ===========");

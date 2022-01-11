@@ -18,10 +18,9 @@ namespace DofusApi.Seeding
     {
         public static void Seed(DofusDataContext context)
         {
-
             string RootPath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin/Debug/net5.0/","/JsonData/");
             
-            StreamReader r12 = new StreamReader(RootPath+"sets.json");
+            StreamReader r12 = new StreamReader(System.IO.Directory.GetCurrentDirectory()+"/JsonData/sets.json");
             string json12 = r12.ReadToEnd();
 
             List<Set> setsj = JsonConvert.DeserializeObject<List<Set>>(json12);
