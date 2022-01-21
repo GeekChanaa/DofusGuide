@@ -14,17 +14,15 @@ import { UpdateComponent } from './update/update.component';
 export class PrivilegesComponent extends BaseDashboardComponent<Privilege> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
     name: boolean,
-    level: boolean,
   } = {
       id: true,
       name: true,
-      level: false,
     };
   dataSource: any;
   cities: any;

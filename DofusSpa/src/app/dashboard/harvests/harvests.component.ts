@@ -14,17 +14,25 @@ import { UpdateComponent } from './update/update.component';
 export class HarvestsComponent extends BaseDashboardComponent<Harvest> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'ankamaID','name','url','imgUrl','level','professionID', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
     name: boolean,
+    ankamaID: boolean,
+    imgUrl: boolean,
+    url: boolean,
     level: boolean,
+    professionID: boolean,
   } = {
       id: true,
       name: true,
-      level: false,
+      ankamaID: true,
+      imgUrl: true,
+      url: true,
+      level: true,
+      professionID: true,
     };
   dataSource: any;
   cities: any;

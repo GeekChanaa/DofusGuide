@@ -1,1 +1,30 @@
-<p>professions works!</p>
+<app-header-datatables 
+  [searchBy]="'Name'"
+  [globalParams]="globalParams" 
+  (reloadData)="reloadData()"
+  [entity]="'Profession'"
+  [entities]="'Professions'"
+  [showColumns]="showColumns"
+  (createDialog)="openCreateDialog()">
+</app-header-datatables>
+
+<div class="container-fluid">
+  <div class="">
+    <!-- Progress Bar -->
+    <div [hidden]="!loader">
+      <mat-progress-bar mode="query" ></mat-progress-bar>
+    </div>
+    <app-datatable
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+    [privilegeEntity]="'Profession'"
+    [showColumns]="showColumns"
+    (deleteAction)="delete($event)"
+    (displayAction)="show($event)"
+    (updateAction)="openEditDialog($event)"
+      >
+
+    </app-datatable>
+    <mat-paginator [length]="totalItems" [pageSize]="10" (page)="setPage($event)" showFirstLastButtons></mat-paginator>
+  </div>
+</div>

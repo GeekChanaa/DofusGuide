@@ -118,3 +118,11 @@
       stroke-width: .4px;
     }
   }
+
+
+/* Container */
+
+.container-fluid{
+  width : 80%;
+  margin-left: 10%;
+}

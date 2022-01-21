@@ -1,1 +1,18 @@
-<p>create works!</p>
+<h1 mat-dialog-title> Add Follower </h1>
+<form #addCityForm="ngForm" (ngSubmit)="create()" [formGroup]="form01">
+  <div mat-dialog-content>
+      <!--  -->
+      <p *ngFor="let inp of inputs">
+          <mat-form-field appearance="legacy">
+              <mat-label>{{inp}}</mat-label>
+              <input formControlName="{{inp}}" matInput name="{{inp}}" placeholder="{{inp}}" required>
+              <mat-error *ngIf="!valid">{{getError(inp,form01)}}</mat-error>
+          </mat-form-field>
+      </p>
+  </div>
+  <div mat-dialog-actions>
+      <button mat-dialog-close [disabled]="!valid" [mat-dialog-close]="model" mat-button type="submit">Save</button>
+      <button mat-dialog-close mat-button type="button">Close</button>
+  </div>
+  
+</form>

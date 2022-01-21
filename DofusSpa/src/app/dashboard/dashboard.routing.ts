@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ConsumablesComponent } from '../pages/wikipedia/consumables/consumables.component';
+import { ConsumablesComponent } from './consumables/consumables.component';
 import { ClassesComponent } from './classes/classes.component';
 import { DecorsComponent } from './decors/decors.component';
 import { EquipmentProductsComponent } from './equipment-products/equipment-products.component';

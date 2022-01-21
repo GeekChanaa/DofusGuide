@@ -14,17 +14,21 @@ import { UpdateComponent } from './update/update.component';
 export class HavenBagsComponent extends BaseDashboardComponent<HavenBag> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'ankamaID','url','imgUrl', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
     name: boolean,
-    level: boolean,
+    ankamaID: boolean,
+    url: boolean,
+    imgUrl: boolean,
   } = {
       id: true,
       name: true,
-      level: false,
+      ankamaID: false,
+      url: false,
+      imgUrl: false,
     };
   dataSource: any;
   cities: any;

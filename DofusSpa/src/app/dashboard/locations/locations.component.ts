@@ -14,17 +14,17 @@ import { UpdateComponent } from './update/update.component';
 export class LocationsComponent extends BaseDashboardComponent<Location> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'professionID', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
     name: boolean,
-    level: boolean,
+    professionID: boolean,
   } = {
       id: true,
       name: true,
-      level: false,
+      professionID: false,
     };
   dataSource: any;
   cities: any;

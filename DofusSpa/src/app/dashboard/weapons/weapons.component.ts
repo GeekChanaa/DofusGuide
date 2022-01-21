@@ -15,17 +15,27 @@ import { UpdateComponent } from './update/update.component';
 export class WeaponsComponent extends BaseDashboardComponent<Weapon> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id','name', 'level','description','url','imgUrl','type', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
-    name: boolean,
+    ankamaId: boolean,
     level: boolean,
+    name: boolean,
+    type: boolean,
+    url: boolean,
+    imgUrl: boolean,
+    description: boolean,
   } = {
-      id: true,
-      name: true,
-      level: false,
+    id:true,
+    ankamaId: true,
+    level: true,
+    name: false,
+    type: false,
+    url: false,
+    imgUrl: false,
+    description: false,
     };
   dataSource: any;
   cities: any;

@@ -14,17 +14,21 @@ import { UpdateComponent } from './update/update.component';
 export class ForumCategoriesComponent extends BaseDashboardComponent<ForumCategory> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'title', 'description','createdAt','userID', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
-    name: boolean,
-    level: boolean,
+    title: boolean,
+    description: boolean,
+    createdAt: boolean,
+    userID: boolean,
   } = {
       id: true,
-      name: true,
-      level: false,
+      title: true,
+      description: false,
+      createdAt: false,
+      userID: false,
     };
   dataSource: any;
   cities: any;

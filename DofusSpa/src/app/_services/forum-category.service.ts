@@ -10,6 +10,6 @@ import { AbstractService } from './abstract-service';
 export class ForumCategoryService extends AbstractService<ForumCategory> {
 
   constructor(protected _http: HttpClient) {
-    super(_http, environment.apiUrl+"/api/ForumCategorys/");
+    super(_http, environment.apiUrl+"/api/ForumCategories/");
   }
 }

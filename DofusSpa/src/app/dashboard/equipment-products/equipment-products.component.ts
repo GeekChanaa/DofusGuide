@@ -14,17 +14,17 @@ import { UpdateComponent } from './update/update.component';
 export class EquipmentProductsComponent extends BaseDashboardComponent<EquipmentProduct> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'equipmentID', 'productID', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
-    name: boolean,
-    level: boolean,
+    equipmentID: boolean,
+    productID: boolean,
   } = {
       id: true,
-      name: true,
-      level: false,
+      equipmentID: true,
+      productID: false,
     };
   dataSource: any;
   cities: any;

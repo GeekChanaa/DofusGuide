@@ -14,17 +14,27 @@ import { UpdateComponent } from './update/update.component';
 export class ResourcesComponent extends BaseDashboardComponent<Resource> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'ankamaID','name','level','type','url','imgUrl','description', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
+    ankamaID: boolean,
     name: boolean,
     level: boolean,
+    type: boolean,
+    url: boolean,
+    imgUrl: boolean,
+    description: boolean,
   } = {
       id: true,
+      ankamaID: true,
       name: true,
-      level: false,
+      level: true,
+      type: false,
+      url: false,
+      imgUrl: false,
+      description: false,
     };
   dataSource: any;
   cities: any;

@@ -14,17 +14,17 @@ import { UpdateComponent } from './update/update.component';
 export class FollowersComponent extends BaseDashboardComponent<Follower> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'userID', 'followID', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
-    name: boolean,
-    level: boolean,
+    userID: boolean,
+    followID: boolean,
   } = {
       id: true,
-      name: true,
-      level: false,
+      userID: true,
+      followID: false,
     };
   dataSource: any;
   cities: any;

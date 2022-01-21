@@ -14,17 +14,19 @@ import { UpdateComponent } from './update/update.component';
 export class SpellsComponent extends BaseDashboardComponent<Spell> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'variant','classeID', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
     name: boolean,
-    level: boolean,
+    variant: boolean,
+    classeID: boolean,
   } = {
       id: true,
       name: true,
-      level: false,
+      variant: false,
+      classeID: false,
     };
   dataSource: any;
   cities: any;

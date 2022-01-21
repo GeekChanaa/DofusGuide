@@ -15,17 +15,19 @@ import { UpdateComponent } from './update/update.component';
 export class ForumReportsComponent extends BaseDashboardComponent<ForumReport> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'forumPostID', 'userID','createdAt', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
-    name: boolean,
-    level: boolean,
+    forumPostID: boolean,
+    userID: boolean,
+    createdAt: boolean,
   } = {
       id: true,
-      name: true,
-      level: false,
+      forumPostID: true,
+      userID: false,
+      createdAt: false,
     };
   dataSource: any;
   cities: any;

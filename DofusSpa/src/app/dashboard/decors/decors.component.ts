@@ -14,17 +14,17 @@ import { UpdateComponent } from './update/update.component';
 export class DecorsComponent extends BaseDashboardComponent<Decor> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'imgUrl', 'havenBagID', 'actions'];
 
   // The columns that we want to display
   showColumns: {
     id:boolean,
-    name: boolean,
-    level: boolean,
+    imgUrl: boolean,
+    havenBagID: boolean,
   } = {
       id: true,
-      name: true,
-      level: false,
+      imgUrl: true,
+      havenBagID: false,
     };
   dataSource: any;
   cities: any;

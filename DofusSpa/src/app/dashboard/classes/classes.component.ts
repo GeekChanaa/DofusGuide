@@ -14,17 +14,29 @@ import { UpdateComponent } from './update/update.component';
 export class ClassesComponent extends BaseDashboardComponent<Classe> implements OnInit {
 
   // columns of mat table
-  displayedColumns: string[] = ['id', 'name', 'level', 'actions'];
+  displayedColumns: string[] = ['id', 'ankamaID', 'name', 'level', 'maleImg', 'femaleImg', 'url', 'description', 'type', 'actions'];
 
   // The columns that we want to display
   showColumns: {
-    id:boolean,
+    id: boolean,
     name: boolean,
     level: boolean,
+    ankamaID: boolean,
+    maleImg: boolean,
+    femaleImg: boolean,
+    url: boolean,
+    description: boolean,
+    type: boolean,
   } = {
       id: true,
       name: true,
-      level: false,
+      level: true,
+      ankamaID: true,
+      maleImg: false,
+      femaleImg: false,
+      url: false,
+      description: false,
+      type: false,
     };
   dataSource: any;
   cities: any;
@@ -32,7 +44,7 @@ export class ClassesComponent extends BaseDashboardComponent<Classe> implements 
   model: any = {};
 
   // Progress Bar (state)
-  loader : boolean = false;
+  loader: boolean = false;
 
   // Params for filtering and sorting
   globalParams: any = {};
@@ -43,7 +55,7 @@ export class ClassesComponent extends BaseDashboardComponent<Classe> implements 
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_classeService,_authService)
+    super(dialog, _classeService, _authService)
   }
   // On init cycle hook
   ngOnInit() {
@@ -51,15 +63,15 @@ export class ClassesComponent extends BaseDashboardComponent<Classe> implements 
   }
 
   // Open Create Dialog
-  openCreateDialog(){
+  openCreateDialog() {
     this.dialog.open(CreateComponent).afterClosed().subscribe((data) => {
       this.reloadData();
     });
   }
 
   // Open Update Dialog
-  openEditDialog(id : number){
-    this.dialog.open(UpdateComponent, {data : {id : id}}).afterClosed().subscribe((data) => {
+  openEditDialog(id: number) {
+    this.dialog.open(UpdateComponent, { data: { id: id } }).afterClosed().subscribe((data) => {
       this.reloadData
     })
   }
