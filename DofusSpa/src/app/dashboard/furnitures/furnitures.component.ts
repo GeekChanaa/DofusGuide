@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Furniture } from 'src/app/_models/furniture';
+import { AuthService } from 'src/app/_services/auth.service';
+import { FurnitureService } from 'src/app/_services/furniture.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,11 +39,11 @@ export class FurnituresComponent extends BaseDashboardComponent<Furniture> imple
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _furnitureService: FurnitureService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_furnitureService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Privilege } from 'src/app/_models/privilege';
+import { AuthService } from 'src/app/_services/auth.service';
+import { PrivilegeService } from 'src/app/_services/privilege.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,7 +39,7 @@ export class PrivilegesComponent extends BaseDashboardComponent<Privilege> imple
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _equipmentService: PrivilegeService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {

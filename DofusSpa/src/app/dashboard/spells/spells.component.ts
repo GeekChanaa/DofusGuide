@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Spell } from 'src/app/_models/spell';
+import { AuthService } from 'src/app/_services/auth.service';
+import { SpellService } from 'src/app/_services/spell.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,11 +39,11 @@ export class SpellsComponent extends BaseDashboardComponent<Spell> implements On
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _spellService: SpellService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_spellService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

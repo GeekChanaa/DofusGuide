@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Pet } from 'src/app/_models/pet';
+import { AuthService } from 'src/app/_services/auth.service';
+import { PetService } from 'src/app/_services/pet.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -36,7 +40,7 @@ export class PetsComponent extends BaseDashboardComponent<Pet> implements OnInit
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _equipmentService: PetService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {

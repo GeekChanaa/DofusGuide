@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Product } from 'src/app/_models/product';
+import { AuthService } from 'src/app/_services/auth.service';
+import { ProductService } from 'src/app/_services/product.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,11 +39,11 @@ export class ProductsComponent extends BaseDashboardComponent<Product> implement
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _productService: ProductService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_productService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { HavenBag } from 'src/app/_models/haven-bag';
+import { AuthService } from 'src/app/_services/auth.service';
+import { HavenBagService } from 'src/app/_services/haven-bag.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,7 +39,7 @@ export class HavenBagsComponent extends BaseDashboardComponent<HavenBag> impleme
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _equipmentService: HavenBagService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {

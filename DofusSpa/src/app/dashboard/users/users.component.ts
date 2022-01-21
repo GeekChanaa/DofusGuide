@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { User } from 'src/app/_models/user';
+import { AuthService } from 'src/app/_services/auth.service';
+import { EquipmentService } from 'src/app/_services/equipment.service';
+import { UserService } from 'src/app/_services/user.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,11 +40,11 @@ export class UsersComponent extends BaseDashboardComponent<User> implements OnIn
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _userService: UserService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_userService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

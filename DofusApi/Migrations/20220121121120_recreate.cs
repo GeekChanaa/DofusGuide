@@ -923,6 +923,32 @@ namespace DofusApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Follower",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserID = table.Column<int>(type: "int", nullable: true),
+                    FollowID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Follower", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Follower_User_FollowID",
+                        column: x => x.FollowID,
+                        principalTable: "User",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Follower_User_UserID",
+                        column: x => x.UserID,
+                        principalTable: "User",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ForumCategory",
                 columns: table => new
                 {
@@ -966,6 +992,30 @@ namespace DofusApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Product",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    BetOn = table.Column<bool>(type: "bit", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UserID = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Quantity = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Product_User_UserID",
+                        column: x => x.UserID,
+                        principalTable: "User",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ForumPost",
                 columns: table => new
                 {
@@ -992,6 +1042,54 @@ namespace DofusApi.Migrations
                         principalTable: "User",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductComment",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductID = table.Column<int>(type: "int", nullable: false),
+                    UserID = table.Column<int>(type: "int", nullable: true),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductComment", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_ProductComment_Product_ProductID",
+                        column: x => x.ProductID,
+                        principalTable: "Product",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ProductComment_User_UserID",
+                        column: x => x.UserID,
+                        principalTable: "User",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProductStatistic",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductID = table.Column<int>(type: "int", nullable: false),
+                    Value = table.Column<double>(type: "float", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProductStatistic", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_ProductStatistic_Product_ProductID",
+                        column: x => x.ProductID,
+                        principalTable: "Product",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -1049,6 +1147,86 @@ namespace DofusApi.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ForumReply",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ForumCommentID = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UserID = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ForumReply", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_ForumReply_ForumComment_ForumCommentID",
+                        column: x => x.ForumCommentID,
+                        principalTable: "ForumComment",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ForumReply_User_UserID",
+                        column: x => x.UserID,
+                        principalTable: "User",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ForumReportComment",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserID = table.Column<int>(type: "int", nullable: false),
+                    ForumCommentID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ForumReportComment", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_ForumReportComment_ForumComment_ForumCommentID",
+                        column: x => x.ForumCommentID,
+                        principalTable: "ForumComment",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ForumReportComment_User_UserID",
+                        column: x => x.UserID,
+                        principalTable: "User",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ForumReportReply",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ForumReplyID = table.Column<int>(type: "int", nullable: false),
+                    UserID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ForumReportReply", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_ForumReportReply_ForumReply_ForumReplyID",
+                        column: x => x.ForumReplyID,
+                        principalTable: "ForumReply",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ForumReportReply_User_UserID",
+                        column: x => x.UserID,
+                        principalTable: "User",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_ConsumableRecipe_ConsumableID",
                 table: "ConsumableRecipe",
@@ -1079,6 +1257,16 @@ namespace DofusApi.Migrations
                 name: "IX_EquipmentStatistic_EquipmentID",
                 table: "EquipmentStatistic",
                 column: "EquipmentID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Follower_FollowID",
+                table: "Follower",
+                column: "FollowID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Follower_UserID",
+                table: "Follower",
+                column: "UserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ForumCategory_UserID",
@@ -1116,8 +1304,38 @@ namespace DofusApi.Migrations
                 column: "UserID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_ForumReply_ForumCommentID",
+                table: "ForumReply",
+                column: "ForumCommentID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ForumReply_UserID",
+                table: "ForumReply",
+                column: "UserID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ForumReport_UserID",
                 table: "ForumReport",
+                column: "UserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ForumReportComment_ForumCommentID",
+                table: "ForumReportComment",
+                column: "ForumCommentID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ForumReportComment_UserID",
+                table: "ForumReportComment",
+                column: "UserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ForumReportReply_ForumReplyID",
+                table: "ForumReportReply",
+                column: "ForumReplyID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ForumReportReply_UserID",
+                table: "ForumReportReply",
                 column: "UserID");
 
             migrationBuilder.CreateIndex(
@@ -1184,6 +1402,26 @@ namespace DofusApi.Migrations
                 name: "IX_PetStatistic_PetID",
                 table: "PetStatistic",
                 column: "PetID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Product_UserID",
+                table: "Product",
+                column: "UserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductComment_ProductID",
+                table: "ProductComment",
+                column: "ProductID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductComment_UserID",
+                table: "ProductComment",
+                column: "UserID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductStatistic_ProductID",
+                table: "ProductStatistic",
+                column: "ProductID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ResourceRecipe_ResourceID",
@@ -1267,13 +1505,19 @@ namespace DofusApi.Migrations
                 name: "EquipmentStatistic");
 
             migrationBuilder.DropTable(
-                name: "ForumComment");
+                name: "Follower");
 
             migrationBuilder.DropTable(
                 name: "ForumLike");
 
             migrationBuilder.DropTable(
                 name: "ForumReport");
+
+            migrationBuilder.DropTable(
+                name: "ForumReportComment");
+
+            migrationBuilder.DropTable(
+                name: "ForumReportReply");
 
             migrationBuilder.DropTable(
                 name: "Furniture");
@@ -1312,6 +1556,12 @@ namespace DofusApi.Migrations
                 name: "PetStatistic");
 
             migrationBuilder.DropTable(
+                name: "ProductComment");
+
+            migrationBuilder.DropTable(
+                name: "ProductStatistic");
+
+            migrationBuilder.DropTable(
                 name: "ResourceRecipe");
 
             migrationBuilder.DropTable(
@@ -1339,7 +1589,7 @@ namespace DofusApi.Migrations
                 name: "Equipment");
 
             migrationBuilder.DropTable(
-                name: "ForumPost");
+                name: "ForumReply");
 
             migrationBuilder.DropTable(
                 name: "HavenBag");
@@ -1360,6 +1610,9 @@ namespace DofusApi.Migrations
                 name: "Pet");
 
             migrationBuilder.DropTable(
+                name: "Product");
+
+            migrationBuilder.DropTable(
                 name: "Resource");
 
             migrationBuilder.DropTable(
@@ -1370,6 +1623,12 @@ namespace DofusApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "Monster");
+
+            migrationBuilder.DropTable(
+                name: "ForumComment");
+
+            migrationBuilder.DropTable(
+                name: "ForumPost");
 
             migrationBuilder.DropTable(
                 name: "ForumCategory");

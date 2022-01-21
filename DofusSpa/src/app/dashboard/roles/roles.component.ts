@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Role } from 'src/app/_models/role';
+import { AuthService } from 'src/app/_services/auth.service';
+import { RoleService } from 'src/app/_services/role.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,11 +39,11 @@ export class RolesComponent extends BaseDashboardComponent<Role> implements OnIn
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _roleService: RoleService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_roleService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Monster } from 'src/app/_models/monster';
+import { AuthService } from 'src/app/_services/auth.service';
+import { MonsterService } from 'src/app/_services/monster.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,7 +39,7 @@ export class MonstersComponent extends BaseDashboardComponent<Monster> implement
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _equipmentService: MonsterService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {

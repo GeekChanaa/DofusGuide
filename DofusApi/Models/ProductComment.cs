@@ -6,7 +6,7 @@ namespace DofusApi.Models
         
         public int ProductID { get; set; }
         
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
         
         public string Content { get; set; }
         

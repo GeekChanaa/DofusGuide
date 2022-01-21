@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
+import { Set } from '../../_models/set';
+import { SetService } from 'src/app/_services/set.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AuthService } from 'src/app/_services/auth.service';
 @Component({
   selector: 'app-sets',
   templateUrl: './sets.component.html',
@@ -35,7 +39,7 @@ export class SetsComponent extends BaseDashboardComponent<Set> implements OnInit
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _equipmentService: SetService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ForumReportReply } from 'src/app/_models/forum-report-reply';
+import { AuthService } from 'src/app/_services/auth.service';
+import { ForumReportReplyService } from 'src/app/_services/forum-report-reply.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -36,11 +39,11 @@ export class ForumReportRepliesComponent extends BaseDashboardComponent<ForumRep
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _forumReportReplyService: ForumReportReplyService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_forumReportReplyService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

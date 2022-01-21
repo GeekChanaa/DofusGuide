@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Idol } from 'src/app/_models/idol';
+import { AuthService } from 'src/app/_services/auth.service';
+import { IdolService } from 'src/app/_services/idol.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,7 +39,7 @@ export class IdolsComponent extends BaseDashboardComponent<Idol> implements OnIn
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _equipmentService: IdolService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {

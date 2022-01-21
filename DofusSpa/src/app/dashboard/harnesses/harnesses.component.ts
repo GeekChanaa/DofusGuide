@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Harness } from 'src/app/_models/harness';
+import { AuthService } from 'src/app/_services/auth.service';
+import { HarnessService } from 'src/app/_services/harness.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,11 +39,11 @@ export class HarnessesComponent extends BaseDashboardComponent<Harness> implemen
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _harnessService: HarnessService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_harnessService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

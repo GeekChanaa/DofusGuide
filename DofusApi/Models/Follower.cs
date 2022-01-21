@@ -7,7 +7,7 @@ namespace DofusApi.Models
     {
         public int ID { get; set; }
         
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
         
         public int FollowID { get; set; }
         

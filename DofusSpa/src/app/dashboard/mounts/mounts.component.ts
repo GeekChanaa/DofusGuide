@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Mount } from 'src/app/_models/mount';
+import { AuthService } from 'src/app/_services/auth.service';
+import { MountService } from 'src/app/_services/mount.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,7 +39,7 @@ export class MountsComponent extends BaseDashboardComponent<Mount> implements On
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _equipmentService: MountService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {

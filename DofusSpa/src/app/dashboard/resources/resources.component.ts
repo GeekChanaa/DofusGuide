@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Resource } from 'src/app/_models/resource';
+import { AuthService } from 'src/app/_services/auth.service';
+import { ResourceService } from 'src/app/_services/resource.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -36,11 +39,11 @@ export class ResourcesComponent extends BaseDashboardComponent<Resource> impleme
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _resourceService: ResourceService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_resourceService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

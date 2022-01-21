@@ -287,6 +287,28 @@ namespace DofusApi.Migrations
                     b.ToTable("EquipmentStatistic");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.Follower", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("FollowID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("FollowID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Follower");
+                });
+
             modelBuilder.Entity("DofusApi.Models.ForumCategory", b =>
                 {
                     b.Property<int>("ID")
@@ -397,6 +419,34 @@ namespace DofusApi.Migrations
                     b.ToTable("ForumPost");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.ForumReply", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ForumCommentID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ForumCommentID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("ForumReply");
+                });
+
             modelBuilder.Entity("DofusApi.Models.ForumReport", b =>
                 {
                     b.Property<int>("ID")
@@ -418,6 +468,50 @@ namespace DofusApi.Migrations
                     b.HasIndex("UserID");
 
                     b.ToTable("ForumReport");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.ForumReportComment", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ForumCommentID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ForumCommentID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("ForumReportComment");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.ForumReportReply", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ForumReplyID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ForumReplyID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("ForumReportReply");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Furniture", b =>
@@ -962,6 +1056,86 @@ namespace DofusApi.Migrations
                     b.ToTable("Privilege");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.Product", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("BetOn")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Product");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.ProductComment", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ProductID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("ProductComment");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.ProductStatistic", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ProductID");
+
+                    b.ToTable("ProductStatistic");
+                });
+
             modelBuilder.Entity("DofusApi.Models.Profession", b =>
                 {
                     b.Property<int>("ID")
@@ -1436,6 +1610,23 @@ namespace DofusApi.Migrations
                     b.Navigation("Equipment");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.Follower", b =>
+                {
+                    b.HasOne("DofusApi.Models.User", "Follow")
+                        .WithMany()
+                        .HasForeignKey("FollowID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DofusApi.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID");
+
+                    b.Navigation("Follow");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("DofusApi.Models.ForumCategory", b =>
                 {
                     b.HasOne("DofusApi.Models.User", "User")
@@ -1496,11 +1687,66 @@ namespace DofusApi.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.ForumReply", b =>
+                {
+                    b.HasOne("DofusApi.Models.ForumComment", "ForumComment")
+                        .WithMany()
+                        .HasForeignKey("ForumCommentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DofusApi.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID");
+
+                    b.Navigation("ForumComment");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("DofusApi.Models.ForumReport", b =>
                 {
                     b.HasOne("DofusApi.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserID");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.ForumReportComment", b =>
+                {
+                    b.HasOne("DofusApi.Models.ForumComment", "ForumComment")
+                        .WithMany()
+                        .HasForeignKey("ForumCommentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DofusApi.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ForumComment");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.ForumReportReply", b =>
+                {
+                    b.HasOne("DofusApi.Models.ForumReply", "ForumReply")
+                        .WithMany()
+                        .HasForeignKey("ForumReplyID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DofusApi.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ForumReply");
 
                     b.Navigation("User");
                 });
@@ -1644,6 +1890,45 @@ namespace DofusApi.Migrations
                         .HasForeignKey("PetID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("DofusApi.Models.Product", b =>
+                {
+                    b.HasOne("DofusApi.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.ProductComment", b =>
+                {
+                    b.HasOne("DofusApi.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DofusApi.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID");
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.ProductStatistic", b =>
+                {
+                    b.HasOne("DofusApi.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("DofusApi.Models.ResourceRecipe", b =>

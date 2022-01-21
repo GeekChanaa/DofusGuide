@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Follower } from 'src/app/_models/follower';
+import { AuthService } from 'src/app/_services/auth.service';
+import { FollowerService } from 'src/app/_services/follower.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -36,11 +39,11 @@ export class FollowersComponent extends BaseDashboardComponent<Follower> impleme
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _followerService: FollowerService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_followerService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

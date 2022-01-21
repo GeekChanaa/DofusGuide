@@ -100,6 +100,12 @@ namespace DofusApi.Data
         public DbSet<DofusApi.Models.WeaponStatistic> StatisticWeapon { get; set; } 
         public DbSet<DofusApi.Models.Ground> Ground { get; set; }
         public DbSet<DofusApi.Models.DropPercent> DropPercent { get; set; }
+        public DbSet<DofusApi.Models.Product> Product { get; set; }
+        public DbSet<DofusApi.Models.ProductComment> ProductComment { get; set; }
+        public DbSet<DofusApi.Models.ProductStatistic> ProductStatistic { get; set; }
+        public DbSet<DofusApi.Models.ForumReportComment> ForumReportComment { get; set; }
+        public DbSet<DofusApi.Models.ForumReportReply> ForumReportReply { get; set; }
+        public DbSet<DofusApi.Models.Follower> Follower { get; set; }
 
     }
 }

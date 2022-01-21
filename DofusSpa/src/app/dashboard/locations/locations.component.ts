@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Location } from 'src/app/_models/location';
+import { AuthService } from 'src/app/_services/auth.service';
+import { LocationService } from 'src/app/_services/location.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,11 +39,11 @@ export class LocationsComponent extends BaseDashboardComponent<Location> impleme
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _locationService: LocationService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_locationService,_authService)
   }
   // On init cycle hook
   ngOnInit() {

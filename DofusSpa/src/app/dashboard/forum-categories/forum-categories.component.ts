@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ForumCategory } from 'src/app/_models/forum-category';
+import { AuthService } from 'src/app/_services/auth.service';
+import { ForumCategoryService } from 'src/app/_services/forum-category.service';
 import { BaseDashboardComponent } from '../base-dashboard';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
@@ -35,11 +39,11 @@ export class ForumCategoriesComponent extends BaseDashboardComponent<ForumCatego
 
 
   constructor(
-    private _equipmentService: EquipmentService,
+    private _forumCategoryService: ForumCategoryService,
     protected dialog: MatDialog,
     public _authService: AuthService,
   ) {
-    super(dialog,_equipmentService,_authService)
+    super(dialog,_forumCategoryService,_authService)
   }
   // On init cycle hook
   ngOnInit() {
