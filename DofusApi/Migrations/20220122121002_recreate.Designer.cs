@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DofusApi.Migrations
 {
     [DbContext(typeof(DofusDataContext))]
-    [Migration("20220121121120_recreate")]
+    [Migration("20220122121002_recreate")]
     partial class recreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -982,6 +982,25 @@ namespace DofusApi.Migrations
                     b.HasIndex("MountID");
 
                     b.ToTable("MountStatistic");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.NewsletterSubscription", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("Email")
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
+
+                    b.ToTable("NewsletterSubscription");
                 });
 
             modelBuilder.Entity("DofusApi.Models.Pet", b =>

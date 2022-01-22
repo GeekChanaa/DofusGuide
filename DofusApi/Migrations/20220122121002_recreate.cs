@@ -154,6 +154,19 @@ namespace DofusApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "NewsletterSubscription",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Email = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NewsletterSubscription", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Pet",
                 columns: table => new
                 {
@@ -1399,6 +1412,13 @@ namespace DofusApi.Migrations
                 column: "MountID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_NewsletterSubscription_Email",
+                table: "NewsletterSubscription",
+                column: "Email",
+                unique: true,
+                filter: "[Email] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PetStatistic_PetID",
                 table: "PetStatistic",
                 column: "PetID");
@@ -1551,6 +1571,9 @@ namespace DofusApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "MountStatistic");
+
+            migrationBuilder.DropTable(
+                name: "NewsletterSubscription");
 
             migrationBuilder.DropTable(
                 name: "PetStatistic");

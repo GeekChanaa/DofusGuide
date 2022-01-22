@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsletterSubscriptionService } from 'src/app/_services/newsletter-subscription.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  // Model for newsletter subscription
+  model : any = {};
 
+  constructor(
+    private _newsletterSubscription : NewsletterSubscriptionService
+  ) { }
+
+  // on init cycle hook
   ngOnInit() {
+    
+  }
+
+  // Subscription to the newsletter
+  subscribeNewsletter(){
+    this._newsletterSubscription.create(this.model).subscribe();
   }
 
 }

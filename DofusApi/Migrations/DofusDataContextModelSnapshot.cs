@@ -982,6 +982,25 @@ namespace DofusApi.Migrations
                     b.ToTable("MountStatistic");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.NewsletterSubscription", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("Email")
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
+
+                    b.ToTable("NewsletterSubscription");
+                });
+
             modelBuilder.Entity("DofusApi.Models.Pet", b =>
                 {
                     b.Property<int>("ID")

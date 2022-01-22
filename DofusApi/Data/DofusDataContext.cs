@@ -10,6 +10,16 @@ namespace DofusApi.Data
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            // Unique name for role
+            builder.Entity<NewsletterSubscription>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+        }
+
+
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.MonsterArea> MonsterArea { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
@@ -106,6 +116,7 @@ namespace DofusApi.Data
         public DbSet<DofusApi.Models.ForumReportComment> ForumReportComment { get; set; }
         public DbSet<DofusApi.Models.ForumReportReply> ForumReportReply { get; set; }
         public DbSet<DofusApi.Models.Follower> Follower { get; set; }
+        public DbSet<DofusApi.Models.NewsletterSubscription> NewsletterSubscription { get; set; }
 
     }
 }
