@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ConsumableStatistic } from '../_models/consumable-statistic';
 import { AbstractService } from './abstract-service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConsumableStatisticService extends AbstractService<ConsumableStatistic> {
 
-  constructor(protected _http: HttpClient) {
-    super(_http, environment.apiUrl+"/api/consumableStatistics/");
+  constructor(protected _http: HttpClient, protected _snackBar : MatSnackBar) {
+    super(_http, environment.apiUrl+"/api/consumableStatistics/", _snackBar);
   }
 }

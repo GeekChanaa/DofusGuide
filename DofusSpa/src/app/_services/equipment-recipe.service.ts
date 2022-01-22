@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { EquipmentRecipe } from '../_models/equipment-recipe';
 import { AbstractService } from './abstract-service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EquipmentRecipeService extends AbstractService<EquipmentRecipe> {
 
-  constructor(protected _http: HttpClient) {
-    super(_http, environment.apiUrl+"/api/EquipmentRecipes/");
+  constructor(protected _http: HttpClient, protected _snackBar : MatSnackBar) {
+    super(_http, environment.apiUrl+"/api/EquipmentRecipes/", _snackBar);
   }
 }

@@ -1,12 +1,14 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { PaginatedResult } from '../_models/pagination';
 
 
 export abstract class AbstractService<T> {
 
-  constructor(protected _http: HttpClient, protected actionUrl: string) {
+  constructor(protected _http: HttpClient, protected actionUrl: string, protected _snackBar : MatSnackBar) {
   }
 
   // Http Options (defining some headers)
@@ -67,19 +69,36 @@ export abstract class AbstractService<T> {
 
   // Delete Item by id
   deleteById(id: number): Observable<T> {
-    return this._http.delete<T>(this.actionUrl + id, this.httpOptions);
+    return this._http.delete<T>(this.actionUrl + id, this.httpOptions).pipe(map(response => {
+      this._snackBar.open("Item Deleted Succesfully","dismiss",{duration:2000});
+      return response;
+    }), catchError(err => {
+      this._snackBar.open("Something Went Wrong with deletion of element","dismiss",{duration:2000});
+      return throwError("Something Went Wrong");
+    }));
   }
 
   // Create item
   create(model: any): Observable<T> {
-    return this._http.post<T>(this.actionUrl, model, this.httpOptions)
+    return this._http.post<T>(this.actionUrl, model, this.httpOptions).pipe(map(response => {
+      model = response;
+      this._snackBar.open("Item Created Succesfully","dismiss",{duration:2000});
+      return response;
+    }),catchError(err => {
+      this._snackBar.open("Something Went Wrong with Creation of element","dismiss",{duration:2000});
+      return throwError("Something Went Wrong");
+    }));
   }
 
   // Update Item
   edit(id:number , model:any): Observable<T>{
     return this._http.put<T>(this.actionUrl+id, model, this.httpOptions).pipe(map(response => {
       model = response;
+      this._snackBar.open("Item Updated Succesfully","dismiss",{duration:2000});
       return response;
+    }), catchError(err => {
+      this._snackBar.open("Something Went Wrong with modification of element","dismiss",{duration:2000});
+      return throwError("Something Went Wrong");
     }));
   }
 
