@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
+import { PersonalShopComponent } from './personal-shop/personal-shop.component';
+import { ProductComponent } from './product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRippleModule } from '@angular/material/core';
@@ -27,7 +29,8 @@ import { MarketCommonModule } from './market-common/market-common.module';
       PopularProductsComponent,
       HotProductsComponent,
       ProductsSectionComponent,
-      SellItemComponent
+      SellItemComponent,
+      ProductComponent
    ],
   imports: [
     CommonModule,

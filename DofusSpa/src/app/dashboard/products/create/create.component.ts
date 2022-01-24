@@ -17,13 +17,12 @@ export class CreateComponent extends BaseCreateComponent<Product> implements OnI
   inputs : string[] = [];
   // Form Group And It's Form Controls
   form01 = new FormGroup({
-    ankamaID: new FormControl(''),
-    name: new FormControl(''),
-    level: new FormControl(),
-    type: new FormControl(),
-    imgUrl: new FormControl(),
-    url: new FormControl(),
+    price: new FormControl(''),
+    betOn: new FormControl(''),
     description: new FormControl(),
+    userID: new FormControl(),
+    status: new FormControl(),
+    quantity: new FormControl(),
   });
 
   constructor(
