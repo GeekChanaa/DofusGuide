@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  // Product ID
+  productID : number;  
 
+  // Constructor
+  constructor(
+    private _route : ActivatedRoute
+  ) { }
+
+  // On init cycle hook
   ngOnInit() {
+   this._route.params.subscribe( data => {
+     this.productID = data['id'];    
+   })
   }
+
+
 
 }

@@ -1,114 +1,106 @@
-<!-- outer-->
-<div class="outer">
-  <!-- header-->
+<div class="outer__inner">
+  <!-- Main Section -->
+  <app-main-section></app-main-section>
 
-  <div class="outer__inner">
-    <!-- Main Section -->
-    <app-main-section></app-main-section>
+  <!-- Bidding Section For Market -->
+  <app-bidding-section></app-bidding-section>
 
-    <!-- Bidding Section For Market -->
-    <app-bidding-section></app-bidding-section>
+  <!-- Popular Products For Market -->
+  <app-popular-products></app-popular-products>
 
-    <!-- Popular Products For Market -->
-    <app-popular-products></app-popular-products>
-    
-    <!-- Hot Products -->
-    <app-hot-products></app-hot-products>
-    
-    <!-- Products -->
-    <app-products-section></app-products-section>
-    
-    <!-- Sell Item Section -->
-    <app-sell-item></app-sell-item>
+  <!-- Hot Products -->
+  <app-hot-products></app-hot-products>
 
-    <div class="popup popup_connect mfp-hide" id="popup-connect">
-      <div class="popup__img">
-        <svg class="icon icon-wallet">
-          <use xlink:href="#icon-wallet"></use>
-        </svg>
-      </div>
-      <div class="popup__description">You need to connect your wallet first to sign messages and send transaction to
-        Ethereum network</div>
-      <div class="popup__btns"><a class="button popup__button" href="connect-wallet.html">Connect wallet</a>
-        <button class="button-stroke popup__button js-popup-close">Cancel</button>
-      </div>
+  <!-- Products -->
+  <app-products-section></app-products-section>
+
+  <!-- Sell Item Section -->
+  <app-sell-item></app-sell-item>
+
+  <div class="popup popup_connect mfp-hide" id="popup-connect">
+    <div class="popup__img">
+      <svg class="icon icon-wallet">
+        <use xlink:href="#icon-wallet"></use>
+      </svg>
     </div>
-    <div class="popup popup_wallet mfp-hide" id="popup-wallet">
-      <div class="popup__title h4">Folow steps</div>
-      <div class="steps">
-        <div class="steps__item">
-          <div class="steps__head">
-            <div class="steps__icon">
-              <svg class="icon icon-upload-file">
-                <use xlink:href="#icon-upload-file"></use>
-              </svg>
-            </div>
-            <div class="steps__details">
-              <div class="steps__info">Deposit ETH</div>
-              <div class="steps__text">Send transaction with your wallet</div>
-            </div>
-          </div>
-          <button class="button steps__button">Start now</button>
-        </div>
-        <div class="steps__item">
-          <div class="steps__head">
-            <div class="steps__icon">
-              <svg class="icon icon-check">
-                <use xlink:href="#icon-check"></use>
-              </svg>
-            </div>
-            <div class="steps__details">
-              <div class="steps__info">Approve</div>
-              <div class="steps__text">Checking balance and approving</div>
-            </div>
-          </div>
-          <button class="button steps__button disabled">Start now</button>
-        </div>
-        <div class="steps__item">
-          <div class="steps__head">
-            <div class="steps__icon">
-              <svg class="icon icon-pencil">
-                <use xlink:href="#icon-pencil"></use>
-              </svg>
-            </div>
-            <div class="steps__details">
-              <div class="steps__info">Signature</div>
-              <div class="steps__text">Create a signature to place a bit</div>
-            </div>
-          </div>
-          <button class="button steps__button disabled js-popup-close">Start now</button>
-        </div>
-      </div>
+    <div class="popup__description">You need to connect your wallet first to sign messages and send transaction to
+      Ethereum network</div>
+    <div class="popup__btns"><a class="button popup__button" href="connect-wallet.html">Connect wallet</a>
+      <button class="button-stroke popup__button js-popup-close">Cancel</button>
     </div>
-    <div class="popup popup_bid mfp-hide" id="popup-bid">
-      <div class="popup__title h4">Place a bid</div>
-      <div class="popup__info">You are about to purchase <strong>C O I N Z</strong> from <strong>UI8</strong></div>
-      <div class="popup__subtitle">Your bid</div>
-      <div class="popup__table">
-        <div class="popup__row">
-          <div class="popup__col">Enter bid</div>
-          <div class="popup__col">ETH</div>
+  </div>
+  <div class="popup popup_wallet mfp-hide" id="popup-wallet">
+    <div class="popup__title h4">Folow steps</div>
+    <div class="steps">
+      <div class="steps__item">
+        <div class="steps__head">
+          <div class="steps__icon">
+            <svg class="icon icon-upload-file">
+              <use xlink:href="#icon-upload-file"></use>
+            </svg>
+          </div>
+          <div class="steps__details">
+            <div class="steps__info">Deposit ETH</div>
+            <div class="steps__text">Send transaction with your wallet</div>
+          </div>
         </div>
-        <div class="popup__row">
-          <div class="popup__col">Your balance</div>
-          <div class="popup__col">8.498 ETH</div>
-        </div>
-        <div class="popup__row">
-          <div class="popup__col">Service fee</div>
-          <div class="popup__col">0 ETH</div>
-        </div>
-        <div class="popup__row">
-          <div class="popup__col">Total bid amount</div>
-          <div class="popup__col">0 ETH</div>
-        </div>
+        <button class="button steps__button">Start now</button>
       </div>
-      <div class="popup__btns"><a class="button popup__button js-popup-open" href="#popup-wallet"
-          data-effect="mfp-zoom-in">Place a bid</a>
-        <button class="button-stroke popup__button js-popup-close">Cancel</button>
+      <div class="steps__item">
+        <div class="steps__head">
+          <div class="steps__icon">
+            <svg class="icon icon-check">
+              <use xlink:href="#icon-check"></use>
+            </svg>
+          </div>
+          <div class="steps__details">
+            <div class="steps__info">Approve</div>
+            <div class="steps__text">Checking balance and approving</div>
+          </div>
+        </div>
+        <button class="button steps__button disabled">Start now</button>
+      </div>
+      <div class="steps__item">
+        <div class="steps__head">
+          <div class="steps__icon">
+            <svg class="icon icon-pencil">
+              <use xlink:href="#icon-pencil"></use>
+            </svg>
+          </div>
+          <div class="steps__details">
+            <div class="steps__info">Signature</div>
+            <div class="steps__text">Create a signature to place a bit</div>
+          </div>
+        </div>
+        <button class="button steps__button disabled js-popup-close">Start now</button>
       </div>
     </div>
   </div>
-  <!-- footer-->
-  <app-footer></app-footer>
-
+  <div class="popup popup_bid mfp-hide" id="popup-bid">
+    <div class="popup__title h4">Place a bid</div>
+    <div class="popup__info">You are about to purchase <strong>C O I N Z</strong> from <strong>UI8</strong></div>
+    <div class="popup__subtitle">Your bid</div>
+    <div class="popup__table">
+      <div class="popup__row">
+        <div class="popup__col">Enter bid</div>
+        <div class="popup__col">ETH</div>
+      </div>
+      <div class="popup__row">
+        <div class="popup__col">Your balance</div>
+        <div class="popup__col">8.498 ETH</div>
+      </div>
+      <div class="popup__row">
+        <div class="popup__col">Service fee</div>
+        <div class="popup__col">0 ETH</div>
+      </div>
+      <div class="popup__row">
+        <div class="popup__col">Total bid amount</div>
+        <div class="popup__col">0 ETH</div>
+      </div>
+    </div>
+    <div class="popup__btns"><a class="button popup__button js-popup-open" href="#popup-wallet"
+        data-effect="mfp-zoom-in">Place a bid</a>
+      <button class="button-stroke popup__button js-popup-close">Cancel</button>
+    </div>
+  </div>
 </div>

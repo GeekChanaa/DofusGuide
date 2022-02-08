@@ -1,0 +1,51 @@
+<div class="outer__inner">
+  <div class="control">
+    <div class="control__center center"><a class="button-stroke button-small control__button" routerLink="/market">
+        <svg class="icon icon-arrow-prev">
+          <use xlink:href="#icon-arrow-prev"></use>
+        </svg><span>Back to home</span></a>
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" routerLink="/market">Market Home Page</a></li>
+          <li class="breadcrumbs__item">Choose your item category</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section-pt80 variants">
+    <div class="variants__center">
+      <div class="variants__top">
+        <h1 class="variants__title h2">Choose your item category</h1>
+        <div class="variants__info">Choose the category of the item you want to sell</div>
+      </div>
+      <div class="variants__list">
+        <div class="variants__item">
+          <div class="variants__preview">
+            <img srcSet="assets/img/content/upload-pic-1@2x.jpg 2x" src="assets/img/content/upload-pic-1.jpg" alt="Upload">
+          </div>
+          <a class="button-stroke variants__button"  [routerLink]="['/market/sell-equipment']" routerLinkActive="router-link-active"   >Sell Equipment</a>
+        </div>
+        <div class="variants__item">
+          <div class="variants__preview">
+            <img srcSet="assets/img/content/upload-pic-2@2x.jpg 2x" src="assets/img/content/upload-pic-2.jpg" alt="Upload">
+          </div>
+          <button class="button-stroke variants__button" [routerLink]="['/market/sell-pet']" routerLinkActive="router-link-active"   >Sell Pet</button>
+        </div>
+        <div class="variants__item">
+          <div class="variants__preview">
+            <img srcSet="assets/img/content/upload-pic-2@2x.jpg 2x" src="assets/img/content/upload-pic-2.jpg" alt="Upload">
+          </div>
+          <a class="button-stroke variants__button" [routerLink]="['/market/sell-resource']" routerLinkActive="router-link-active"   >Sell Resources</a>
+        </div>
+        <div class="variants__item">
+          <div class="variants__preview">
+            <img srcSet="assets/img/content/upload-pic-2@2x.jpg 2x" src="assets/img/content/upload-pic-2.jpg" alt="Upload">
+          </div>
+          <a class="button-stroke variants__button" [routerLink]="['/market/sell-weapon']" routerLinkActive="router-link-active"   >Sell Weapon</a>
+        </div>
+      </div>
+      <div class="variants__note">We do not own your private keys and cannot access your funds without your
+        confirmation.</div>
+    </div>
+  </div>
+</div>

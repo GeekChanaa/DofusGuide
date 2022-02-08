@@ -19,6 +19,12 @@ import { HotProductsComponent } from './index/hot-products/hot-products.componen
 import { ProductsSectionComponent } from './index/products-section/products-section.component';
 import { SellItemComponent } from './index/sell-item/sell-item.component';
 import { MarketCommonModule } from './market-common/market-common.module';
+import { ProductsComponent } from './products/products.component';
+import { SellProductComponent } from './sell-product/sell-product.component';
+import { SellResourceComponent } from './sell-resource/sell-resource.component';
+import { SellWeaponComponent } from './sell-weapon/sell-weapon.component';
+import { SellPetComponent } from './sell-pet/sell-pet.component';
+import { SellEquipmentComponent } from './sell-equipment/sell-equipment.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { MarketCommonModule } from './market-common/market-common.module';
       HotProductsComponent,
       ProductsSectionComponent,
       SellItemComponent,
-      ProductComponent
+      ProductComponent,
+      ProductsComponent,
+      SellProductComponent,
+      SellResourceComponent,
+      SellWeaponComponent,
+      SellPetComponent,
+      SellEquipmentComponent
    ],
   imports: [
     CommonModule,
