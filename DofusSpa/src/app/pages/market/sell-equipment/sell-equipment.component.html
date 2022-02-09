@@ -26,16 +26,27 @@
               <div class="upload__fieldset">
                 <div class="field">
                   <div class="field__label">Equipment Name</div>
+
                   <div class="field__wrap">
-                    <input class="field__input" type="text" name="item"
-                      placeholder="e. g. Redeemable Bitcoin Card with logo&quot;" required>
+                      <input type="text"
+                      class="field__input"
+                             placeholder="ex : Voile d'encre"
+                             aria-label="Number"
+                             matInput
+                             [(ngModel)]="product.name"
+                             (keypress)="searchEquipment(product.name)"
+                             [matAutocomplete]="auto">
+                      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option (click)="getStatistics(item.id)" [value]="item.name" *ngFor="let item of equipments">{{item.name}}</mat-option>
+                        
+                      </mat-autocomplete>
                   </div>
                 </div>
                 <div class="field">
                   <div class="field__label">Description</div>
                   <div class="field__wrap">
                     <input class="field__input" type="text" name="description"
-                      placeholder="e. g. “After purchasing you will able to recived the logo...”" required>
+                      placeholder="ex : exo pa full vita" required>
                   </div>
                 </div>
                 <div class="upload__row">

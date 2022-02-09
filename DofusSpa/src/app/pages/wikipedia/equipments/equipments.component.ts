@@ -41,7 +41,9 @@ export class EquipmentsComponent implements OnInit {
     type: '',
     imgUrl: '',
     url: '',
-    description: ''
+    description: '',
+    statistics : [],
+    recipes: []
   } ;
 
 

@@ -25,6 +25,8 @@ import { SellResourceComponent } from './sell-resource/sell-resource.component';
 import { SellWeaponComponent } from './sell-weapon/sell-weapon.component';
 import { SellPetComponent } from './sell-pet/sell-pet.component';
 import { SellEquipmentComponent } from './sell-equipment/sell-equipment.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { SellEquipmentComponent } from './sell-equipment/sell-equipment.componen
     MatCheckboxModule,
     FormsModule,
     MarketRoutingModule,
-    MarketCommonModule
+    MarketCommonModule,
+    MatAutocompleteModule,
+    MatFormFieldModule
   ],
   providers: [
   ]
