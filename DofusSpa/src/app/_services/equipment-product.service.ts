@@ -11,6 +11,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class EquipmentProductService extends AbstractService<EquipmentProduct> {
 
   constructor(protected _http: HttpClient, protected _snackBar : MatSnackBar) {
-    super(_http, environment.apiUrl+"/api/EquipmentRecipes/", _snackBar);
+    super(_http, environment.apiUrl+"/api/EquipmentProducts/", _snackBar);
   }
 }

@@ -7,6 +7,6 @@ namespace DofusApi.Dtos
         public string Password { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public int RoleID { get; set; }
+        public int RankID { get; set; }
     }
 }

@@ -1,3 +1,4 @@
+import { ProductStatistic } from "./product-statistic";
 import { User } from "./user";
 
 export interface Product{
@@ -8,6 +9,6 @@ export interface Product{
     userID : number,
     status : string,
     quantity : number,
-    user : User
-
+    user : User,
+    statistics : ProductStatistic[]
 }

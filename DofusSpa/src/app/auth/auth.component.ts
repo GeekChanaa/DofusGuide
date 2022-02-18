@@ -19,15 +19,17 @@ export class AuthComponent implements OnInit {
    }
 
   
+   
    loadCSS(){
     // css files$
     const cssFiles= [
-      "/assets/css/app.css",
+      "/assets/css/market.css",
+
     ];
     for(let i = 0; i< cssFiles.length;i++){
       const node = document.createElement('link');
       node.href = cssFiles[i];
-      node.rel = "stylesheet";
+      node.rel = 'stylesheet';
       document.getElementsByTagName('head')[0].appendChild(node);
     }
   }
@@ -35,14 +37,16 @@ export class AuthComponent implements OnInit {
   loadScripts(){
     // files / cdns
     const dynamicScripts = [
-      "/assets/js/lib/apexcharts.js",
-      "/assets/js/lib/jquery.magnific-popup.min.js",
       "/assets/js/lib/jquery.min.js",
+      "/assets/js/lib/jquery.countdown.min.js",
+      "/assets/js/lib/jquery.magnific-popup.min.js",
       "/assets/js/lib/jquery.nice-select.min.js",
+      "/assets/js/lib/nouislider.min.js",
+      "/assets/js/lib/share-buttons.js",
       "/assets/js/lib/slick.min.js",
-      "/assets/js/lib/svg4everybody.min.js",
-      "/assets/js/app.js",
-      "/assets/js/charts.js",
+      "/assets/js/lib/wNumb.js",
+      "/assets/js/market.js",
+      "/assets/js/demo.js",
     ];
     for(let i = 0; i< dynamicScripts.length;i++){
       const node = document.createElement('script');

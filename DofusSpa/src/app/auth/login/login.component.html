@@ -1,55 +1,47 @@
-<div class="page page_login">
 
-  <div class="page__wrapper">
-    <div class="login" style="background-image: url('img/bg-sign-in.png');">
-      <div class="login__container">
-        <div class="login__wrap"><a class="login__logo" href="index.html"><img class="login__pic"
-              src="img/logo-white.svg" alt=""></a>
-          <div class="login__info">A Video Gaming Platfrom UI Kit</div>
-          <div class="games"><a class="games__item" href="#">
-              <div class="games__preview"><img class="games__pic" src="img/game-1.png" /></div>
-              <div class="games__details">
-                <div class="games__title">Call of Duty®</div>
-                <div class="games__category">Shooting</div>
-                <div class="status orange">2.8K viewers</div>
+      <div class="outer__inner">
+        <div class="section-pt80 wallet">
+          <div class="wallet__center center">
+            <div class="wallet__head"><a class="wallet__back" href="index.html"> 
+                <svg class="icon icon-arrow-prev">
+                  <use xlink:href="#icon-arrow-prev"></use>
+                </svg>
+                <div class="wallet__stage h2">Login</div></a></div>
+            <div class="wallet__body">
+              <div class="wallet__menu">
+                <div class="upload__form">
+                  <div class="upload__list">
+                   
+                    <div class="upload__item">
+                      <div class="upload__fieldset">
+                        <div class="field">
+                          <div class="field__label">Email</div>
+                          <div class="field__wrap">
+                              <input [(ngModel)]="user.email" type="text" class="field__input" placeholder="Enter your Email Address" aria-label="Number" matInput>
+                          </div>
+                        </div>
+                        <div class="field">
+                          <div class="field__label">Password</div>
+                          <div class="field__wrap">
+                              <input [(ngModel)]="user.password" type="password" class="field__input" placeholder="Enter your password" aria-label="Number" matInput>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="upload__foot">
+                    <button (click)="login()"
+                      class="button upload__button" data-effect="mfp-zoom-in">
+                      <span>Login</span></button>
+                  </div>
+                </div>
               </div>
-            </a><a class="games__item" href="#">
-              <div class="games__preview"><img class="games__pic" src="img/game-2.png" /></div>
-              <div class="games__details">
-                <div class="games__title">The Dota 2</div>
-                <div class="games__category">eSport</div>
-                <div class="status orange">2.8K viewers</div>
+              <div class="wallet__wrapper">
+                <div class="wallet__bg"><img srcSet="img/content/connect-bg@2x.jpg 2x" src="assets/img/content/connect-bg.jpg" alt="Connect wallet"></div>
+                
               </div>
-            </a><a class="games__item" href="#">
-              <div class="games__preview"><img class="games__pic" src="img/game-3.png" /></div>
-              <div class="games__details">
-                <div class="games__title">League of Legends®</div>
-                <div class="games__category">Online Game</div>
-                <div class="status orange">2.8K viewers</div>
-              </div>
-            </a></div><a class="login__add" href="#"><svg class="icon icon-add-square">
-              <use xlink:href="img/sprite.svg#icon-add-square"></use>
-            </svg>Discover more</a>
-        </div>
-        <div class="login__form"><a class="login__close mobile-hide" href="index.html"><svg class="icon icon-remove">
-              <use xlink:href="img/sprite.svg#icon-remove"></use>
-            </svg></a>
-          <div class="login__title h3">Sign in</div>
-          <div class="login__line">
-            <div class="login__text">New user?</div><a class="login__link" href="#">Create an account</a>
+            </div>
           </div>
-          <div class="field">
-            <div class="field__label">Usename or email</div>
-            <div class="field__wrap"><input class="field__input" type="email"></div>
-          </div>
-          <div class="field">
-            <div class="field__label">Password</div>
-            <div class="field__wrap"><input class="field__input" type="password"></div>
-          </div>
-          <button class="login__btn btn btn_purple btn_wide">Continue</button>
-          <div class="login__or">Or continue with</div><button class="login__btn btn btn_blue btn_wide">Google</button>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+      

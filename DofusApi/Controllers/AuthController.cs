@@ -43,7 +43,7 @@ namespace DofusApi.Controllers
                 return BadRequest("Email already exists");
             }
             Console.WriteLine("this is the user being created");
-            Console.WriteLine(userForRegisterDto.RoleID);
+            Console.WriteLine(userForRegisterDto.RankID);
 
             // Creating user
             var userToCreate = new User
@@ -52,7 +52,7 @@ namespace DofusApi.Controllers
                 FirstName = userForRegisterDto.FirstName,
                 LastName = userForRegisterDto.LastName,
                 Phone = userForRegisterDto.Phone,
-                RankID = userForRegisterDto.RoleID,
+                RankID = userForRegisterDto.RankID,
             };
 
             var createdUser = await _repo.Register(userToCreate, userForRegisterDto.Password);

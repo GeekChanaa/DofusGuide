@@ -65,6 +65,9 @@ namespace DofusApi.Seeding
 
                 if(!context.Weapon.Any())
                 SeedingWeapons.Seed(context);
+
+                if(!context.Rank.Any())
+                SeedingRanks.Seed(context);
             }
         }
     }

@@ -35,6 +35,8 @@ namespace DofusApi.Data
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.Equipment> Equipment { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
+        public DbSet<DofusApi.Models.EquipmentProduct> EquipmentProduct { get; set; }
+        // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.ForumCategory> ForumCategory { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.ForumComment> ForumComment { get; set; }
@@ -80,6 +82,7 @@ namespace DofusApi.Data
         public DbSet<DofusApi.Models.Spell> Spell { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.User> User { get; set; }
+        public DbSet<DofusApi.Models.Rank> Rank { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities
         public DbSet<DofusApi.Models.RolePrivilege> RolePrivilege { get; set; }
         // This class instance represents a session with the database and can be used to query and save instances of our entities

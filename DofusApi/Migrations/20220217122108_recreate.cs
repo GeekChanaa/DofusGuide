@@ -1058,6 +1058,32 @@ namespace DofusApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "EquipmentProduct",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EquipmentID = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EquipmentProduct", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_EquipmentProduct_Equipment_EquipmentID",
+                        column: x => x.EquipmentID,
+                        principalTable: "Equipment",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EquipmentProduct_Product_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Product",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ProductComment",
                 columns: table => new
                 {
@@ -1260,6 +1286,16 @@ namespace DofusApi.Migrations
                 table: "DropPercent",
                 column: "MonsterDropID",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EquipmentProduct_EquipmentID",
+                table: "EquipmentProduct",
+                column: "EquipmentID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EquipmentProduct_ProductId",
+                table: "EquipmentProduct",
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_EquipmentRecipe_EquipmentID",
@@ -1517,6 +1553,9 @@ namespace DofusApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "DropPercent");
+
+            migrationBuilder.DropTable(
+                name: "EquipmentProduct");
 
             migrationBuilder.DropTable(
                 name: "EquipmentRecipe");

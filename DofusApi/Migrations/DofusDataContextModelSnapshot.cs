@@ -223,6 +223,28 @@ namespace DofusApi.Migrations
                     b.ToTable("Equipment");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.EquipmentProduct", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("EquipmentID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("EquipmentID");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("EquipmentProduct");
+                });
+
             modelBuilder.Entity("DofusApi.Models.EquipmentRecipe", b =>
                 {
                     b.Property<int>("ID")
@@ -1607,6 +1629,25 @@ namespace DofusApi.Migrations
                     b.Navigation("MonsterDrop");
                 });
 
+            modelBuilder.Entity("DofusApi.Models.EquipmentProduct", b =>
+                {
+                    b.HasOne("DofusApi.Models.Equipment", "Equipment")
+                        .WithMany()
+                        .HasForeignKey("EquipmentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DofusApi.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Equipment");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("DofusApi.Models.EquipmentRecipe", b =>
                 {
                     b.HasOne("DofusApi.Models.Equipment", "Equipment")
@@ -1942,7 +1983,7 @@ namespace DofusApi.Migrations
             modelBuilder.Entity("DofusApi.Models.ProductStatistic", b =>
                 {
                     b.HasOne("DofusApi.Models.Product", "Product")
-                        .WithMany()
+                        .WithMany("Statistics")
                         .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -2125,6 +2166,11 @@ namespace DofusApi.Migrations
                 });
 
             modelBuilder.Entity("DofusApi.Models.Pet", b =>
+                {
+                    b.Navigation("Statistics");
+                });
+
+            modelBuilder.Entity("DofusApi.Models.Product", b =>
                 {
                     b.Navigation("Statistics");
                 });

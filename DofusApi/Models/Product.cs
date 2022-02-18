@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace DofusApi.Models
 {
@@ -19,6 +20,8 @@ namespace DofusApi.Models
         public int Quantity { get; set; }
         
         public User User { get; set; }
+
+        public IEnumerable<ProductStatistic> Statistics {get; set;}
         
         
     }

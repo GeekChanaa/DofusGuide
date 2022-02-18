@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace DofusApi.Models
 {
     public class EquipmentProduct
@@ -11,6 +13,8 @@ namespace DofusApi.Models
         public Equipment Equipment { get; set; }
         
         public Product Product { get; set; }
+
+        
         
         
     }

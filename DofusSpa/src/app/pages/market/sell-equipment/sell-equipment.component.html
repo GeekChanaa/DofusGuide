@@ -46,17 +46,32 @@
                   <div class="field__label">Description</div>
                   <div class="field__wrap">
                     <input class="field__input" type="text" name="description"
-                      placeholder="ex : exo pa full vita" required>
+                      placeholder="ex : exo pa full vita" [(ngModel)]="product.description" required>
                   </div>
                 </div>
-                <div class="upload__row">
-                  <div class="field__label">Equipment Statistics</div>
-                  <!-- Form to add Equipment Statistics :
-                    Choose firstly the equipment the user wants to add
-                    Report if the item is missing from the database button
-                    Form for the statistics of the item
-                    Possibility to add exotic statistics on item
-                  -->
+                <div class="field">
+                  <div class="field__label">Price (Kamas)</div>
+
+                  <div class="field__wrap">
+                      <input type="number"
+                      class="field__input"
+                             placeholder="ex : 2000000"
+                             aria-label="Number"
+                             matInput
+                             [(ngModel)]="product.price"
+                             [matAutocomplete]="auto">
+                  </div>
+                </div>
+                <div class="upload__row flex__wrap">
+                  <div class="field__label item__stat">Equipment Statistics</div>
+                  <ng-container *ngFor="let item of statistics">
+                    <div class="field item__stat">
+                      <div class="field__label"> {{item.name}} </div>
+                      <div class="field__wrap"> 
+                        <input class="field__input" type="number" [(ngModel)]="productStatistics[item.name]">
+                      </div>
+                    </div>
+                  </ng-container>
                 </div>
               </div>
             </div>
@@ -68,11 +83,11 @@
                 <div class="upload__text">You’ll receive bids on this item</div>
               </div>
               <label class="switch">
-                <input class="switch__input" type="checkbox" checked="checked" /><span class="switch__inner"><span
+                <input class="switch__input" type="checkbox" checked="checked" [(ngModel)]="product.betOn" /><span class="switch__inner"><span
                     class="switch__box"></span></span>
               </label>
             </div>
-            <div class="upload__option">
+            <!-- <div class="upload__option">
               <div class="upload__box">
                 <div class="upload__category">Instant sale price</div>
                 <div class="upload__text">Enter the price for which the item will be instantly sold</div>
@@ -91,19 +106,20 @@
                 <input class="switch__input" type="checkbox" /><span class="switch__inner"><span
                     class="switch__box"></span></span>
               </label>
-            </div>
+            </div> -->
             
           </div>
           <div class="upload__foot">
-            <button class="button-stroke tablet-show upload__button js-preview-open">Preview</button><a
-              class="button upload__button js-popup-open" href="#popup-wallet" data-effect="mfp-zoom-in"><span>Create
+            <button (click)="createProduct()" class="button-stroke tablet-show upload__button js-preview-open">Preview</button>
+            <button (click)="createProduct()" 
+              class="button upload__button" data-effect="mfp-zoom-in"><span>Create
                 item</span>
               <svg class="icon icon-arrow-next">
                 <use xlink:href="#icon-arrow-next"></use>
-              </svg></a>
-            <div class="upload__saving">Auto saving
+              </svg></button>
+            <!-- <div class="upload__saving">Auto saving
               <div class="loader"></div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

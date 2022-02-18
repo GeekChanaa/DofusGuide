@@ -58,7 +58,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MarketRoutingModule,
     MarketCommonModule,
     MatAutocompleteModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    
   ],
   providers: [
   ]
