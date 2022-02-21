@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\DofusApi.Hdv\\DofusApi.Hdv.csproj": {}
+    "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi.hdv\\DofusApi.Hdv.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\DofusApi.Hdv\\DofusApi.Hdv.csproj": {
+    "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi.hdv\\DofusApi.Hdv.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\DofusApi.Hdv\\DofusApi.Hdv.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi.hdv\\DofusApi.Hdv.csproj",
         "projectName": "DofusApi.Hdv",
-        "projectPath": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\DofusApi.Hdv\\DofusApi.Hdv.csproj",
+        "projectPath": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi.hdv\\DofusApi.Hdv.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\DofusApi.Hdv\\obj\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi.hdv\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",

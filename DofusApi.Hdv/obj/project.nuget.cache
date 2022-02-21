@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5fyKBI96kgJqxOmBCaFcPWC0Gog5SYnyhi07sbUl8TXOIdw3f/tmXRFxJHB34Pn2rnQbh+vQi+UlCaY+tDQxvw==",
+  "dgSpecHash": "bkV2afepWP31/xYthcutpeIdti1/c8kSisDwzXAkDzmkT2p2rmoK1dCJj+o2ZgGVijD9qR9LqNXrGbVgJpvWWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\DofusApi.Hdv\\DofusApi.Hdv.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\Dofus Project\\DofusGuide\\dofusapi.hdv\\DofusApi.Hdv.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

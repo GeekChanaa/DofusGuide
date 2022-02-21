@@ -13,10 +13,10 @@ namespace DofusApi.Hdv.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EquipmentPriceController : BaseController<EquipmentPrice>
+    public class RunePriceController : BaseController<RunePrice>
     {
         
-        public EquipmentPriceController(DofusHdvDataContext context, IBaseRepository<EquipmentPrice> repo) : base(context,repo)
+        public RunePriceController(DofusHdvDataContext context, IBaseRepository<RunePrice> repo) : base(context,repo)
         {
             
         }
