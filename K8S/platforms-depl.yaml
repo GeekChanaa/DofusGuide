@@ -1,0 +1,20 @@
+#Specifying the api version
+apiVersion: apps/v1
+#Kind of it
+kind: Deployment
+metadata:
+  name: platforms-depl
+spec:
+# how many replicas of this container will be running
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: dofushdvservice
+  template:
+    metadata:
+      labels:
+        app: dofushdvservice
+    spec:
+      containers:
+        - name: dofushdvservice   
+          image: jaberfeka/dofus-hdv:latest
