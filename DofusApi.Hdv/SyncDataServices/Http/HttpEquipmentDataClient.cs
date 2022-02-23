@@ -3,6 +3,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using DofusApi.Hdv.Models;
+using System;
 
 namespace DofusApi.Hdv.SyncDataServices.Http
 {
@@ -12,9 +13,9 @@ namespace DofusApi.Hdv.SyncDataServices.Http
 
         public HttpCommandDataClient(HttpClient httpClient)
         {
-            _httpClient = httpClient
+            _httpClient = httpClient;
         }
-        public Task SendEquipmentPriceToCommand(EquipmentPrice eqPrice)
+        public async Task SendEquipmentPriceToCommand(EquipmentPrice eqPrice)
         {
             var httpContent = new StringContent(
                 JsonSerializer.Serialize(eqPrice),
@@ -22,7 +23,12 @@ namespace DofusApi.Hdv.SyncDataServices.Http
                 "application/json"
             );
 
-            var response = await _httpClient.PostAsync();
+            var response = await _httpClient.PostAsync("http://localhost:5001/api/equipments", httpContent);
+
+            if(response.IsSuccessStatusCode)
+            {
+                Console.WriteLine("sync post was ok");
+            }
         }
     }
 }

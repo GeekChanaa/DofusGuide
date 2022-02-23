@@ -3,20 +3,20 @@ apiVersion: apps/v1
 #Kind of it
 kind: Deployment
 metadata:
-  name: platforms-depl
+  name: commands-depl
 spec:
 # how many replicas of this container will be running
   replicas: 1
   selector: 
     matchLabels:
-      app: dofushdvservice
+      app: commandservice
   template:
     metadata:
       labels:
-        app: dofushdvservice
+        app: commandservice
     spec:
       containers:
-        - name: dofushdvservice   
+        - name: commandservice   
           image: jaberfeka/dofus-hdv:latest
 
 ---
@@ -24,13 +24,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata: 
-  name: platforms-clusterip-srv
+  name: commands-clusterip-srv
 spec: 
   type: ClusterIP
   selector: 
-    app: dofushdvservice
+    app: commandservice
   ports:
-    - name: dofushdvservice
+    - name: commandservice
       protocol: TCP
       port: 80
       targetPort: 80
