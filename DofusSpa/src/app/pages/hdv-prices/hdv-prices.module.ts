@@ -10,11 +10,17 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
 import { FormsModule } from '@angular/forms';
 import { HdvPricesRoutingModule } from './hdv-prices.routing';
 import { HdvPricesComponent } from './hdv-prices.component';
+import { MainSectionComponent } from './index/main-section/main-section.component';
+import { CategoriesSectionComponent } from './index/categories-section/categories-section.component';
+import { CategoryItemComponent } from './index/categories-section/category-item/category-item.component';
 
 @NgModule({
   declarations: [
       HdvPricesComponent,
       IndexComponent,
+      MainSectionComponent,
+      CategoriesSectionComponent,
+      CategoryItemComponent
    ],
   imports: [
     CommonModule,

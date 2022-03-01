@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using DofusApi.Hdv.Helpers;
 using DofusApi.Hdv.Data;
+using DofusApi.Hdv.Seeding;
 using Microsoft.EntityFrameworkCore;
 
 namespace DofusApi.Hdv
@@ -18,6 +19,23 @@ namespace DofusApi.Hdv
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
+
+            using(var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = new DofusHdvDataContext(services.GetRequiredService<DbContextOptions<DofusHdvDataContext>>());
+                    // Seeding the database
+                    DbMigration.Seed(context);
+                    
+                }
+                catch(Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex,"This is not working properly");
+                }
+            }
             CreateHostBuilder(args).Build().Run();
         }
 
