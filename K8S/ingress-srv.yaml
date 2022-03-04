@@ -14,13 +14,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: platforms-clusterip-srv
+                name: dofushdv-clusterip-srv
                 port: 
                   number: 80
           - path: /api/equipments
             pathType: Prefix
             backend:
               service:
-                name: commands-clusterip-srv
+                name: dofus-clusterip-srv
                 port: 
                   number: 80

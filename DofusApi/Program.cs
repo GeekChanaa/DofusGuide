@@ -26,6 +26,7 @@ namespace DofusApi
                 try
                 {
                     var context = new DofusDataContext(services.GetRequiredService<DbContextOptions<DofusDataContext>>());
+                    Migration.Seed(context);
                     // Seeding the database
                     SeedingData.Initialize(services);
                     

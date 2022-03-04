@@ -3,7 +3,7 @@ apiVersion: apps/v1
 #Kind of it
 kind: Deployment
 metadata:
-  name: platforms-depl
+  name: dofushdv-depl
 spec:
 # how many replicas of this container will be running
   replicas: 1
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata: 
-  name: platforms-clusterip-srv
+  name: dofus-clusterip-srv
 spec: 
   type: ClusterIP
   selector: 
